@@ -1,0 +1,277 @@
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    width: 100%;
+    height: 82px;
+
+    background-color: #000000;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 0 48px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================================================
+   WABA LOGO - LEFT
+========================================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.logo img {
+    display: block;
+
+    width: 130px;
+    height: auto;
+
+    max-height: 76px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   NAVIGATION - CENTER
+========================================================= */
+
+.nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+}
+
+.nav h3 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    color: #ffffff;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.nav h3:hover {
+    color: #d71920;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.actions {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    height: 100%;
+}
+
+
+/* =========================================================
+   JOIN WABA BUTTON
+========================================================= */
+
+.joinBtn {
+    border: none;
+
+    background: linear-gradient(
+        135deg,
+        #d11b15 0%,
+        #8d0404 100%
+    );
+
+    color: #ffffff;
+
+    padding: 12px 24px;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.joinBtn:hover {
+    background: linear-gradient(
+        135deg,
+        #8d0404 0%,
+        #d11b15 100%
+    );
+
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   VERTICAL LINE
+========================================================= */
+
+.divider {
+    width: 1px;
+    height: 32px;
+
+    background-color: #dddddd;
+
+    display: block;
+}
+
+
+/* =========================================================
+   SOCIAL ICONS - RIGHT
+========================================================= */
+
+.socials {
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+}
+
+.socials svg {
+    width: 18px;
+    height: 18px;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.socials svg:hover {
+    color: #df1b23;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+
+    .container {
+        padding: 0 30px;
+    }
+
+    .nav {
+        gap: 20px;
+    }
+
+    .nav h3 {
+        font-size: 14px;
+    }
+
+    .actions {
+        gap: 14px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        height: 70px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .actions {
+        margin-left: auto;
+    }
+
+    .logo img {
+        width: 115px;
+        max-height: 62px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .logo img {
+        width: 105px;
+    }
+
+    .joinBtn {
+        padding: 9px 14px;
+        font-size: 12px;
+    }
+
+    .divider {
+        height: 26px;
+    }
+
+    .socials {
+        gap: 9px;
+    }
+
+    .socials svg {
+        width: 16px;
+        height: 16px;
+    }
+}
