@@ -1,0 +1,523 @@
+.page {
+  min-height: 100vh;
+  margin-left: 260px;
+  padding: 96px 30px 45px;
+  background: linear-gradient(135deg, #f6f9fc, #eef4f8);
+}
+
+/* HEADER */
+
+.pageHeader {
+  margin-bottom: 28px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.titleIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: linear-gradient(135deg, #f59e0b, #ef6c00);
+  box-shadow: 0 8px 20px rgba(239, 108, 0, 0.2);
+}
+
+.pageHeader h1 {
+  margin: 0;
+  color: #12263f;
+  font-size: 28px;
+}
+
+.pageHeader p {
+  margin: 6px 0 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+/* STATS */
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.statCard {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  padding: 19px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 5px 18px rgba(25, 45, 70, 0.06);
+}
+
+.statIcon {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blue {
+  background: #eaf2ff;
+  color: #2563eb;
+}
+
+.green {
+  background: #eaf8ef;
+  color: #16a34a;
+}
+
+.red {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.orange {
+  background: #fff1e7;
+  color: #ea580c;
+}
+
+.statCard span {
+  display: block;
+  color: #718096;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.statCard strong {
+  color: #172b4d;
+  font-size: 24px;
+}
+
+/* FILTER */
+
+.filterCard {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 18px rgba(25, 45, 70, 0.05);
+}
+
+.searchBox {
+  flex: 1;
+  min-height: 44px;
+  border: 1px solid #dfe5ec;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 13px;
+  color: #94a3b8;
+}
+
+.searchBox input {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #334155;
+  font-size: 14px;
+}
+
+.select {
+  width: 180px;
+  border: 1px solid #dfe5ec;
+  border-radius: 9px;
+  padding: 0 12px;
+  color: #334155;
+  background: white;
+  outline: none;
+}
+
+/* TABLE */
+
+.tableCard {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(25, 45, 70, 0.05);
+}
+
+.tableHeader {
+  padding: 20px 22px;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.tableHeader h2 {
+  margin: 0;
+  color: #172b4d;
+  font-size: 18px;
+}
+
+.tableHeader p {
+  margin: 5px 0 0;
+  color: #8a96a8;
+  font-size: 13px;
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tableWrapper table {
+  width: 100%;
+  min-width: 1250px;
+  border-collapse: collapse;
+}
+
+.tableWrapper th {
+  background: #f8fafc;
+  color: #64748b;
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+.tableWrapper td {
+  padding: 15px 16px;
+  border-top: 1px solid #edf1f5;
+  color: #475569;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.tableWrapper tbody tr:hover {
+  background: #fafcff;
+}
+
+.matchId {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ef6c00;
+  font-weight: 700;
+}
+
+.competition {
+  width: 190px;
+  white-space: normal;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #334155;
+}
+
+.dateInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #475569;
+}
+
+.category {
+  background: #eef4ff;
+  color: #3157a5;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.resultBadge {
+  display: inline-block;
+  min-width: 52px;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.win {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.loss {
+  color: #dc2626;
+  background: #fee2e2;
+}
+
+.draw {
+  color: #b45309;
+  background: #fef3c7;
+}
+
+.score {
+  color: #172b4d;
+  font-size: 14px;
+}
+
+.venue {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.viewButton {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  background: #eaf2ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.viewButton:hover {
+  background: #dbeafe;
+}
+
+.noData {
+  padding: 45px;
+  text-align: center;
+  color: #94a3b8;
+}
+
+/* MODAL */
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 22px;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.modalHeader h2 {
+  margin: 0;
+  color: #172b4d;
+  font-size: 20px;
+}
+
+.modalHeader p {
+  margin: 5px 0 0;
+  color: #8a96a8;
+  font-size: 13px;
+}
+
+.closeButton {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* RESULT DETAILS */
+
+.resultDetails {
+  padding: 22px;
+}
+
+.detailCompetition {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff7ed;
+  color: #ea580c;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.detailCompetition span {
+  display: block;
+  font-size: 11px;
+  color: #9a6a45;
+  margin-bottom: 4px;
+}
+
+.detailCompetition strong {
+  display: block;
+  color: #334155;
+  font-size: 14px;
+}
+
+.matchPlayers {
+  margin: 22px 0;
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  align-items: center;
+  text-align: center;
+}
+
+.matchPlayers span {
+  display: block;
+  color: #94a3b8;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.matchPlayers strong {
+  color: #172b4d;
+  font-size: 15px;
+}
+
+.vs {
+  color: #ef6c00;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.scoreBox {
+  text-align: center;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.scoreBox > span {
+  display: block;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.scoreBox > strong {
+  display: block;
+  margin: 7px 0 10px;
+  color: #172b4d;
+  font-size: 30px;
+}
+
+.largeResult {
+  display: inline-block;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.detailsGrid div {
+  padding: 12px;
+  border: 1px solid #edf1f5;
+  border-radius: 9px;
+}
+
+.detailsGrid span {
+  display: block;
+  color: #94a3b8;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.detailsGrid strong {
+  color: #475569;
+  font-size: 13px;
+}
+
+.modalFooter {
+  padding: 16px 22px;
+  border-top: 1px solid #edf1f5;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.closeModalButton {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  background: #172b4d;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .page {
+    margin-left: 0;
+    padding: 90px 18px 35px;
+  }
+
+  .filterCard {
+    flex-direction: column;
+  }
+
+  .select {
+    width: 100%;
+    height: 44px;
+  }
+}
+
+@media (max-width: 600px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pageHeader h1 {
+    font-size: 23px;
+  }
+
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .matchPlayers {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .vs {
+    display: none;
+  }
+}

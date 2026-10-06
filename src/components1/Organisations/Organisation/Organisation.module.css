@@ -1,0 +1,278 @@
+.organisationPage {
+  margin-left: 260px;
+  padding: 95px 30px 40px;
+  min-height: 100vh;
+  background: #f6f8fc;
+}
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.pageHeader h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #032865;
+}
+
+.pageHeader p {
+  margin: 7px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.headerIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #eaf2ff;
+  color: #032865;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.summaryCard {
+  background: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.cardIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #eef5ff;
+  color: #032865;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.summaryCard span {
+  display: block;
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 5px;
+}
+
+.summaryCard strong {
+  display: block;
+  font-size: 22px;
+  color: #032865;
+}
+
+.organisationCard {
+  background: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  margin-bottom: 25px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 24px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.cardHeader h2 {
+  margin: 0;
+  font-size: 19px;
+  color: #032865;
+}
+
+.cardHeader p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #7a8494;
+}
+
+.totalBadge {
+  background: #eef5ff;
+  color: #032865;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.organisationGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  padding: 24px;
+}
+
+.organisationItem {
+  border: 1px solid #e7ebf2;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: 0.2s ease;
+}
+
+.organisationItem:hover {
+  border-color: #cbd8ed;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.organisationIcon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  background: #eef5ff;
+  color: #032865;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.organisationContent {
+  flex: 1;
+}
+
+.organisationContent h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #032865;
+}
+
+.organisationContent p {
+  margin: 5px 0;
+  font-size: 12px;
+  color: #7a8494;
+  line-height: 1.5;
+}
+
+.organisationContent strong {
+  font-size: 12px;
+  color: #16834a;
+}
+
+.viewButton {
+  border: 1px solid #dce3ed;
+  background: #ffffff;
+  color: #032865;
+  border-radius: 7px;
+  padding: 8px 11px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.viewButton:hover {
+  background: #f3f6fb;
+}
+
+.hierarchyCard {
+  background: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.hierarchy {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.level {
+  min-width: 180px;
+  padding: 12px 25px;
+  text-align: center;
+  border: 1px solid #dce3ed;
+  border-radius: 9px;
+  background: #f8fafc;
+}
+
+.level span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #032865;
+}
+
+.arrow {
+  color: #7a8494;
+  font-size: 20px;
+  padding: 5px 0;
+}
+
+.levelGroup {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .summaryGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .organisationGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .organisationPage {
+    margin-left: 0;
+    padding: 90px 15px 30px;
+  }
+
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .organisationItem {
+    flex-wrap: wrap;
+  }
+
+  .viewButton {
+    margin-left: 66px;
+  }
+
+  .levelGroup {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

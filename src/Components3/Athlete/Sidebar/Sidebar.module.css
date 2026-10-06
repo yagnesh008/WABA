@@ -1,0 +1,236 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 260px;
+  height: 100vh;
+
+  background: linear-gradient(
+    180deg,
+    #06182d 0%,
+    #082442 100%
+  );
+
+  color: white;
+
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* =========================
+   BRAND
+========================= */
+
+.brand {
+  padding: 22px 20px;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.brandTitle {
+  color: white;
+
+  font-size: 20px;
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+.brandSubtitle {
+  margin-top: 3px;
+
+  color: #aab7c7;
+
+  font-size: 12px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navigation {
+  padding: 18px 12px 30px;
+}
+
+/* =========================
+   MENU ITEM
+========================= */
+
+.menuLink {
+  width: 100%;
+  min-height: 44px;
+
+  padding: 0 12px;
+
+  margin-bottom: 4px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  border-radius: 8px;
+
+  color: #d7e0eb;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  transition: 0.2s;
+}
+
+.menuLink:hover {
+  background: rgba(255, 255, 255, 0.07);
+
+  color: white;
+}
+
+/* =========================
+   MENU ROW
+========================= */
+
+.navItem {
+  width: 100%;
+}
+
+.menuRow {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+}
+
+.menuRow .menuLink {
+  flex: 1;
+}
+
+/* =========================
+   ARROW
+========================= */
+
+.arrowButton {
+  width: 38px;
+  height: 42px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #9eacbd;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  border-radius: 6px;
+
+  transition: 0.2s;
+}
+
+.arrowButton:hover {
+  color: #fe7a03;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.05
+  );
+}
+
+.rotate {
+  transform: rotate(180deg);
+
+  color: #fe7a03;
+}
+
+/* =========================
+   SUB MENU
+========================= */
+
+.subMenu {
+  margin: 0 0 8px 20px;
+
+  padding: 4px 0 4px 20px;
+
+  border-left: 1px solid
+    rgba(255, 255, 255, 0.15);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.subItem {
+  padding: 9px 12px;
+
+  color: #9eacbd;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  border-radius: 6px;
+
+  transition: 0.2s;
+}
+
+.subItem:hover {
+  background: rgba(
+    254,
+    122,
+    3,
+    0.1
+  );
+
+  color: #fe7a03;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.15
+  );
+
+  border-radius: 10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 230px;
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 220px;
+  }
+}

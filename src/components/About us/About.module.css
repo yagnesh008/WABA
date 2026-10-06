@@ -1,0 +1,1006 @@
+/* =====================================
+   ABOUT MAIN
+===================================== */
+
+.about {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =====================================
+   MAIN ABOUT PAGE
+===================================== */
+
+.aboutPage {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 0;
+  margin: 0;
+
+  background-image: url("/images/aboutimage.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+
+/* =====================================
+   DARK OVERLAY
+===================================== */
+
+.aboutPage::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.20);
+
+  z-index: 0;
+
+  pointer-events: none;
+}
+
+
+/* =====================================
+   FOUR CARDS
+   CARDS MUST STAY AT TOP
+===================================== */
+
+.subParts {
+  position: relative;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 12px;
+
+  padding: 3px 48px 0;
+
+  box-sizing: border-box;
+
+  z-index: 10;
+}
+
+
+/* =====================================
+   EACH CARD
+===================================== */
+
+.card {
+  position: relative;
+
+  width: 100%;
+  height: 220px;
+
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  flex-shrink: 0;
+
+  box-sizing: border-box;
+
+  transition: transform 0.3s ease;
+}
+
+
+/* =====================================
+   CARD HOVER
+===================================== */
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =====================================
+   CARD CONTENT
+===================================== */
+
+.cardContent {
+  position: absolute;
+
+  top: 20px;
+  left: 17px;
+
+  width: 150px;
+
+  z-index: 11;
+}
+
+
+/* =====================================
+   CARD TITLE
+===================================== */
+
+.cardContent h2 {
+  margin: 0 0 12px 0;
+  padding: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 24px;
+
+  font-weight: 800;
+
+  font-style: italic;
+
+  line-height: 0.98;
+
+  color: #032865;
+
+  letter-spacing: -0.5px;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================
+   CARD DESCRIPTION
+===================================== */
+
+.cardContent p {
+  width: 150px;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  line-height: 1.35;
+
+  color: #032865;
+}
+
+
+/* =====================================
+   CARD ARROW BUTTON
+===================================== */
+
+.cardButton {
+  position: absolute;
+
+  left: 18px;
+  bottom: 14px;
+
+  width: 44px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #032865;
+
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: #032865;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 22px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* =====================================
+   CARD BUTTON HOVER
+===================================== */
+
+.cardButton:hover {
+  background: #032865;
+
+  color: #ffffff;
+
+  transform: translateX(2px);
+}
+
+
+/* =====================================
+   ABOUT CONTENT
+
+   IMPORTANT:
+   NO absolute positioning here.
+   This keeps About content below cards.
+===================================== */
+
+.aboutContent {
+  position: relative;
+
+  left: 0;
+  top: 0;
+
+  width: 530px;
+
+  margin-left: 96px;
+
+  margin-top: 30px;
+
+  padding-bottom: 60px;
+
+  z-index: 8;
+}
+
+
+/* =====================================
+   ABOUT US
+===================================== */
+
+.smallTitle {
+  margin: 0 0 22px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  font-style: italic;
+
+  color: #032865;
+}
+
+
+/* =====================================
+   WHO WE ARE
+===================================== */
+
+.mainTitle {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 88px;
+
+  font-weight: 900;
+
+  font-style: italic;
+
+  line-height: 0.94;
+
+  letter-spacing: -3px;
+}
+
+
+/* =====================================
+   WHO
+===================================== */
+
+.mainTitle span:first-child {
+  color: #fe7a03;
+}
+
+
+/* =====================================
+   WE ARE
+===================================== */
+
+.mainTitle span:last-child {
+  color: #032865;
+}
+
+
+/* =====================================
+   TAGLINE
+===================================== */
+
+.tagline {
+  margin-top: 34px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 24px;
+
+  font-weight: 800;
+
+  font-style: italic;
+
+  line-height: 1.15;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* =====================================
+   TAGLINE COLOR
+===================================== */
+
+.tagline span:first-child {
+  color: #032865;
+}
+
+.tagline span:last-child {
+  color: #032865;
+}
+
+
+/* =====================================
+   DESCRIPTION
+===================================== */
+
+.description {
+  width: 510px;
+
+  margin-top: 42px;
+
+  margin-bottom: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 400;
+
+  line-height: 1.45;
+
+  color: #032865;
+}
+
+
+/* =====================================
+   OUR STORY BUTTON
+===================================== */
+
+.storyButton {
+  margin-top: 35px;
+
+  width: 202px;
+  height: 64px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  border: none;
+
+  background: linear-gradient(
+    180deg,
+    #00c853 0%,
+    #015520 100%
+  );
+
+  border-radius: 7px;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =====================================
+   STORY BUTTON HOVER
+===================================== */
+
+.storyButton:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =====================================
+   ARROW
+===================================== */
+
+.arrow {
+  color: #ffffff;
+
+  font-size: 27px;
+
+  line-height: 1;
+
+  transition: transform 0.3s ease;
+}
+
+
+/* =====================================
+   ARROW HOVER
+===================================== */
+
+.storyButton:hover .arrow {
+  color: #ffffff;
+
+  transform: translateX(5px);
+}
+
+
+/* =====================================
+   LARGE DESKTOP
+===================================== */
+
+@media (min-width: 1200px) {
+
+  .aboutPage {
+    min-height: 100vh;
+
+    background-size: cover;
+    background-position: center top;
+  }
+
+
+  /* Cards exactly at top */
+
+  .subParts {
+    width: 100%;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+    padding: 3px 48px 0;
+  }
+
+
+  .card {
+    height: 220px;
+  }
+
+
+  .cardContent {
+    top: 20px;
+    left: 17px;
+
+    width: 150px;
+  }
+
+
+  .cardContent h2 {
+    font-size: 24px;
+  }
+
+
+  .cardContent p {
+    width: 150px;
+
+    font-size: 12px;
+  }
+
+
+  .cardButton {
+    left: 18px;
+    bottom: 14px;
+
+    width: 44px;
+    height: 27px;
+  }
+
+
+  /*
+     About content starts
+     BELOW cards
+  */
+
+  .aboutContent {
+    margin-left: 96px;
+
+    margin-top: 30px;
+
+    width: 530px;
+  }
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1000px) {
+
+  .aboutPage {
+    min-height: 100vh;
+
+    background-position: center top;
+  }
+
+
+  .subParts {
+    width: 100%;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 8px;
+
+    padding: 3px 30px 0;
+  }
+
+
+  .card {
+    height: 175px;
+
+    border-radius: 12px;
+  }
+
+
+  .cardContent {
+    top: 16px;
+    left: 12px;
+
+    width: 105px;
+  }
+
+
+  .cardContent h2 {
+    font-size: 17px;
+
+    margin-bottom: 7px;
+  }
+
+
+  .cardContent p {
+    width: 105px;
+
+    font-size: 9px;
+
+    line-height: 1.35;
+  }
+
+
+  .cardButton {
+    left: 11px;
+    bottom: 11px;
+
+    width: 37px;
+    height: 23px;
+
+    font-size: 18px;
+  }
+
+
+  /*
+     Content below cards
+  */
+
+  .aboutContent {
+    width: 430px;
+
+    margin-left: 50px;
+
+    margin-top: 30px;
+
+    padding-bottom: 50px;
+  }
+
+
+  .smallTitle {
+    font-size: 14px;
+
+    margin-bottom: 18px;
+  }
+
+
+  .mainTitle {
+    font-size: 65px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .tagline {
+    margin-top: 25px;
+
+    font-size: 20px;
+  }
+
+
+  .description {
+    width: 400px;
+
+    margin-top: 32px;
+
+    font-size: 14px;
+  }
+
+
+  .storyButton {
+    width: 185px;
+    height: 58px;
+
+    margin-top: 30px;
+
+    font-size: 14px;
+  }
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 700px) {
+
+  .aboutPage {
+    min-height: 100vh;
+
+    background-position: center top;
+  }
+
+
+  /*
+     Cards become 2 columns
+  */
+
+  .subParts {
+    width: 100%;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 8px;
+
+    padding: 5px 15px 0;
+
+    box-sizing: border-box;
+  }
+
+
+  .card {
+    height: 135px;
+
+    border-radius: 10px;
+  }
+
+
+  .cardContent {
+    top: 10px;
+    left: 8px;
+
+    width: 80px;
+  }
+
+
+  .cardContent h2 {
+    font-size: 12px;
+
+    margin-bottom: 5px;
+  }
+
+
+  .cardContent p {
+    width: 80px;
+
+    font-size: 7px;
+
+    line-height: 1.3;
+  }
+
+
+  .cardButton {
+    left: 8px;
+    bottom: 8px;
+
+    width: 31px;
+    height: 20px;
+
+    font-size: 15px;
+
+    border-radius: 5px;
+  }
+
+
+  /*
+     About content BELOW cards
+  */
+
+  .aboutContent {
+    width: calc(100% - 40px);
+
+    margin-left: 20px;
+
+    margin-top: 28px;
+
+    padding-bottom: 40px;
+  }
+
+
+  .smallTitle {
+    font-size: 13px;
+
+    margin-bottom: 15px;
+  }
+
+
+  .mainTitle {
+    font-size: 48px;
+
+    letter-spacing: -2px;
+
+    line-height: 0.95;
+  }
+
+
+  .tagline {
+    margin-top: 22px;
+
+    font-size: 17px;
+
+    line-height: 1.15;
+  }
+
+
+  .description {
+    width: 100%;
+
+    margin-top: 25px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+
+  .storyButton {
+    width: 170px;
+    height: 52px;
+
+    margin-top: 25px;
+
+    font-size: 13px;
+  }
+
+
+  .arrow {
+    font-size: 23px;
+  }
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 500px) {
+
+  .aboutPage {
+    min-height: 100vh;
+
+    background-position: center top;
+  }
+
+
+  .subParts {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 5px;
+
+    padding: 4px 10px 0;
+  }
+
+
+  .card {
+    height: 105px;
+
+    border-radius: 8px;
+  }
+
+
+  .cardContent {
+    top: 7px;
+    left: 6px;
+
+    width: 58px;
+  }
+
+
+  .cardContent h2 {
+    font-size: 9px;
+
+    margin-bottom: 3px;
+  }
+
+
+  .cardContent p {
+    width: 58px;
+
+    font-size: 5.5px;
+
+    line-height: 1.3;
+  }
+
+
+  .cardButton {
+    left: 6px;
+    bottom: 6px;
+
+    width: 25px;
+    height: 16px;
+
+    font-size: 12px;
+
+    border-radius: 4px;
+  }
+
+
+  /*
+     Content below cards
+  */
+
+  .aboutContent {
+    width: calc(100% - 36px);
+
+    margin-left: 18px;
+
+    margin-top: 24px;
+
+    padding-bottom: 35px;
+  }
+
+
+  .smallTitle {
+    font-size: 12px;
+
+    margin-bottom: 13px;
+  }
+
+
+  .mainTitle {
+    font-size: 38px;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  .tagline {
+    margin-top: 18px;
+
+    font-size: 14px;
+  }
+
+
+  .description {
+    width: 100%;
+
+    margin-top: 20px;
+
+    font-size: 12px;
+
+    line-height: 1.45;
+  }
+
+
+  .storyButton {
+    width: 150px;
+    height: 46px;
+
+    margin-top: 22px;
+
+    font-size: 12px;
+  }
+
+
+  .arrow {
+    font-size: 20px;
+  }
+}
+
+
+/* =====================================
+   VERY SMALL DEVICES
+===================================== */
+
+@media (max-width: 360px) {
+
+  .subParts {
+    gap: 4px;
+
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+
+  .card {
+    height: 95px;
+  }
+
+
+  .cardContent {
+    top: 6px;
+    left: 5px;
+
+    width: 52px;
+  }
+
+
+  .cardContent h2 {
+    font-size: 8px;
+  }
+
+
+  .cardContent p {
+    width: 52px;
+
+    font-size: 5px;
+  }
+
+
+  .cardButton {
+    left: 5px;
+    bottom: 5px;
+
+    width: 23px;
+    height: 15px;
+
+    font-size: 11px;
+  }
+
+
+  .aboutContent {
+    margin-left: 15px;
+
+    width: calc(100% - 30px);
+
+    margin-top: 20px;
+  }
+
+
+  .mainTitle {
+    font-size: 34px;
+  }
+
+
+  .tagline {
+    font-size: 13px;
+  }
+
+
+  .description {
+    font-size: 11px;
+  }
+}

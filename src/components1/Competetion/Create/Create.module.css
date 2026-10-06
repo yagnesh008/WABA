@@ -1,0 +1,332 @@
+.createCompetitionPage {
+  margin-left: 260px;
+  padding: 95px 30px 40px;
+  min-height: 100vh;
+  background: #f6f8fc;
+}
+
+/* PAGE HEADER */
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.titleIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #fff2e5;
+  color: #fe7a03;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleRow h1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+  color: #032865;
+}
+
+.titleRow p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.headerButton {
+  border: none;
+  background: #032865;
+  color: white;
+  padding: 11px 18px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.headerButton:hover {
+  background: #021f4d;
+}
+
+/* FORM CARD */
+
+.formCard {
+  background: white;
+  border: 1px solid #e5e9f2;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.sectionIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  background: #eef4ff;
+  color: #032865;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  color: #032865;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.sectionHeader p {
+  margin: 4px 0 0;
+  color: #7a8494;
+  font-size: 13px;
+}
+
+/* FORM GRID */
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroup label {
+  font-size: 13px;
+  color: #374151;
+  font-weight: 600;
+}
+
+.formGroup label span {
+  color: #e53935;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d9dee8;
+  border-radius: 8px;
+  padding: 11px 13px;
+  background: #fff;
+  color: #263238;
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+  transition: 0.2s;
+}
+
+.formGroup input,
+.formGroup select {
+  height: 44px;
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: #a0a7b2;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  border-color: #032865;
+  box-shadow: 0 0 0 3px rgba(3, 40, 101, 0.08);
+}
+
+.fullWidth {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.fullWidth:last-child {
+  margin-bottom: 0;
+}
+
+/* INPUT ICON */
+
+.inputWithIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputWithIcon svg {
+  position: absolute;
+  left: 13px;
+  color: #7c8798;
+}
+
+.inputWithIcon input {
+  padding-left: 40px;
+}
+
+/* FILE */
+
+.fileBox {
+  position: relative;
+  min-height: 110px;
+  border: 1.5px dashed #cbd3df;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #7c8798;
+  background: #fafbfc;
+  cursor: pointer;
+}
+
+.fileBox svg {
+  color: #032865;
+}
+
+.fileBox input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.fileBox span {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ACTIONS */
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 5px;
+}
+
+.cancelButton,
+.createButton {
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancelButton {
+  border: 1px solid #d5dae3;
+  background: white;
+  color: #374151;
+}
+
+.cancelButton:hover {
+  background: #f5f6f8;
+}
+
+.createButton {
+  border: none;
+  background: #fe7a03;
+  color: white;
+}
+
+.createButton:hover {
+  background: #e96800;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .formGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .createCompetitionPage {
+    margin-left: 0;
+    padding: 85px 18px 30px;
+  }
+
+  .pageHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .headerButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formCard {
+    padding: 18px;
+  }
+
+  .formActions {
+    flex-direction: column;
+  }
+
+  .cancelButton,
+  .createButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .titleRow h1 {
+    font-size: 21px;
+  }
+
+  .titleIcon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .sectionHeader {
+    align-items: flex-start;
+  }
+}

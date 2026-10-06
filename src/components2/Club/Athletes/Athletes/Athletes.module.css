@@ -1,0 +1,484 @@
+.athletes {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  min-height: 100vh;
+  padding: 98px 30px 45px;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(254, 122, 3, 0.08),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #f7f9fc 0%, #eef3f8 100%);
+}
+
+/* =================================
+   PAGE HEADER
+================================= */
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.titleSection {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.titleIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #fe7a03,
+    #ff9d3f
+  );
+
+  box-shadow:
+    0 8px 20px rgba(254, 122, 3, 0.22);
+}
+
+.titleSection h1 {
+  margin: 0;
+  color: #10233f;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.titleSection p {
+  margin: 5px 0 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 11px 17px;
+
+  color: #ffffff;
+  background: #fe7a03;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 14px rgba(254, 122, 3, 0.2);
+}
+
+.addButton:hover {
+  background: #e96d00;
+}
+
+/* =================================
+   STATS
+================================= */
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+
+  margin-bottom: 25px;
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 19px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5eaf0;
+  border-radius: 15px;
+
+  box-shadow:
+    0 6px 20px rgba(16, 35, 63, 0.05);
+}
+
+.statIcon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+}
+
+.blue {
+  color: #2874c6;
+  background: #eaf3ff;
+}
+
+.green {
+  color: #16834a;
+  background: #ecfdf3;
+}
+
+.orange {
+  color: #fe7a03;
+  background: #fff2e8;
+}
+
+.purple {
+  color: #7655c7;
+  background: #f1edff;
+}
+
+.statCard span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #7a8797;
+  font-size: 12px;
+}
+
+.statCard strong {
+  display: block;
+
+  color: #10233f;
+  font-size: 22px;
+}
+
+.statCard small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #9aa4b2;
+  font-size: 10px;
+}
+
+/* =================================
+   MANAGEMENT
+================================= */
+
+.managementSection {
+  margin-bottom: 24px;
+}
+
+.sectionHeader {
+  margin-bottom: 15px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+
+  color: #172b46;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.sectionHeader p {
+  margin: 5px 0 0;
+
+  color: #8793a3;
+  font-size: 12px;
+}
+
+.managementGrid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+.managementCard {
+  min-height: 205px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 22px;
+
+  box-sizing: border-box;
+
+  text-decoration: none;
+
+  background: #ffffff;
+
+  border: 1px solid #e5eaf0;
+  border-radius: 17px;
+
+  box-shadow:
+    0 7px 24px rgba(16, 35, 63, 0.05);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.managementCard:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(254, 122, 3, 0.35);
+
+  box-shadow:
+    0 14px 32px rgba(16, 35, 63, 0.1);
+}
+
+.cardIcon {
+  width: 51px;
+  height: 51px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  margin-bottom: 17px;
+}
+
+.allIcon {
+  color: #2874c6;
+  background: #eaf3ff;
+}
+
+.activeIcon {
+  color: #16834a;
+  background: #ecfdf3;
+}
+
+.membershipIcon {
+  color: #fe7a03;
+  background: #fff2e8;
+}
+
+.classificationIcon {
+  color: #7655c7;
+  background: #f1edff;
+}
+
+.cardContent h3 {
+  margin: 0 0 7px;
+
+  color: #172b46;
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.cardContent p {
+  margin: 0;
+
+  color: #788698;
+
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.cardBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: auto;
+  padding-top: 17px;
+
+  color: #fe7a03;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =================================
+   ACTIVITY
+================================= */
+
+.overviewCard {
+  background: #ffffff;
+
+  border: 1px solid #e5eaf0;
+  border-radius: 18px;
+
+  box-shadow:
+    0 7px 24px rgba(16, 35, 63, 0.05);
+
+  overflow: hidden;
+}
+
+.overviewHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 23px;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.overviewHeader h2 {
+  margin: 0;
+
+  color: #172b46;
+  font-size: 17px;
+}
+
+.overviewHeader p {
+  margin: 4px 0 0;
+
+  color: #8793a3;
+  font-size: 12px;
+}
+
+.overviewHeader a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #fe7a03;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.activityList {
+  padding: 0 23px;
+}
+
+.activityItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px 0;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.activityItem:last-child {
+  border-bottom: none;
+}
+
+.activityAvatar {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #0b3157,
+    #fe7a03
+  );
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.activityInfo {
+  flex: 1;
+}
+
+.activityInfo strong {
+  display: block;
+
+  color: #2a3d56;
+  font-size: 13px;
+}
+
+.activityInfo span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #8b97a6;
+  font-size: 11px;
+}
+
+.activityTime {
+  color: #a0aaba;
+  font-size: 11px;
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 1250px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .managementGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .athletes {
+    margin-left: 0;
+    width: 100%;
+    padding: 90px 20px 35px;
+  }
+}
+
+@media (max-width: 650px) {
+  .pageHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .addButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .statsGrid,
+  .managementGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .athletes {
+    padding: 85px 15px 30px;
+  }
+
+  .titleSection h1 {
+    font-size: 23px;
+  }
+
+  .activityTime {
+    display: none;
+  }
+}

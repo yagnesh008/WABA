@@ -1,0 +1,317 @@
+.page {
+  margin-left: 260px;
+  padding: 95px 30px 40px;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+/* Header */
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.backLink:hover {
+  color: #fe7a03;
+}
+
+.pageHeader h1 {
+  margin: 0;
+  color: #10233f;
+  font-size: 28px;
+}
+
+.pageHeader p {
+  margin: 7px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: #fff3e8;
+  color: #fe7a03;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Stats */
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.statCard {
+  background: white;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.statIcon {
+  width: 46px;
+  height: 46px;
+  border-radius: 11px;
+  background: #f3eaff;
+  color: #7545b5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statIcon.green {
+  background: #e9f8ef;
+  color: #16803c;
+}
+
+.statIcon.orange {
+  background: #fff3e8;
+  color: #fe7a03;
+}
+
+.statCard span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.statCard strong {
+  color: #10233f;
+  font-size: 21px;
+}
+
+/* Section */
+
+.section {
+  background: white;
+  border: 1px solid #e5eaf1;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 25px;
+}
+
+.sectionHeader {
+  margin-bottom: 20px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  color: #10233f;
+  font-size: 19px;
+}
+
+.sectionHeader p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* Certificate Grid */
+
+.certificateGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.certificateCard {
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  padding: 19px;
+  background: #fff;
+  transition: 0.2s ease;
+}
+
+.certificateCard:hover {
+  transform: translateY(-3px);
+  border-color: #fe7a03;
+  box-shadow: 0 8px 25px rgba(16, 35, 63, 0.08);
+}
+
+/* Top */
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.certificateIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 11px;
+  background: #fff3e8;
+  color: #fe7a03;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.verified {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 8px;
+  border-radius: 15px;
+  background: #e9f8ef;
+  color: #16803c;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Content */
+
+.cardContent {
+  margin-top: 17px;
+}
+
+.certificateId {
+  color: #fe7a03;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.cardContent h3 {
+  margin: 6px 0;
+  color: #10233f;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.cardContent p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Details */
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 0;
+  margin-top: 14px;
+  border-top: 1px solid #edf0f4;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.details div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.details svg {
+  color: #fe7a03;
+}
+
+.details span {
+  color: #64748b;
+  font-size: 10px;
+}
+
+/* Button */
+
+.downloadButton {
+  width: 100%;
+  margin-top: 14px;
+  border: none;
+  border-radius: 9px;
+  padding: 10px 12px;
+  background: #10233f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.downloadButton:hover {
+  background: #fe7a03;
+}
+
+/* Info */
+
+.infoBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 17px;
+  border-radius: 12px;
+  background: #eef6ff;
+  color: #2864c7;
+}
+
+.infoBox strong {
+  display: block;
+  color: #10233f;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.infoBox p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .certificateGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .page {
+    margin-left: 0;
+    padding: 85px 16px 30px;
+  }
+
+  .pageHeader {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .section {
+    padding: 16px;
+  }
+
+  .certificateGrid {
+    grid-template-columns: 1fr;
+  }
+}

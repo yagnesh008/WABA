@@ -1,0 +1,439 @@
+.page {
+  margin-left: 260px;
+  padding: 95px 30px 40px;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.backLink:hover {
+  color: #fe7a03;
+}
+
+.pageHeader h1 {
+  margin: 0;
+  color: #10233f;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.pageHeader p {
+  margin: 7px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.headerBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: #eaf8ef;
+  color: #16803c;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================
+   STATUS BANNER
+========================= */
+
+.statusBanner {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 22px;
+  margin-bottom: 25px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #10233f, #17365e);
+  color: white;
+}
+
+.statusIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(22, 128, 60, 0.18);
+  color: #66d48a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statusContent {
+  flex: 1;
+}
+
+.statusContent span {
+  color: #9eb0c8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.statusContent h2 {
+  margin: 3px 0;
+  font-size: 20px;
+}
+
+.statusContent p {
+  margin: 0;
+  color: #c5cfdd;
+  font-size: 12px;
+}
+
+.classificationBadge {
+  padding: 10px 17px;
+  border-radius: 9px;
+  background: #fe7a03;
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.mainCard,
+.historySection {
+  background: white;
+  border: 1px solid #e5eaf1;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 25px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.cardHeader h2 {
+  margin: 0;
+  color: #10233f;
+  font-size: 19px;
+}
+
+.cardHeader p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.headerIcon {
+  color: #fe7a03;
+}
+
+/* =========================
+   CLASSIFICATION CONTENT
+========================= */
+
+.classificationContent {
+  display: flex;
+  gap: 25px;
+  align-items: stretch;
+}
+
+.classificationBox {
+  width: 230px;
+  min-height: 190px;
+  border-radius: 14px;
+  background: #fff3e8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.classificationBox span {
+  color: #fe7a03;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.classificationBox strong {
+  margin: 8px 0 5px;
+  color: #10233f;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.classificationBox small {
+  color: #64748b;
+  font-size: 11px;
+  text-align: center;
+}
+
+.detailsGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 14px;
+  border: 1px solid #edf0f4;
+  border-radius: 11px;
+}
+
+.detailItem svg {
+  color: #fe7a03;
+  flex-shrink: 0;
+}
+
+.detailItem span {
+  display: block;
+  color: #64748b;
+  font-size: 10px;
+  margin-bottom: 4px;
+}
+
+.detailItem strong {
+  color: #10233f;
+  font-size: 13px;
+}
+
+.confirmed {
+  color: #16803c !important;
+}
+
+/* =========================
+   INFO CARDS
+========================= */
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.infoCard {
+  display: flex;
+  gap: 13px;
+  padding: 19px;
+  background: white;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+}
+
+.infoIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #eaf8ef;
+  color: #16803c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.infoCard h3 {
+  margin: 0 0 5px;
+  color: #10233f;
+  font-size: 14px;
+}
+
+.infoCard p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================
+   HISTORY
+========================= */
+
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.historyCard {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 17px;
+  border: 1px solid #e5eaf1;
+  border-radius: 12px;
+}
+
+.historyIcon {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background: #eaf2ff;
+  color: #2864c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.historyMain {
+  flex: 1;
+}
+
+.historyId {
+  color: #fe7a03;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.historyMain h3 {
+  margin: 3px 0 8px;
+  color: #10233f;
+  font-size: 15px;
+}
+
+.historyDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.historyDetails span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.historyDetails svg {
+  color: #fe7a03;
+}
+
+.historyStatus {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  border-radius: 15px;
+  background: #e9f8ef;
+  color: #16803c;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =========================
+   NOTE
+========================= */
+
+.noteBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 17px;
+  border-radius: 12px;
+  background: #fff8e8;
+  color: #b47b00;
+}
+
+.noteBox strong {
+  display: block;
+  color: #10233f;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.noteBox p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  .classificationContent {
+    flex-direction: column;
+  }
+
+  .classificationBox {
+    width: 100%;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .page {
+    margin-left: 0;
+    padding: 85px 16px 30px;
+  }
+
+  .pageHeader {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .statusBanner {
+    flex-wrap: wrap;
+  }
+
+  .classificationBadge {
+    margin-left: 69px;
+  }
+
+  .mainCard,
+  .historySection {
+    padding: 16px;
+  }
+
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .historyCard {
+    align-items: flex-start;
+  }
+
+  .historyStatus {
+    display: none;
+  }
+
+  .historyDetails {
+    flex-direction: column;
+    gap: 7px;
+  }
+}

@@ -1,0 +1,423 @@
+.page {
+  margin-left: 260px;
+  padding: 95px 30px 40px;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.pageHeader h1 {
+  margin: 0;
+  color: #10233f;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.pageHeader p {
+  margin: 7px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.achievementBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: #fff3e8;
+  color: #fe7a03;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.statCard {
+  background: white;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.statIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gold {
+  background: #fff6d9;
+  color: #c48a00;
+}
+
+.blue {
+  background: #eaf2ff;
+  color: #2864c7;
+}
+
+.orange {
+  background: #fff3e8;
+  color: #fe7a03;
+}
+
+.statCard span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.statCard strong {
+  display: block;
+  color: #10233f;
+  font-size: 23px;
+  margin-bottom: 3px;
+}
+
+.statCard small {
+  color: #8a96a8;
+  font-size: 11px;
+}
+
+/* =========================
+   OVERVIEW
+========================= */
+
+.overview {
+  background: linear-gradient(135deg, #10233f, #17365e);
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 25px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.overviewContent {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.trophyIcon {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: rgba(254, 122, 3, 0.15);
+  color: #fe7a03;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.label {
+  font-size: 10px;
+  color: #fe7a03;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.overview h2 {
+  margin: 5px 0 5px;
+  font-size: 20px;
+}
+
+.overview p {
+  margin: 0;
+  color: #c5cfdd;
+  font-size: 13px;
+}
+
+.overviewStats {
+  display: flex;
+  gap: 30px;
+}
+
+.overviewStats div {
+  text-align: center;
+}
+
+.overviewStats strong {
+  display: block;
+  font-size: 22px;
+}
+
+.overviewStats span {
+  display: block;
+  margin-top: 4px;
+  color: #b8c4d4;
+  font-size: 11px;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+  background: white;
+  border: 1px solid #e5eaf1;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 25px;
+}
+
+.sectionHeader {
+  margin-bottom: 20px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  color: #10233f;
+  font-size: 19px;
+}
+
+.sectionHeader p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* =========================
+   MANAGEMENT CARDS
+========================= */
+
+.managementGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.managementCard {
+  text-decoration: none;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  transition: 0.2s ease;
+  background: #fff;
+}
+
+.managementCard:hover {
+  transform: translateY(-3px);
+  border-color: #fe7a03;
+  box-shadow: 0 8px 25px rgba(16, 35, 63, 0.08);
+}
+
+.cardIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.medalIcon {
+  background: #fff6d9;
+  color: #c48a00;
+}
+
+.rankingIcon {
+  background: #eaf2ff;
+  color: #2864c7;
+}
+
+.certificateIcon {
+  background: #fff3e8;
+  color: #fe7a03;
+}
+
+.cardContent {
+  flex: 1;
+}
+
+.cardContent h3 {
+  margin: 0;
+  color: #10233f;
+  font-size: 16px;
+}
+
+.cardContent p {
+  margin: 7px 0 16px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fe7a03;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================
+   RECENT ACHIEVEMENTS
+========================= */
+
+.recentList {
+  display: flex;
+  flex-direction: column;
+}
+
+.recentItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.recentItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.recentIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #fff3e8;
+  color: #fe7a03;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recentContent {
+  flex: 1;
+}
+
+.recentContent h3 {
+  margin: 0 0 3px;
+  color: #10233f;
+  font-size: 14px;
+}
+
+.recentContent p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.date {
+  color: #8a96a8;
+  font-size: 11px;
+}
+
+/* =========================
+   INFO BOX
+========================= */
+
+.infoBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 17px;
+  border-radius: 12px;
+  background: #eef6ff;
+  color: #2864c7;
+}
+
+.infoBox strong {
+  display: block;
+  color: #10233f;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.infoBox p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .managementGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .overview {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .overviewStats {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 700px) {
+  .page {
+    margin-left: 0;
+    padding: 85px 16px 30px;
+  }
+
+  .pageHeader {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .section {
+    padding: 17px;
+  }
+
+  .overviewContent {
+    align-items: flex-start;
+  }
+
+  .overviewStats {
+    gap: 15px;
+  }
+
+  .recentItem {
+    align-items: flex-start;
+  }
+
+  .date {
+    display: none;
+  }
+}

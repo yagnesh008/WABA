@@ -1,0 +1,707 @@
+.page {
+  margin-left: 260px;
+  min-height: 100vh;
+  padding: 96px 32px 45px;
+  background: #f5f7fb;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  color: #fe7a03;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.pageHeader h1 {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 7px 0;
+  color: #10233f;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.pageHeader p {
+  margin: 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+.headerBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  background: #fff4e9;
+  border: 1px solid #ffd9b5;
+  border-radius: 10px;
+  color: #d95f00;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.summaryCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 19px;
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 12px;
+}
+
+.summaryIcon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #fff3e7;
+  border-radius: 10px;
+  color: #fe7a03;
+}
+
+.summaryCard strong {
+  display: block;
+  color: #10233f;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.summaryCard span {
+  display: block;
+  margin-top: 3px;
+  color: #718096;
+  font-size: 13px;
+}
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.section {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.sectionLabel {
+  color: #fe7a03;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.sectionHeader h2 {
+  margin: 6px 0;
+  color: #10233f;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sectionHeader p {
+  margin: 0;
+  color: #718096;
+  font-size: 13px;
+}
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.searchBox {
+  width: 250px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px;
+  border: 1px solid #dfe5ed;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #8a95a5;
+}
+
+.searchBox:focus-within {
+  border-color: #fe7a03;
+  box-shadow: 0 0 0 3px rgba(254, 122, 3, 0.08);
+}
+
+.searchBox input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #10233f;
+  font-size: 13px;
+}
+
+.searchBox input::placeholder {
+  color: #9aa5b4;
+}
+
+/* =========================================================
+   CERTIFICATE LIST
+========================================================= */
+
+.certificateList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.certificateCard {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 17px;
+  border: 1px solid #e7ebf1;
+  border-radius: 11px;
+  transition: 0.2s ease;
+}
+
+.certificateCard:hover {
+  border-color: #ffc995;
+  box-shadow: 0 5px 18px rgba(16, 35, 63, 0.05);
+}
+
+/* =========================================================
+   CERTIFICATE ICON
+========================================================= */
+
+.certificateIcon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff3e7;
+  border-radius: 11px;
+  color: #fe7a03;
+}
+
+/* =========================================================
+   CERTIFICATE INFORMATION
+========================================================= */
+
+.certificateInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.certificateId {
+  display: block;
+  margin-bottom: 3px;
+  color: #fe7a03;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.titleRow h3 {
+  margin: 0;
+  color: #10233f;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.certificateInfo > p {
+  margin: 5px 0 9px;
+  color: #718096;
+  font-size: 12px;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.details span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #7b8797;
+  font-size: 11px;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.verified,
+.active,
+.expired {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.verified {
+  background: #e9f8ef;
+  color: #16834b;
+}
+
+.active {
+  background: #eaf4ff;
+  color: #2474bd;
+}
+
+.expired {
+  background: #fff0f0;
+  color: #c63d3d;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.viewButton,
+.downloadButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.viewButton {
+  border: 1px solid #dfe5ed;
+  background: #ffffff;
+  color: #10233f;
+}
+
+.viewButton:hover {
+  border-color: #fe7a03;
+  color: #fe7a03;
+}
+
+.downloadButton {
+  border: 1px solid #fe7a03;
+  background: #fe7a03;
+  color: #ffffff;
+}
+
+.downloadButton:hover {
+  background: #e96d00;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.empty {
+  padding: 55px 20px;
+  text-align: center;
+  color: #9aa5b4;
+}
+
+.empty h3 {
+  margin: 10px 0 4px;
+  color: #10233f;
+  font-size: 16px;
+}
+
+.empty p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* =========================================================
+   INFORMATION CARDS
+========================================================= */
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.infoCard {
+  display: flex;
+  gap: 13px;
+  padding: 19px;
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 12px;
+}
+
+.infoIcon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff3e7;
+  border-radius: 9px;
+  color: #fe7a03;
+}
+
+.infoCard span {
+  color: #fe7a03;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.infoCard h3 {
+  margin: 5px 0;
+  color: #10233f;
+  font-size: 14px;
+}
+
+.infoCard p {
+  margin: 0;
+  color: #718096;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(8, 20, 38, 0.58);
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal {
+  position: relative;
+  width: min(650px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 28px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+.close {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  background: #f5f7fb;
+  color: #607087;
+  cursor: pointer;
+}
+
+.close:hover {
+  background: #edf1f6;
+  color: #10233f;
+}
+
+.modalLabel {
+  color: #fe7a03;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+/* =========================================================
+   MODAL CERTIFICATE
+========================================================= */
+
+.modalCertificate {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 18px 0;
+  padding-right: 35px;
+}
+
+.modalIcon {
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff3e7;
+  border-radius: 12px;
+  color: #fe7a03;
+}
+
+.modalCertificate > div:last-child > span {
+  color: #fe7a03;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.modalCertificate h2 {
+  margin: 4px 0;
+  color: #10233f;
+  font-size: 20px;
+}
+
+.modalCertificate p {
+  margin: 0;
+  color: #718096;
+  font-size: 12px;
+}
+
+/* =========================================================
+   MODAL STATUS
+========================================================= */
+
+.modalStatus {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 15px;
+  margin-bottom: 17px;
+  background: #e9f8ef;
+  border: 1px solid #ccebd7;
+  border-radius: 9px;
+  color: #16834b;
+}
+
+.modalStatus div {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalStatus span {
+  margin-bottom: 2px;
+  color: #6d8d79;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.modalStatus strong {
+  color: #16834b;
+  font-size: 12px;
+}
+
+/* =========================================================
+   MODAL GRID
+========================================================= */
+
+.modalGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.modalGrid div {
+  padding: 13px;
+  background: #f7f9fc;
+  border-radius: 8px;
+}
+
+.modalGrid span,
+.modalGrid strong {
+  display: block;
+}
+
+.modalGrid span {
+  margin-bottom: 5px;
+  color: #8994a4;
+  font-size: 10px;
+}
+
+.modalGrid strong {
+  color: #10233f;
+  font-size: 12px;
+}
+
+/* =========================================================
+   MODAL ACTIONS
+========================================================= */
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 23px;
+}
+
+.secondaryButton,
+.primaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.secondaryButton {
+  border: 1px solid #dfe5ed;
+  background: #ffffff;
+  color: #10233f;
+}
+
+.secondaryButton:hover {
+  border-color: #fe7a03;
+  color: #fe7a03;
+}
+
+.primaryButton {
+  border: 1px solid #fe7a03;
+  background: #fe7a03;
+  color: #ffffff;
+}
+
+.primaryButton:hover {
+  background: #e96d00;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+  .certificateCard {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 900px) {
+  .page {
+    margin-left: 0;
+    padding: 90px 20px 35px;
+  }
+
+  .summaryGrid,
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pageHeader {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 650px) {
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .searchBox {
+    width: 100%;
+  }
+
+  .certificateCard {
+    flex-direction: column;
+  }
+
+  .certificateInfo {
+    width: 100%;
+  }
+
+  .titleRow {
+    flex-direction: column;
+  }
+
+  .actions {
+    justify-content: stretch;
+  }
+
+  .viewButton,
+  .downloadButton {
+    flex: 1;
+  }
+
+  .modalGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .modalActions {
+    flex-direction: column;
+  }
+
+  .secondaryButton,
+  .primaryButton {
+    width: 100%;
+  }
+}

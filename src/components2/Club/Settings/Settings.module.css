@@ -1,0 +1,348 @@
+.page {
+  margin-left: 260px;
+  padding: 95px 30px 40px;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.pageHeader {
+  margin-bottom: 25px;
+}
+
+.pageHeader h1 {
+  margin: 0;
+  color: #10233f;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.pageHeader p {
+  margin: 7px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =========================
+   SETTINGS CARD
+========================= */
+
+.settingsCard {
+  display: flex;
+  background: white;
+  border: 1px solid #e5e9f0;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 600px;
+  box-shadow: 0 2px 8px rgba(16, 35, 63, 0.04);
+}
+
+/* =========================
+   LEFT SIDEBAR
+========================= */
+
+.sidebar {
+  width: 220px;
+  background: #f8f9fb;
+  border-right: 1px solid #e5e9f0;
+  padding: 20px 12px;
+  flex-shrink: 0;
+}
+
+.tabButton {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #5f6b7a;
+  padding: 13px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.tabButton span {
+  width: 22px;
+  font-size: 16px;
+}
+
+.tabButton:hover {
+  background: #eef1f5;
+  color: #10233f;
+}
+
+.activeTab {
+  background: #fff1e6;
+  color: #fe7a03;
+  font-weight: 600;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+  flex: 1;
+  padding: 30px;
+  min-width: 0;
+}
+
+.sectionHeader {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #edf0f4;
+  margin-bottom: 25px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  color: #10233f;
+  font-size: 20px;
+}
+
+.sectionHeader p {
+  margin: 6px 0 0;
+  color: #7b8493;
+  font-size: 13px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.formGroup label {
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dce2ea;
+  border-radius: 8px;
+  padding: 11px 13px;
+  background: white;
+  color: #10233f;
+  font-size: 13px;
+  outline: none;
+  font-family: inherit;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  border-color: #fe7a03;
+  box-shadow: 0 0 0 2px rgba(254, 122, 3, 0.08);
+}
+
+.formGroup textarea {
+  resize: vertical;
+}
+
+/* =========================
+   SAVE BUTTON
+========================= */
+
+.saveArea {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #edf0f4;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.saveButton {
+  border: none;
+  background: #fe7a03;
+  color: white;
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.saveButton:hover {
+  background: #e96d00;
+}
+
+/* =========================
+   NOTIFICATION / SECURITY
+========================= */
+
+.optionList {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e9f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.option {
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.option:last-child {
+  border-bottom: none;
+}
+
+.option h3 {
+  margin: 0;
+  color: #10233f;
+  font-size: 14px;
+}
+
+.option p {
+  margin: 5px 0 0;
+  color: #7b8493;
+  font-size: 12px;
+}
+
+/* =========================
+   TOGGLE
+========================= */
+
+.switch {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch span {
+  position: absolute;
+  inset: 0;
+  background: #cbd2dc;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.switch span::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  top: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.switch input:checked + span {
+  background: #fe7a03;
+}
+
+.switch input:checked + span::before {
+  transform: translateX(20px);
+}
+
+/* =========================
+   PASSWORD
+========================= */
+
+.passwordSection {
+  margin-top: 25px;
+  padding: 22px;
+  border: 1px solid #e5e9f0;
+  border-radius: 10px;
+}
+
+.passwordSection h3 {
+  margin: 0 0 20px;
+  color: #10233f;
+  font-size: 15px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .settingsCard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e5e9f0;
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+  }
+
+  .tabButton {
+    width: auto;
+    white-space: nowrap;
+    margin-bottom: 0;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .fullWidth {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .page {
+    margin-left: 0;
+    padding: 85px 15px 30px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .pageHeader h1 {
+    font-size: 24px;
+  }
+
+  .option {
+    align-items: flex-start;
+  }
+
+  .saveArea {
+    justify-content: flex-start;
+  }
+}

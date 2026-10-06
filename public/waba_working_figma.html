@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WABA — Complete Working Figma Ecosystem (Landing, Login, Signup & 7 Dashboards)</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+      user-select: none;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #111114;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #27272a;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3f3f46;
+    }
+    .figma-canvas {
+      background-color: #1a1a1d;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .waba-red { color: #e50914; }
+    .bg-waba-red { background-color: #e50914; }
+    .border-waba-red { border-color: #e50914; }
+    .glow-red { box-shadow: 0 0 16px rgba(229, 9, 20, 0.4); }
+    .gold-gradient { background: linear-gradient(135deg, #fe7a03, #ffad5c); }
+  </style>
+</head>
+<body class="bg-[#0e0e11] text-gray-200 h-screen flex flex-col overflow-hidden">
+
+  <!-- ================= FIGMA TOP APPLICATION BAR ================= -->
+  <header class="h-12 bg-[#1e1e20] border-b border-[#2b2b2f] flex items-center justify-between px-3 z-30 shrink-0 text-xs">
+    <!-- Left: Figma File Title -->
+    <div class="flex items-center space-x-3">
+      <div class="flex items-center space-x-2 bg-[#2a2a2e] px-2.5 py-1 rounded text-gray-300">
+        <svg class="w-4 h-4 text-[#0acf83]" viewBox="0 0 38 57" fill="currentColor">
+          <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
+          <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
+          <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
+          <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
+          <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
+        </svg>
+        <span class="font-bold text-white tracking-wide">WABA Master UI Kit</span>
+        <span class="text-gray-500">/</span>
+        <span id="activeFrameTitle" class="text-gray-300 font-medium">Landing Page</span>
+      </div>
+      <span id="frameDimensionsBadge" class="bg-red-950/80 text-red-400 border border-red-800/60 px-2 py-0.5 rounded font-mono text-[11px]">1440 × 900</span>
+    </div>
+
+    <!-- Center: Master View / Frame Switcher -->
+    <div class="flex items-center space-x-1 bg-[#141416] p-1 rounded-lg border border-[#2c2c30] overflow-x-auto max-w-3xl">
+      <!-- Public Pages -->
+      <button onclick="switchView('landing')" id="tab-landing" class="view-tab px-2.5 py-1 rounded font-semibold transition bg-[#e50914] text-white">
+        🌐 Landing
+      </button>
+      <button onclick="switchView('login')" id="tab-login" class="view-tab px-2.5 py-1 rounded font-medium transition text-gray-400 hover:text-white">
+        🔑 Login
+      </button>
+      <button onclick="switchView('signup')" id="tab-signup" class="view-tab px-2.5 py-1 rounded font-medium transition text-gray-400 hover:text-white">
+        📝 Signup
+      </button>
+      <span class="text-gray-600 px-1 font-mono">|</span>
+      <!-- 7 Dashboards -->
+      <button onclick="switchView('national')" id="tab-national" class="view-tab px-2 py-1 rounded font-medium transition text-gray-400 hover:text-white">
+        1. National
+      </button>
+      <button onclick="switchView('state')" id="tab-state" class="view-tab px-2 py-1 rounded font-medium transition text-gray-400 hover:text-white">
+        2. State
+      </button>
+      <button onclick="switchView('district')" id="tab-district" class="view-tab px-2 py-1 rounded font-medium transition text-gray-400 hover:text-white">
+        3. District
+      </button>
+      <button onclick="switchView('club')" id="tab-club" class="view-tab px-2 py-1 rounded font-medium transition text-gray-400 hover:text-white">
+        4. Club
+      </button>
+      <button onclick="switchView('athlete')" id="tab-athlete" class="view-tab px-2 py-1 rounded font-medium transition text-gray-400 hover:text-white">
+        5. Athlete
+      </button>
+      <button onclick="switchView('technical')" id="tab-technical" class="view-tab px-2 py-1 rounded font-medium transition text-gray-400 hover:text-white">
+        6. Technical
+      </button>
+      <button onclick="switchView('committee')" id="tab-committee" class="view-tab px-2 py-1 rounded font-medium transition text-gray-400 hover:text-white">
+        7. Committee
+      </button>
+    </div>
+
+    <!-- Right: Figma Presentation & Download Controls -->
+    <div class="flex items-center space-x-2">
+      <button onclick="toggleGrid()" id="gridBtn" class="px-2.5 py-1 bg-[#28282b] hover:bg-[#333] text-gray-300 rounded flex items-center space-x-1">
+        <i class="fa-solid fa-border-all text-[10px]"></i>
+        <span>Grid</span>
+      </button>
+      <a href="waba_figma_all_dashboards.svg" download="waba_figma_all_dashboards.svg" class="px-2.5 py-1 bg-[#059669] hover:bg-[#047857] text-white rounded font-medium flex items-center space-x-1 shadow">
+        <i class="fa-solid fa-download text-[10px]"></i>
+        <span>Figma SVG</span>
+      </a>
+      <button onclick="toggleFullscreen()" class="px-3 py-1 bg-[#0c8ce9] hover:bg-[#0077cc] text-white rounded font-medium flex items-center space-x-1.5 shadow">
+        <i class="fa-solid fa-play text-[10px]"></i>
+        <span>Present</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= WORKSPACE BODY ================= -->
+  <div class="flex-1 flex overflow-hidden">
+
+    <!-- LEFT: FIGMA LAYERS & COMPONENT TREE -->
+    <aside class="w-64 bg-[#18181b] border-r border-[#27272a] flex flex-col shrink-0 text-xs">
+      <div class="h-9 border-b border-[#27272a] flex items-center px-3 space-x-4 font-medium text-gray-400">
+        <span class="text-white border-b-2 border-red-500 pb-1.5 cursor-pointer">Pages &amp; Frames</span>
+        <span class="cursor-pointer hover:text-gray-300">Design Tokens</span>
+      </div>
+
+      <!-- Frame Hierarchy Navigator -->
+      <div class="flex-1 overflow-y-auto p-2 space-y-1">
+        <div class="text-[10px] font-bold text-gray-500 uppercase px-2 py-1">Public Pages</div>
+        <div onclick="switchView('landing')" class="flex items-center justify-between p-1.5 rounded hover:bg-[#27272a] cursor-pointer text-gray-300">
+          <span class="flex items-center space-x-2"><i class="fa-regular fa-window-maximize text-red-500 text-[10px]"></i><span>Landing Page (Home)</span></span>
+          <span class="text-[9px] bg-red-950/60 text-red-400 px-1 rounded">1440w</span>
+        </div>
+        <div onclick="switchView('login')" class="flex items-center justify-between p-1.5 rounded hover:bg-[#27272a] cursor-pointer text-gray-300">
+          <span class="flex items-center space-x-2"><i class="fa-solid fa-arrow-right-to-bracket text-amber-500 text-[10px]"></i><span>Login Page</span></span>
+          <span class="text-[9px] bg-gray-800 text-gray-400 px-1 rounded">Auth</span>
+        </div>
+        <div onclick="switchView('signup')" class="flex items-center justify-between p-1.5 rounded hover:bg-[#27272a] cursor-pointer text-gray-300">
+          <span class="flex items-center space-x-2"><i class="fa-solid fa-user-plus text-blue-500 text-[10px]"></i><span>Signup Page (Dynamic)</span></span>
+          <span class="text-[9px] bg-gray-800 text-gray-400 px-1 rounded">Multi-role</span>
+        </div>
+
+        <div class="text-[10px] font-bold text-gray-500 uppercase px-2 py-2 border-t border-[#27272a] mt-2">WABA Dashboards (7 Tiers)</div>
+        <div onclick="switchView('national')" class="flex items-center justify-between p-1.5 rounded hover:bg-[#27272a] cursor-pointer text-gray-300">
+          <span class="flex items-center space-x-2"><i class="fa-solid fa-crown text-yellow-500 text-[10px]"></i><span>1. National Admin</span></span>
+        </div>
+        <div onclick="switchView('state')" class="flex items-center justify-between p-1.5 rounded hover:bg-[#27272a] cursor-pointer text-gray-300">
+          <span class="flex items-center space-x-2"><i class="fa-solid fa-landmark text-blue-400 text-[10px]"></i><span>2. State Admin</span></span>
+        </div>
+        <div onclick="switchView('district')" class="flex items-center justify-between p-1.5 rounded hover:bg-[#27272a] cursor-pointer text-gray-300">
+          <span class="flex items-center space-x-2"><i class="fa-solid fa-building text-green-400 text-[10px]"></i><span>3. District Admin</span></span>
+        </div>
+        <div onclick="switchView('club')" class="flex items-center justify-between p-1.5 rounded hover:bg-[#27272a] cursor-pointer text-gray-300">
+          <span class="flex items-center space-x-2"><i class="fa-solid fa-hand-fist text-red-400 text-[10px]"></i><span>4. Club / Academy</span></span>
+        </div>
+        <div onclick="switchView('athlete')" class="flex items-center justify-between p-1.5 rounded hover:bg-[#27272a] cursor-pointer text-gray-300">
+          <span class="flex items-center space-x-2"><i class="fa-solid fa-medal text-amber-400 text-[10px]"></i><span>5. Athlete Portal</span></span>
+        </div>
+        <div onclick="switchView('technical')" class="flex items-center justify-between p-1.5 rounded hover:bg-[#27272a] cursor-pointer text-gray-300">
+          <span class="flex items-center space-x-2"><i class="fa-solid fa-scale-balanced text-purple-400 text-[10px]"></i><span>6. Technical Console</span></span>
+        </div>
+        <div onclick="switchView('committee')" class="flex items-center justify-between p-1.5 rounded hover:bg-[#27272a] cursor-pointer text-gray-300">
+          <span class="flex items-center space-x-2"><i class="fa-solid fa-shield-halved text-rose-500 text-[10px]"></i><span>7. Committee Governance</span></span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CENTER: FIGMA CANVAS (INTERACTIVE FRAME VIEW) -->
+    <main class="flex-1 figma-canvas overflow-auto p-8 flex justify-center items-start">
+      <div id="artboardFrame" class="w-[1360px] min-h-[860px] bg-[#0c0c0e] rounded-xl border border-[#2d2d32] shadow-2xl overflow-hidden transition-all duration-300 flex flex-col">
+        <!-- Rendered dynamically by JavaScript based on active view -->
+        <div id="canvasContent" class="w-full h-full flex-1 flex flex-col">
+          <!-- Dynamic Content -->
+        </div>
+      </div>
+    </main>
+
+    <!-- RIGHT: FIGMA INSPECT PANEL & DEMO ACTIONS -->
+    <aside class="w-72 bg-[#18181b] border-l border-[#27272a] p-3 flex flex-col shrink-0 text-xs overflow-y-auto">
+      <div class="flex items-center justify-between pb-2 border-b border-[#27272a] mb-3">
+        <span class="font-semibold text-white">Figma Properties</span>
+        <span class="text-[10px] bg-red-950 text-red-400 px-2 py-0.5 rounded font-mono">Auto Layout</span>
+      </div>
+
+      <!-- Active Frame Specs -->
+      <div class="bg-[#121215] p-3 rounded-lg border border-[#24242a] mb-4">
+        <h4 id="inspectTitle" class="font-bold text-white text-sm mb-1">Landing Page (Home)</h4>
+        <p id="inspectDesc" class="text-gray-400 text-[11px] leading-relaxed">
+          Public-facing showcase with Hero, About, Programs, Upcoming Events, Get Involved, Contact form, and Footer.
+        </p>
+      </div>
+
+      <!-- Quick Interactive Switcher for Test Bouts & Portals -->
+      <div class="mb-4">
+        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider block mb-2">Interactive Quick Actions</span>
+        <div class="space-y-2">
+          <button onclick="switchView('landing')" class="w-full text-left p-2 bg-[#202024] hover:bg-[#28282e] rounded border border-[#2b2b32] text-white flex items-center justify-between">
+            <span>🌐 Open Full Landing Page</span>
+            <i class="fa-solid fa-arrow-right text-[10px] text-gray-400"></i>
+          </button>
+          <button onclick="switchView('login')" class="w-full text-left p-2 bg-[#202024] hover:bg-[#28282e] rounded border border-[#2b2b32] text-white flex items-center justify-between">
+            <span>🔑 Go to Login Screen</span>
+            <i class="fa-solid fa-arrow-right text-[10px] text-gray-400"></i>
+          </button>
+          <button onclick="switchView('signup')" class="w-full text-left p-2 bg-[#202024] hover:bg-[#28282e] rounded border border-[#2b2b32] text-white flex items-center justify-between">
+            <span>📝 Open Signup Registration</span>
+            <i class="fa-solid fa-arrow-right text-[10px] text-gray-400"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Design Tokens Box -->
+      <div>
+        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider block mb-2">Design Tokens</span>
+        <div class="grid grid-cols-2 gap-1.5 text-[10px]">
+          <div class="p-1.5 bg-[#202024] rounded border border-[#2a2a2e] flex items-center space-x-1.5">
+            <span class="w-3.5 h-3.5 rounded bg-[#e50914]"></span>
+            <span class="font-mono text-gray-300">#E50914 (WABA Red)</span>
+          </div>
+          <div class="p-1.5 bg-[#202024] rounded border border-[#2a2a2e] flex items-center space-x-1.5">
+            <span class="w-3.5 h-3.5 rounded bg-[#fe7a03]"></span>
+            <span class="font-mono text-gray-300">#FE7A03 (Orange)</span>
+          </div>
+          <div class="p-1.5 bg-[#202024] rounded border border-[#2a2a2e] flex items-center space-x-1.5">
+            <span class="w-3.5 h-3.5 rounded bg-[#0a0a0d] border border-gray-700"></span>
+            <span class="font-mono text-gray-300">#0A0A0D (Dark BG)</span>
+          </div>
+          <div class="p-1.5 bg-[#202024] rounded border border-[#2a2a2e] flex items-center space-x-1.5">
+            <span class="w-3.5 h-3.5 rounded bg-[#141418] border border-gray-700"></span>
+            <span class="font-mono text-gray-300">#141418 (Card)</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- JAVASCRIPT: INTERACTIVE PROTOTYPE ENGINE -->
+  <script>
+    let currentView = 'landing';
+    let showPasswordState = false;
+    let selectedAccountType = 'athlete';
+    let selectedOfficialRole = '';
+
+    const VIEWS = {
+      // 1. LANDING PAGE
+      landing: {
+        title: "Landing Page (WABA Official)",
+        dimensions: "1440 × Auto",
+        desc: "Public-facing website containing Header, Hero 'Fight Beyond Limits', About Us, Programs, Events, Get Involved, Contact Form, and Footer.",
+        render: () => `
+          <div class="w-full bg-[#0a0a0c] text-white overflow-y-auto max-h-[860px]">
+            <!-- Header -->
+            <nav class="h-16 px-8 border-b border-[#222228] flex items-center justify-between bg-[#111114] sticky top-0 z-20">
+              <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-[#e50914] flex items-center justify-center font-black text-white text-base">W</div>
+                <span class="font-black text-lg tracking-wider">WABA</span>
+              </div>
+              <div class="flex items-center space-x-6 text-xs font-semibold text-gray-300">
+                <a href="#Home" class="hover:text-red-500">Home</a>
+                <a href="#About" class="hover:text-red-500">About</a>
+                <a href="#Programs" class="hover:text-red-500">Programs</a>
+                <a href="#Events" class="hover:text-red-500">Events</a>
+                <a href="#GetInvolved" class="hover:text-red-500">Get Involved</a>
+                <a href="#Contact" class="hover:text-red-500">Contact</a>
+              </div>
+              <div class="flex items-center space-x-3">
+                <button onclick="switchView('login')" class="text-xs text-gray-300 hover:text-white px-3 py-1.5 font-semibold">Login</button>
+                <button onclick="switchView('signup')" class="bg-waba-red hover:bg-red-700 text-white text-xs px-4 py-2 rounded-lg font-bold shadow glow-red">Join WABA</button>
+              </div>
+            </nav>
+
+            <!-- Hero Section -->
+            <section class="p-16 text-center bg-gradient-to-b from-[#14141c] to-[#0a0a0c] border-b border-[#222228] relative overflow-hidden">
+              <div class="inline-flex items-center space-x-2 text-xs font-bold text-red-500 tracking-widest uppercase mb-4">
+                <span>EMPOWER</span><b>•</b><span>ADAPT</span><b>•</b><span>FIGHT</span><b>•</b><span>INSPIRE</span>
+              </div>
+              <h1 class="text-5xl font-black tracking-tight mb-4">
+                <span>FIGHT </span><span class="text-red-600">BEYOND </span><span>LIMITS</span>
+              </h1>
+              <p class="text-gray-400 text-sm max-w-xl mx-auto mb-8 leading-relaxed">
+                Empowering athletes through adaptive boxing. Building strength. Building champions. Building future.
+              </p>
+              <div class="flex justify-center space-x-4">
+                <button onclick="switchView('signup')" class="bg-waba-red hover:bg-red-700 text-white font-bold text-xs px-6 py-3 rounded-lg shadow glow-red flex items-center space-x-2">
+                  <span>JOIN WABA</span><span>→</span>
+                </button>
+                <button onclick="switchView('national')" class="bg-[#202028] hover:bg-[#2a2a34] text-white font-bold text-xs px-6 py-3 rounded-lg border border-[#30303c] flex items-center space-x-2">
+                  <span>EXPLORE DASHBOARDS</span><span>→</span>
+                </button>
+              </div>
+            </section>
+
+            <!-- About Section Preview -->
+            <section class="p-12 border-b border-[#222228]">
+              <div class="grid grid-cols-4 gap-4 mb-8">
+                <div class="bg-[#141418] p-5 rounded-xl border border-[#222228]">
+                  <h3 class="font-bold text-sm text-white mb-1">ADAPTIVE BOXING</h3>
+                  <p class="text-xs text-gray-400">Professional training programs for athletes of all abilities.</p>
+                </div>
+                <div class="bg-[#141418] p-5 rounded-xl border border-[#222228]">
+                  <h3 class="font-bold text-sm text-white mb-1">YOUTH DEVELOPMENT</h3>
+                  <p class="text-xs text-gray-400">Building confidence, discipline and a strong future.</p>
+                </div>
+                <div class="bg-[#141418] p-5 rounded-xl border border-[#222228]">
+                  <h3 class="font-bold text-sm text-white mb-1">COMMUNITY PROGRAMS</h3>
+                  <p class="text-xs text-gray-400">Creating inclusive opportunities and stronger communities.</p>
+                </div>
+                <div class="bg-[#141418] p-5 rounded-xl border border-[#222228]">
+                  <h3 class="font-bold text-sm text-white mb-1">AWARENESS INITIATIVES</h3>
+                  <p class="text-xs text-gray-400">Spreading awareness and breaking barriers every day.</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Footer Preview -->
+            <footer class="p-8 bg-[#09090b] border-t border-[#1e1e24] text-xs text-gray-500 flex justify-between items-center">
+              <span>© 2026 Wheelchair Adaptive Boxing Association (WABA)</span>
+              <span>EMPOWER • ADAPT • FIGHT • INSPIRE</span>
+            </footer>
+          </div>
+        `
+      },
+
+      // 2. LOGIN PAGE
+      login: {
+        title: "Login Page (Authentication)",
+        dimensions: "1440 × 900",
+        desc: "Interactive login portal with split layout, show/hide password toggle, and direct demo login buttons for all 7 roles.",
+        render: () => `
+          <div class="w-full flex-1 flex bg-[#0c0c0e]">
+            <!-- Left Banner (Branding) -->
+            <div class="w-1/2 bg-gradient-to-br from-[#12141c] via-[#1a0f12] to-[#40080d] p-12 flex flex-col justify-between border-r border-[#222228]">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-waba-red flex items-center justify-center font-black text-xl text-white shadow glow-red">W</div>
+                <span class="text-xl font-black text-white">WABA</span>
+              </div>
+
+              <div>
+                <h2 class="text-3xl font-black text-white tracking-tight mb-3">Welcome Back</h2>
+                <p class="text-gray-300 text-sm leading-relaxed max-w-md">
+                  Login to your WABA account and continue your journey with the Wheelchair Adaptive Boxing Association.
+                </p>
+                <div class="flex space-x-3 text-xs font-bold text-red-400 mt-6 tracking-wider">
+                  <span>EMPOWER</span><span>•</span><span>ADAPT</span><span>•</span><span>FIGHT</span><span>•</span><span>INSPIRE</span>
+                </div>
+              </div>
+
+              <div class="text-xs text-gray-500">
+                Official WABA Portal • Secured with SSL
+              </div>
+            </div>
+
+            <!-- Right Form Section -->
+            <div class="w-1/2 p-12 flex flex-col justify-center max-w-lg mx-auto">
+              <div class="mb-6">
+                <h3 class="text-2xl font-black text-white mb-1">Sign In</h3>
+                <p class="text-xs text-gray-400">Sign in to access your designated WABA dashboard</p>
+              </div>
+
+              <!-- Quick Login Role Presets for Testing -->
+              <div class="mb-5 p-3 rounded-lg bg-[#141418] border border-[#24242e]">
+                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider block mb-2">⚡ Instant Demo Login (Click Any Role):</span>
+                <div class="grid grid-cols-2 gap-1.5 text-xs">
+                  <button onclick="switchView('national')" class="p-1.5 bg-[#1c1c22] hover:bg-red-600 text-white rounded text-left font-medium transition">👑 National Admin</button>
+                  <button onclick="switchView('state')" class="p-1.5 bg-[#1c1c22] hover:bg-red-600 text-white rounded text-left font-medium transition">🏛️ State Admin</button>
+                  <button onclick="switchView('district')" class="p-1.5 bg-[#1c1c22] hover:bg-red-600 text-white rounded text-left font-medium transition">🏢 District Admin</button>
+                  <button onclick="switchView('club')" class="p-1.5 bg-[#1c1c22] hover:bg-red-600 text-white rounded text-left font-medium transition">🥊 Club / Academy</button>
+                  <button onclick="switchView('athlete')" class="p-1.5 bg-[#1c1c22] hover:bg-red-600 text-white rounded text-left font-medium transition">🥇 Athlete Portal</button>
+                  <button onclick="switchView('technical')" class="p-1.5 bg-[#1c1c22] hover:bg-red-600 text-white rounded text-left font-medium transition">⏱️ Technical Official</button>
+                  <button onclick="switchView('committee')" class="col-span-2 p-1.5 bg-red-950 text-red-300 border border-red-800 hover:bg-red-600 hover:text-white rounded text-center font-bold transition">🏥 7. Committee Governance Dashboard</button>
+                </div>
+              </div>
+
+              <!-- Form -->
+              <div class="space-y-4 text-xs">
+                <div>
+                  <label class="block text-gray-300 font-semibold mb-1">Email Address</label>
+                  <input type="email" value="alex.reed@waba.org" class="w-full bg-[#141418] border border-[#24242e] rounded-lg px-3 py-2 text-white focus:border-red-500 outline-none">
+                </div>
+
+                <div>
+                  <label class="block text-gray-300 font-semibold mb-1">Password</label>
+                  <div class="relative">
+                    <input id="loginPasswordField" type="password" value="secretPassword123" class="w-full bg-[#141418] border border-[#24242e] rounded-lg px-3 py-2 text-white focus:border-red-500 outline-none">
+                    <button onclick="togglePasswordVisibility()" class="absolute right-3 top-2 text-gray-400 hover:text-white">Show</button>
+                  </div>
+                </div>
+
+                <div class="flex justify-between items-center text-xs">
+                  <label class="flex items-center space-x-2 cursor-pointer text-gray-300">
+                    <input type="checkbox" checked class="rounded bg-[#141418] border-[#24242e] text-red-600">
+                    <span>Remember me</span>
+                  </label>
+                  <a href="#" class="text-red-400 hover:underline">Forgot Password?</a>
+                </div>
+
+                <button onclick="switchView('national')" class="w-full bg-waba-red hover:bg-red-700 text-white font-bold py-2.5 rounded-lg shadow glow-red text-center">
+                  Login to WABA
+                </button>
+              </div>
+
+              <p class="text-xs text-gray-400 mt-6 text-center">
+                Don't have an account? <span onclick="switchView('signup')" class="text-red-400 font-bold hover:underline cursor-pointer">Join WABA</span>
+              </p>
+            </div>
+          </div>
+        `
+      },
+
+      // 3. SIGNUP PAGE
+      signup: {
+        title: "Signup Registration (Dynamic Account Roles)",
+        dimensions: "1440 × 900",
+        desc: "Interactive signup page with address fields and dynamic sections for Athlete vs Official (Referee, Judge, Coach, Classifier).",
+        render: () => `
+          <div class="w-full flex-1 flex bg-[#0c0c0e] overflow-y-auto max-h-[860px]">
+            <!-- Left Branding -->
+            <div class="w-2/5 bg-gradient-to-br from-[#12141c] via-[#1a0f12] to-[#40080d] p-10 flex flex-col justify-between border-r border-[#222228]">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-waba-red flex items-center justify-center font-black text-xl text-white shadow glow-red">W</div>
+                <span class="text-xl font-black text-white">WABA</span>
+              </div>
+              <div>
+                <h2 class="text-3xl font-black text-white tracking-tight mb-2">Join WABA</h2>
+                <p class="text-gray-300 text-xs leading-relaxed">
+                  Become a part of the Wheelchair Adaptive Boxing Association and contribute to the growth of adaptive boxing across India.
+                </p>
+              </div>
+              <div class="text-[11px] text-gray-500">EMPOWER • ADAPT • FIGHT • INSPIRE</div>
+            </div>
+
+            <!-- Right Registration Form -->
+            <div class="w-3/5 p-10 max-w-xl mx-auto space-y-4 text-xs">
+              <div>
+                <h3 class="text-xl font-black text-white">Create Account</h3>
+                <p class="text-gray-400 text-xs">Register with WABA Adaptive Boxing</p>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-gray-300 mb-1">Full Name</label>
+                  <input type="text" placeholder="Enter your name" class="w-full bg-[#141418] border border-[#24242e] rounded-lg px-3 py-1.5 text-white outline-none">
+                </div>
+                <div>
+                  <label class="block text-gray-300 mb-1">Email Address</label>
+                  <input type="email" placeholder="Enter your email" class="w-full bg-[#141418] border border-[#24242e] rounded-lg px-3 py-1.5 text-white outline-none">
+                </div>
+              </div>
+
+              <!-- Address Cascading Selectors -->
+              <div class="p-3 bg-[#141418] rounded-lg border border-[#24242e] space-y-2">
+                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider block">Address Details</span>
+                <div class="grid grid-cols-2 gap-2">
+                  <select class="bg-[#1c1c22] border border-[#282832] rounded p-1.5 text-white">
+                    <option>India</option>
+                    <option>Australia</option>
+                    <option>United Kingdom</option>
+                  </select>
+                  <select class="bg-[#1c1c22] border border-[#282832] rounded p-1.5 text-white">
+                    <option>Telangana</option>
+                    <option>Maharashtra</option>
+                    <option>Karnataka</option>
+                    <option>Delhi</option>
+                  </select>
+                  <select class="bg-[#1c1c22] border border-[#282832] rounded p-1.5 text-white">
+                    <option>Hyderabad</option>
+                    <option>Warangal</option>
+                    <option>Karimnagar</option>
+                  </select>
+                  <input type="text" placeholder="Pincode (e.g. 500001)" class="bg-[#1c1c22] border border-[#282832] rounded p-1.5 text-white outline-none">
+                </div>
+              </div>
+
+              <!-- Account Type Switcher -->
+              <div>
+                <label class="block text-gray-300 font-bold mb-1">Select Account Type</label>
+                <div class="grid grid-cols-2 gap-3">
+                  <button onclick="setAccountType('athlete')" id="btn-acc-athlete" class="p-2 rounded-lg border font-bold text-center transition ${selectedAccountType === 'athlete' ? 'bg-red-950 border-red-600 text-white' : 'bg-[#141418] border-[#24242e] text-gray-400'}">
+                    🥇 Athlete
+                  </button>
+                  <button onclick="setAccountType('official')" id="btn-acc-official" class="p-2 rounded-lg border font-bold text-center transition ${selectedAccountType === 'official' ? 'bg-red-950 border-red-600 text-white' : 'bg-[#141418] border-[#24242e] text-gray-400'}">
+                    ⚖️ Official
+                  </button>
+                </div>
+              </div>
+
+              <!-- Dynamic Section: Athlete vs Official -->
+              ${selectedAccountType === 'athlete' ? `
+                <div class="p-3 bg-[#181820] rounded-lg border border-[#262634] space-y-2">
+                  <span class="font-bold text-red-400 block">Athlete Details</span>
+                  <div class="grid grid-cols-2 gap-2">
+                    <div>
+                      <label class="text-[10px] text-gray-400 block">Years of Experience</label>
+                      <select class="w-full bg-[#141418] border border-[#24242e] rounded p-1.5 text-white">
+                        <option>0 Experience</option>
+                        <option>1–2 Years</option>
+                        <option>2–5 Years</option>
+                        <option>5+ Years</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label class="text-[10px] text-gray-400 block">Upload ID / Disability Card</label>
+                      <input type="file" class="text-[10px] text-gray-400 mt-1">
+                    </div>
+                  </div>
+                </div>
+              ` : `
+                <div class="p-3 bg-[#181820] rounded-lg border border-[#262634] space-y-2">
+                  <span class="font-bold text-red-400 block">Official Role &amp; Credentials</span>
+                  <select onchange="setOfficialRole(this.value)" class="w-full bg-[#141418] border border-[#24242e] rounded p-1.5 text-white mb-2">
+                    <option value="">Select Official Role</option>
+                    <option value="judge" ${selectedOfficialRole === 'judge' ? 'selected' : ''}>Judge</option>
+                    <option value="referee" ${selectedOfficialRole === 'referee' ? 'selected' : ''}>Referee</option>
+                    <option value="coach" ${selectedOfficialRole === 'coach' ? 'selected' : ''}>Coach</option>
+                    <option value="classifier" ${selectedOfficialRole === 'classifier' ? 'selected' : ''}>Classifier</option>
+                    <option value="technical-official" ${selectedOfficialRole === 'technical-official' ? 'selected' : ''}>Technical Official</option>
+                  </select>
+                  <div class="grid grid-cols-2 gap-2 text-[10px]">
+                    <div>
+                      <span class="text-gray-400 block">Licence File (.PDF)</span>
+                      <input type="file" class="mt-1">
+                    </div>
+                    <div>
+                      <span class="text-gray-400 block">Certification (.PDF)</span>
+                      <input type="file" class="mt-1">
+                    </div>
+                  </div>
+                </div>
+              `}
+
+              <button onclick="switchView('athlete')" class="w-full bg-waba-red hover:bg-red-700 text-white font-bold py-2.5 rounded-lg shadow glow-red text-center">
+                Complete Sign Up
+              </button>
+
+              <p class="text-xs text-gray-400 text-center">
+                Already have an account? <span onclick="switchView('login')" class="text-red-400 font-bold hover:underline cursor-pointer">Login</span>
+              </p>
+            </div>
+          </div>
+        `
+      }
+    };
+
+    function switchView(viewKey) {
+      currentView = viewKey;
+
+      // Check if it's one of the 7 dashboards
+      if (['national', 'state', 'district', 'club', 'athlete', 'technical', 'committee'].includes(viewKey)) {
+        renderDashboardView(viewKey);
+      } else {
+        const viewConfig = VIEWS[viewKey];
+        if (!viewConfig) return;
+
+        // Update Top Bar
+        document.getElementById('activeFrameTitle').textContent = viewConfig.title;
+        document.getElementById('frameDimensionsBadge').textContent = viewConfig.dimensions;
+        document.getElementById('inspectTitle').textContent = viewConfig.title;
+        document.getElementById('inspectDesc').textContent = viewConfig.desc;
+
+        // Update Tabs
+        document.querySelectorAll('.view-tab').forEach(t => {
+          t.className = "view-tab px-2.5 py-1 rounded font-medium transition text-gray-400 hover:text-white";
+        });
+        const activeTab = document.getElementById('tab-' + viewKey);
+        if (activeTab) {
+          activeTab.className = "view-tab px-2.5 py-1 rounded font-semibold transition bg-[#e50914] text-white";
+        }
+
+        // Render Frame
+        document.getElementById('canvasContent').innerHTML = viewConfig.render();
+      }
+    }
+
+    function renderDashboardView(role) {
+      // Re-use dynamic dashboard engine from prototype
+      document.querySelectorAll('.view-tab').forEach(t => {
+        t.className = "view-tab px-2 py-1 rounded font-medium transition text-gray-400 hover:text-white";
+      });
+      const activeTab = document.getElementById('tab-' + role);
+      if (activeTab) {
+        activeTab.className = "view-tab px-2 py-1 rounded font-semibold transition bg-[#e50914] text-white";
+      }
+
+      // Title & Inspect
+      const titles = {
+        national: "1. National Administration",
+        state: "2. State Administration",
+        district: "3. District Administration",
+        club: "4. Club / Academy",
+        athlete: "5. Athlete Portal",
+        technical: "6. Technical Console",
+        committee: "7. Committee Governance"
+      };
+      document.getElementById('activeFrameTitle').textContent = titles[role];
+      document.getElementById('frameDimensionsBadge').textContent = "1440 × 900";
+      document.getElementById('inspectTitle').textContent = titles[role];
+
+      // Assemble Dashboard Frame with Left Sidebar + Header + Content
+      document.getElementById('canvasContent').innerHTML = `
+        <div class="flex-1 flex overflow-hidden">
+          <!-- Sidebar -->
+          <aside class="w-64 bg-[#111114] border-r border-[#222226] flex flex-col justify-between shrink-0 select-none text-xs">
+            <div>
+              <div class="p-4 border-b border-[#1e1e24] flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-lg bg-[#e50914] flex items-center justify-center font-extrabold text-white text-lg shadow glow-red">W</div>
+                <div>
+                  <h1 class="text-sm font-black text-white">WABA</h1>
+                  <p class="text-[11px] font-medium text-red-400">${titles[role]}</p>
+                </div>
+              </div>
+              <div class="p-3 space-y-1 overflow-y-auto max-h-[620px]">
+                <div class="p-2 rounded bg-red-600 text-white font-bold flex items-center space-x-2">
+                  <i class="fa-solid fa-house text-xs"></i><span>Dashboard</span>
+                </div>
+                <div class="p-2 text-gray-400 hover:text-white flex items-center justify-between">
+                  <span>Users &amp; Affiliations</span><i class="fa-solid fa-chevron-down text-[9px]"></i>
+                </div>
+                <div class="p-2 text-gray-400 hover:text-white flex items-center justify-between">
+                  <span>Competitions &amp; Bouts</span><i class="fa-solid fa-chevron-down text-[9px]"></i>
+                </div>
+                <div class="p-2 text-gray-400 hover:text-white flex items-center justify-between">
+                  <span>Officials &amp; Classification</span><i class="fa-solid fa-chevron-down text-[9px]"></i>
+                </div>
+                <div class="p-2 text-gray-400 hover:text-white flex items-center justify-between">
+                  <span>Finance &amp; Sanctions</span><i class="fa-solid fa-chevron-down text-[9px]"></i>
+                </div>
+                <div class="p-2 text-gray-400 hover:text-white"><span>🛡️ Safeguarding &amp; Ethics</span></div>
+                <div class="p-2 text-gray-400 hover:text-white"><span>📊 Reports &amp; Analytics</span></div>
+              </div>
+            </div>
+            <div class="p-3 border-t border-[#1e1e24] bg-[#0d0d10] space-y-1">
+              <button onclick="switchView('login')" class="w-full text-left flex items-center space-x-2 p-2 text-red-400 hover:bg-red-950/40 rounded">
+                <i class="fa-solid fa-arrow-right-from-bracket text-xs"></i><span>Logout to Login</span>
+              </button>
+            </div>
+          </aside>
+
+          <!-- Main Content -->
+          <div class="flex-1 flex flex-col bg-[#0c0c0e]">
+            <header class="h-14 border-b border-[#222226] px-6 flex items-center justify-between bg-[#111114]">
+              <div class="flex items-center space-x-3">
+                <span class="text-xs text-gray-400">WABA Portal /</span>
+                <span class="text-sm font-bold text-white tracking-wide">${titles[role]}</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <button onclick="switchView('landing')" class="text-xs text-gray-400 hover:text-white px-2 py-1">View Landing</button>
+                <div class="w-7 h-7 rounded-full bg-red-600 flex items-center justify-center text-white font-bold text-xs">W</div>
+              </div>
+            </header>
+
+            <div class="p-6 flex-1 overflow-y-auto max-h-[760px] space-y-6 text-xs">
+              <div class="flex justify-between items-center">
+                <div>
+                  <h2 class="text-xl font-black text-white">${titles[role]} Active Console</h2>
+                  <p class="text-gray-400 text-xs mt-0.5">Live working prototype with all WABA modules enabled.</p>
+                </div>
+                <span class="bg-red-950 text-red-400 border border-red-800 text-xs px-3 py-1 rounded-full font-bold">● Active Session</span>
+              </div>
+
+              <!-- KPI Row -->
+              <div class="grid grid-cols-4 gap-4">
+                <div class="bg-[#141418] border border-[#222228] p-4 rounded-xl">
+                  <span class="text-gray-400 text-xs block mb-1">Registered Athletes</span>
+                  <div class="text-2xl font-black text-white">2,850</div>
+                  <span class="text-green-400 text-[10px] font-bold">+14% Growth</span>
+                </div>
+                <div class="bg-[#141418] border border-[#222228] p-4 rounded-xl">
+                  <span class="text-gray-400 text-xs block mb-1">Active Bouts</span>
+                  <div class="text-2xl font-black text-white">16 Scheduled</div>
+                  <span class="text-amber-400 text-[10px] font-bold">3 In Progress</span>
+                </div>
+                <div class="bg-[#141418] border border-[#222228] p-4 rounded-xl">
+                  <span class="text-gray-400 text-xs block mb-1">Clearances Pending</span>
+                  <div class="text-2xl font-black text-white">18</div>
+                  <span class="text-red-400 text-[10px] font-bold">4 Urgent</span>
+                </div>
+                <div class="bg-[#141418] border border-[#222228] p-4 rounded-xl">
+                  <span class="text-gray-400 text-xs block mb-1">Compliance Rate</span>
+                  <div class="text-2xl font-black text-white">99.4%</div>
+                  <span class="text-blue-400 text-[10px] font-bold">ISO &amp; WABA</span>
+                </div>
+              </div>
+
+              <!-- Main Dashboard Action Card -->
+              <div class="bg-[#141418] border border-[#222228] p-5 rounded-xl">
+                <h3 class="text-sm font-bold text-white mb-3">Live Roster &amp; Sanctioned Events</h3>
+                <div class="p-4 bg-[#181820] rounded-lg border border-[#242430] flex justify-between items-center">
+                  <div>
+                    <strong class="text-white text-sm">National Wheelchair Boxing Championship 2026</strong>
+                    <p class="text-gray-400 text-xs">Gachibowli Stadium • 24 Affiliated States • 120 Boxers</p>
+                  </div>
+                  <button class="bg-waba-red text-white text-xs px-4 py-2 rounded-lg font-bold">Manage Event</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function togglePasswordVisibility() {
+      showPasswordState = !showPasswordState;
+      const pwd = document.getElementById('loginPasswordField');
+      if (pwd) {
+        pwd.type = showPasswordState ? 'text' : 'password';
+      }
+    }
+
+    function setAccountType(type) {
+      selectedAccountType = type;
+      switchView('signup');
+    }
+
+    function setOfficialRole(role) {
+      selectedOfficialRole = role;
+    }
+
+    function toggleGrid() {
+      const artboard = document.getElementById('artboardFrame');
+      artboard.classList.toggle('ring-2');
+      artboard.classList.toggle('ring-red-500');
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen().catch(() => {});
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      switchView('landing');
+    });
+  </script>
+</body>
+</html>

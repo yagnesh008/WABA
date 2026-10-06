@@ -1,0 +1,264 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px 12px;
+
+  background: linear-gradient(
+    180deg,
+    #06182d 0%,
+    #082442 100%
+  );
+
+  color: #ffffff;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 5px 9px 18px;
+}
+
+.logo {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #fe7a03;
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.brand h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.brand span {
+  display: block;
+  margin-top: 2px;
+
+  color: #9eacc0;
+  font-size: 11px;
+}
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.divider {
+  height: 1px;
+  margin: 0 8px 13px;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================================
+   NAV
+========================================================= */
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* =========================================================
+   MENU ROW
+========================================================= */
+
+.menuGroup {
+  width: 100%;
+}
+
+.menuRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* =========================================================
+   MENU LINK
+========================================================= */
+
+.menuLink {
+  min-height: 43px;
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 10px;
+
+  border-radius: 8px;
+
+  color: #c5cfdd;
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.menuLink:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+}
+
+.menuLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menuLeft svg {
+  flex-shrink: 0;
+}
+
+.menuLeft span {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.arrowButton {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 2px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+  color: #8796aa;
+
+  cursor: pointer;
+}
+
+.arrowButton:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+}
+
+.chevron {
+  transition: transform 0.2s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   SUB MENU
+========================================================= */
+
+.subMenu {
+  display: flex;
+  flex-direction: column;
+
+  margin: 2px 0 5px 42px;
+  padding-left: 12px;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.subMenuLink {
+  position: relative;
+
+  padding: 8px 10px;
+
+  border-radius: 6px;
+
+  color: #9facbf;
+  text-decoration: none;
+
+  font-size: 12px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.subMenuLink::before {
+  content: "";
+  position: absolute;
+
+  left: -13px;
+  top: 50%;
+
+  width: 6px;
+  height: 6px;
+
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+
+  background: #53657b;
+}
+
+.subMenuLink:hover {
+  background: rgba(254, 122, 3, 0.1);
+  color: #ffffff;
+}
+
+.subMenuLink:hover::before {
+  background: #fe7a03;
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 230px;
+  }
+}

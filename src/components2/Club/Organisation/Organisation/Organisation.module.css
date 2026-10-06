@@ -1,0 +1,263 @@
+.organisation {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  min-height: 100vh;
+  padding: 98px 30px 45px;
+  background:
+    radial-gradient(circle at top right, rgba(254, 122, 3, 0.08), transparent 30%),
+    linear-gradient(135deg, #f7f9fc 0%, #eef3f8 100%);
+  box-sizing: border-box;
+}
+
+/* ================================
+   PAGE HEADER
+================================ */
+
+.pageHeader {
+  margin-bottom: 28px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.titleIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fe7a03, #ff9d3f);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(254, 122, 3, 0.22);
+}
+
+.titleRow h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #10233f;
+}
+
+.titleRow p {
+  margin: 5px 0 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+/* ================================
+   ORGANISATION OVERVIEW
+================================ */
+
+.overviewCard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #ffffff;
+  border: 1px solid #e5eaf0;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 28px rgba(16, 35, 63, 0.07);
+}
+
+.organisationLogo {
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #06182d, #0d355d);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.organisationInfo h2 {
+  margin: 0 0 7px;
+  font-size: 21px;
+  color: #10233f;
+  font-weight: 750;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  color: #68778b;
+  font-size: 14px;
+}
+
+.contactInfo {
+  display: flex;
+  gap: 20px;
+  margin-top: 9px;
+  flex-wrap: wrap;
+}
+
+.contactInfo span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #59697d;
+  font-size: 13px;
+}
+
+.status {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 13px;
+  border-radius: 20px;
+  background: #ecfdf3;
+  color: #16834a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #19a463;
+}
+
+/* ================================
+   MANAGEMENT CARDS
+================================ */
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.managementCard {
+  text-decoration: none;
+  background: #ffffff;
+  border: 1px solid #e5eaf0;
+  border-radius: 18px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  min-height: 235px;
+  box-shadow: 0 8px 25px rgba(16, 35, 63, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.managementCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(254, 122, 3, 0.4);
+  box-shadow: 0 14px 32px rgba(16, 35, 63, 0.11);
+}
+
+.cardIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.profileIcon {
+  background: #fff2e8;
+  color: #fe7a03;
+}
+
+.staffIcon {
+  background: #eaf3ff;
+  color: #2673c9;
+}
+
+.documentIcon {
+  background: #edf9f2;
+  color: #219653;
+}
+
+.cardContent h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 750;
+  color: #10233f;
+}
+
+.cardContent p {
+  margin: 0;
+  color: #718096;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.viewLink {
+  margin-top: auto;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #fe7a03;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1100px) {
+  .cardsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .organisation {
+    margin-left: 0;
+    width: 100%;
+    padding: 90px 20px 35px;
+  }
+
+  .overviewCard {
+    align-items: flex-start;
+  }
+
+  .status {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .titleRow h1 {
+    font-size: 23px;
+  }
+
+  .overviewCard {
+    flex-direction: column;
+  }
+
+  .status {
+    position: static;
+    margin-left: 0;
+  }
+
+  .contactInfo {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

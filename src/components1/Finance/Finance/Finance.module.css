@@ -1,0 +1,1391 @@
+/* =========================================================
+   FINANCE PAGE
+   Professional + Colorful Dashboard Style
+   ========================================================= */
+
+.financePage,
+.financePage * {
+  box-sizing: border-box;
+}
+
+.financePage {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  max-width: 100%;
+  min-height: 100vh;
+
+  padding: 95px 30px 40px;
+
+  background:
+    radial-gradient(
+      circle at 5% 5%,
+      rgba(254, 122, 3, 0.08),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 95% 12%,
+      rgba(3, 40, 101, 0.09),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #f8faff 0%,
+      #f5f8fc 50%,
+      #fafcff 100%
+    );
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.pageHeader {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 20px;
+
+  margin-bottom: 28px;
+  padding-bottom: 18px;
+}
+
+.pageHeader::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 3px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #032865,
+      #1473e6,
+      #fe7a03,
+      #f5b400
+    );
+}
+
+.pageHeader h1 {
+  margin: 0;
+
+  color: #032865;
+
+  font-size: 29px;
+  font-weight: 800;
+
+  letter-spacing: -0.4px;
+}
+
+.pageHeader p {
+  margin: 7px 0 0;
+
+  color: #6b7280;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+   ========================================================= */
+
+.headerActions {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 11px 17px;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.primaryButton {
+  background:
+    linear-gradient(
+      135deg,
+      #fe7a03,
+      #ff982e
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 6px 16px rgba(254, 122, 3, 0.22);
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 9px 20px rgba(254, 122, 3, 0.30);
+}
+
+.secondaryButton {
+  background: #ffffff;
+
+  color: #032865;
+
+  border: 1px solid #dfe6f0;
+
+  box-shadow:
+    0 3px 10px rgba(15, 23, 42, 0.04);
+}
+
+.secondaryButton:hover {
+  transform: translateY(-2px);
+
+  background: #f8fbff;
+
+  border-color: #cbd8ea;
+
+  box-shadow:
+    0 7px 16px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.summaryGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 24px;
+}
+
+.summaryCard {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+
+  gap: 15px;
+
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fbfcff
+    );
+
+  border: 1px solid #e4eaf3;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.06);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.summaryCard::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #032865,
+      #1473e6
+    );
+}
+
+.summaryCard:hover {
+  transform: translateY(-3px);
+
+  border-color: #d4deed;
+
+  box-shadow:
+    0 10px 25px rgba(15, 23, 42, 0.10);
+}
+
+
+/* Different card colors */
+
+.summaryCard:nth-child(1)::before {
+  background:
+    linear-gradient(
+      180deg,
+      #1473e6,
+      #032865
+    );
+}
+
+.summaryCard:nth-child(2)::before {
+  background:
+    linear-gradient(
+      180deg,
+      #fe7a03,
+      #ffad42
+    );
+}
+
+.summaryCard:nth-child(3)::before {
+  background:
+    linear-gradient(
+      180deg,
+      #16a34a,
+      #4ade80
+    );
+}
+
+.summaryCard:nth-child(4)::before {
+  background:
+    linear-gradient(
+      180deg,
+      #7c3aed,
+      #a855f7
+    );
+}
+
+
+/* =========================================================
+   SUMMARY ICON
+   ========================================================= */
+
+.iconBox {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef4ff,
+      #dfeaff
+    );
+
+  color: #032865;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(3, 40, 101, 0.05);
+}
+
+.summaryCard:nth-child(2) .iconBox {
+  background: #fff1e5;
+  color: #fe7a03;
+}
+
+.summaryCard:nth-child(3) .iconBox {
+  background: #eaf8ef;
+  color: #16a34a;
+}
+
+.summaryCard:nth-child(4) .iconBox {
+  background: #f3eaff;
+  color: #7c3aed;
+}
+
+.summaryCard p {
+  margin: 0 0 5px;
+
+  color: #6b7280;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.summaryCard h2 {
+  margin: 0 0 5px;
+
+  color: #111827;
+
+  font-size: 25px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   SUMMARY STATUS TEXT
+   ========================================================= */
+
+.successText,
+.warningText {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.successText {
+  color: #16a34a;
+}
+
+.warningText {
+  color: #d97706;
+}
+
+
+/* =========================================================
+   MODULE CARDS
+   ========================================================= */
+
+.moduleGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 24px;
+}
+
+.moduleCard {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+
+  gap: 14px;
+
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fbfcff
+    );
+
+  border: 1px solid #e4eaf3;
+
+  border-radius: 14px;
+
+  text-decoration: none;
+
+  color: #111827;
+
+  box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.05);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.moduleCard::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background: #fe7a03;
+
+  opacity: 0;
+
+  transition: opacity 0.2s ease;
+}
+
+.moduleCard:hover {
+  transform: translateY(-3px);
+
+  border-color: #d5dfed;
+
+  box-shadow:
+    0 10px 24px rgba(15, 23, 42, 0.09);
+}
+
+.moduleCard:hover::before {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   MODULE ICON
+   ========================================================= */
+
+.moduleIcon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff0e5,
+      #ffe3ce
+    );
+
+  color: #fe7a03;
+}
+
+
+/* Color variations */
+
+.moduleCard:nth-child(2) .moduleIcon {
+  background: #eaf2ff;
+  color: #1473e6;
+}
+
+.moduleCard:nth-child(3) .moduleIcon {
+  background: #eaf8ef;
+  color: #16a34a;
+}
+
+.moduleCard:nth-child(4) .moduleIcon {
+  background: #f3eaff;
+  color: #7c3aed;
+}
+
+.moduleCard:nth-child(5) .moduleIcon {
+  background: #fff6df;
+  color: #d97706;
+}
+
+.moduleCard:nth-child(6) .moduleIcon {
+  background: #eaf4ff;
+  color: #0369a1;
+}
+
+
+/* =========================================================
+   MODULE CONTENT
+   ========================================================= */
+
+.moduleContent {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.moduleContent h3 {
+  margin: 0 0 5px;
+
+  color: #032865;
+
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.moduleContent p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 11px;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   CONTENT GRID
+   ========================================================= */
+
+.contentGrid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 2fr)
+    minmax(280px, 1fr);
+
+  gap: 20px;
+
+  margin-bottom: 24px;
+}
+
+.revenueCard,
+.statusCard,
+.tableCard {
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fbfcff
+    );
+
+  border: 1px solid #e4eaf3;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.06);
+
+  min-width: 0;
+}
+
+.revenueCard,
+.statusCard {
+  padding: 23px;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+
+  color: #032865;
+
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.sectionHeader p {
+  margin: 5px 0 0;
+
+  color: #6b7280;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+.viewLink {
+  flex-shrink: 0;
+
+  padding: 7px 10px;
+
+  border-radius: 7px;
+
+  color: #fe7a03;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.viewLink:hover {
+  background: #fff1e6;
+  color: #e76500;
+}
+
+
+/* =========================================================
+   REVENUE TOTAL
+   ========================================================= */
+
+.revenueTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5f8ff,
+      #eef4ff
+    );
+
+  border: 1px solid #e0e9f7;
+
+  border-radius: 10px;
+
+  margin-bottom: 21px;
+}
+
+.revenueTotal span {
+  color: #6b7280;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.revenueTotal strong {
+  color: #032865;
+
+  font-size: 22px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   REVENUE LIST
+   ========================================================= */
+
+.revenueList {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.revenueItem {
+  position: relative;
+}
+
+.revenueInfo {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 7px;
+
+  font-size: 12px;
+}
+
+.revenueInfo span {
+  color: #4b5563;
+}
+
+.revenueInfo strong {
+  color: #111827;
+
+  font-weight: 700;
+}
+
+.progressBackground {
+  width: 100%;
+  height: 8px;
+
+  border-radius: 10px;
+
+  background: #edf1f6;
+
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #fe7a03,
+      #ffad42
+    );
+
+  transition: width 0.4s ease;
+}
+
+.revenueItem:nth-child(2) .progressBar {
+  background:
+    linear-gradient(
+      90deg,
+      #1473e6,
+      #60a5fa
+    );
+}
+
+.revenueItem:nth-child(3) .progressBar {
+  background:
+    linear-gradient(
+      90deg,
+      #16a34a,
+      #4ade80
+    );
+}
+
+.revenueItem:nth-child(4) .progressBar {
+  background:
+    linear-gradient(
+      90deg,
+      #7c3aed,
+      #a855f7
+    );
+}
+
+.percentage {
+  display: block;
+
+  text-align: right;
+
+  margin-top: 5px;
+
+  color: #9ca3af;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   PAYMENT STATUS
+   ========================================================= */
+
+.statusList {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.statusItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  background: #f8fafc;
+
+  border: 1px solid #edf1f6;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.statusItem:hover {
+  transform: translateX(2px);
+
+  background: #f4f8ff;
+}
+
+.statusLeft {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 0;
+
+  color: #4b5563;
+
+  font-size: 12px;
+}
+
+.statusItem strong {
+  color: #111827;
+
+  font-size: 17px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   FULL BUTTON
+   ========================================================= */
+
+.fullButton {
+  display: block;
+
+  width: 100%;
+
+  text-align: center;
+
+  margin-top: 20px;
+
+  padding: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #032865,
+      #0a438d
+    );
+
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  box-shadow:
+    0 5px 14px rgba(3, 40, 101, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.fullButton:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(3, 40, 101, 0.25);
+}
+
+
+/* =========================================================
+   TABLE CARD
+   ========================================================= */
+
+.tableCard {
+  width: 100%;
+  max-width: 100%;
+
+  padding: 22px;
+
+  margin-bottom: 24px;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   FILTER ROW
+   ========================================================= */
+
+.filterRow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+
+  flex-wrap: wrap;
+}
+
+.searchInput,
+.selectInput {
+  height: 42px;
+
+  border: 1px solid #dfe5ef;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  outline: none;
+
+  font-size: 12px;
+
+  color: #374151;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.searchInput {
+  width: 330px;
+
+  max-width: 100%;
+
+  padding: 0 14px;
+}
+
+.selectInput {
+  padding: 0 12px;
+
+  min-width: 150px;
+}
+
+.searchInput::placeholder {
+  color: #9ca3af;
+}
+
+.searchInput:focus,
+.selectInput:focus {
+  border-color: #fe7a03;
+
+  box-shadow:
+    0 0 0 3px rgba(254, 122, 3, 0.10);
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+   ========================================================= */
+
+.tableWrapper {
+  width: 100%;
+  max-width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  border: 1px solid #e5eaf1;
+
+  border-radius: 10px;
+
+  scrollbar-width: thin;
+}
+
+.tableWrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.tableWrapper::-webkit-scrollbar-track {
+  background: #eef2f7;
+
+  border-radius: 10px;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb {
+  background: #aebbd0;
+
+  border-radius: 10px;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb:hover {
+  background: #7f91ad;
+}
+
+
+/* =========================================================
+   FINANCE TABLE
+   ========================================================= */
+
+.financeTable {
+  width: 100%;
+
+  min-width: 1050px;
+
+  border-collapse: separate;
+
+  border-spacing: 0;
+
+  background: #ffffff;
+}
+
+.tableHeading {
+  text-align: left;
+
+  padding: 14px 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #032865,
+      #0a438d
+    );
+
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  border-bottom: 1px solid #dce4ef;
+}
+
+.tableCell {
+  padding: 14px 13px;
+
+  color: #374151;
+
+  font-size: 12px;
+
+  border-bottom: 1px solid #edf0f5;
+
+  white-space: nowrap;
+
+  background: #ffffff;
+}
+
+.financeTable tbody tr {
+  transition: background 0.15s ease;
+}
+
+.financeTable tbody tr:hover .tableCell {
+  background: #f8fbff;
+}
+
+.financeTable tbody tr:last-child .tableCell {
+  border-bottom: none;
+}
+
+.tableCell strong {
+  color: #032865;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   STATUS BADGES
+   ========================================================= */
+
+.statusBadge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.completed {
+  background: #e9f8ef;
+
+  color: #15803d;
+
+  border: 1px solid #bbf7d0;
+}
+
+.pending {
+  background: #fff6df;
+
+  color: #b45309;
+
+  border: 1px solid #fde68a;
+}
+
+.failed {
+  background: #feecec;
+
+  color: #dc2626;
+
+  border: 1px solid #fecaca;
+}
+
+
+/* =========================================================
+   VIEW BUTTON
+   ========================================================= */
+
+.viewButton {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  border: 1px solid #d8e3f4;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef4ff,
+      #e2ecff
+    );
+
+  color: #032865;
+
+  padding: 7px 11px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.viewButton:hover {
+  transform: translateY(-1px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #dfeaff,
+      #d5e5ff
+    );
+
+  box-shadow:
+    0 4px 10px rgba(3, 40, 101, 0.12);
+}
+
+
+/* =========================================================
+   NO DATA
+   ========================================================= */
+
+.noData {
+  text-align: center;
+
+  padding: 40px;
+
+  color: #6b7280;
+
+  font-size: 13px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1400px
+   ========================================================= */
+
+@media (max-width: 1400px) {
+
+  .summaryGrid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .moduleGrid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .financePage {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .financePage {
+    margin-left: 0;
+
+    width: 100%;
+    max-width: 100%;
+
+    padding:
+      90px
+      20px
+      30px;
+  }
+
+  .pageHeader {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .headerActions {
+    width: 100%;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    justify-content: center;
+  }
+
+  .moduleGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 600px
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .financePage {
+    padding:
+      85px
+      15px
+      25px;
+  }
+
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .filterRow {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+
+  .selectInput {
+    width: 100%;
+  }
+
+  .headerActions {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .sectionHeader {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .viewLink {
+    align-self: flex-start;
+  }
+
+  .revenueCard,
+  .statusCard,
+  .tableCard {
+    padding: 17px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .financePage {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .summaryCard {
+    padding: 17px;
+
+    gap: 12px;
+  }
+
+  .iconBox {
+    width: 44px;
+    height: 44px;
+  }
+
+  .summaryCard h2 {
+    font-size: 22px;
+  }
+
+  .moduleCard {
+    padding: 17px;
+  }
+
+  .moduleIcon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .revenueTotal {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 5px;
+  }
+}

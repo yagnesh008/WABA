@@ -1,0 +1,625 @@
+.page {
+  margin-left: 260px;
+  min-height: 100vh;
+  padding: 96px 32px 45px;
+  background: #f5f7fb;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  color: #fe7a03;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.pageHeader h1 {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 7px 0;
+  color: #10233f;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.pageHeader p {
+  margin: 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+.headerBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  background: #fff3e7;
+  border: 1px solid #ffd9b5;
+  border-radius: 10px;
+  color: #d95f00;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   SETTINGS LAYOUT
+========================================================= */
+
+.settingsLayout {
+  display: grid;
+  grid-template-columns: 245px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+/* =========================================================
+   SETTINGS SIDEBAR
+========================================================= */
+
+.settingsSidebar {
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 13px;
+}
+
+.sidebarTitle {
+  padding: 7px 9px 12px;
+  color: #98a2b1;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.settingsMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menuItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 11px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  background: #f8fafc;
+}
+
+.menuItemActive {
+  background: #fff4e9;
+  border-color: #ffe0c2;
+}
+
+.menuIcon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #f3f6fa;
+  color: #66758a;
+}
+
+.menuItemActive .menuIcon {
+  background: #fe7a03;
+  color: #ffffff;
+}
+
+.menuText {
+  min-width: 0;
+}
+
+.menuText strong {
+  display: block;
+  color: #10233f;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.menuText span {
+  display: block;
+  margin-top: 3px;
+  color: #8a95a5;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.settingsContent {
+  min-width: 0;
+}
+
+.contentCard {
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+}
+
+/* =========================================================
+   CONTENT HEADER
+========================================================= */
+
+.contentHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding-bottom: 21px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.contentIcon {
+  width: 43px;
+  height: 43px;
+  min-width: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff3e7;
+  border-radius: 10px;
+  color: #fe7a03;
+}
+
+.contentHeader span {
+  color: #fe7a03;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.contentHeader h2 {
+  margin: 5px 0;
+  color: #10233f;
+  font-size: 20px;
+}
+
+.contentHeader p {
+  margin: 0;
+  color: #718096;
+  font-size: 12px;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.formGroup label {
+  color: #344054;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #dfe5ed;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: #10233f;
+  font-size: 12px;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  border-color: #fe7a03;
+  box-shadow: 0 0 0 3px rgba(254, 122, 3, 0.08);
+}
+
+.formGroup input[readonly] {
+  background: #f6f8fb;
+  color: #7b8797;
+}
+
+/* =========================================================
+   INPUT WITH ICON
+========================================================= */
+
+.inputWithIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputWithIcon svg {
+  position: absolute;
+  left: 12px;
+  color: #8a95a5;
+}
+
+.inputWithIcon input {
+  padding-left: 38px;
+}
+
+/* =========================================================
+   ACCOUNT STATUS
+========================================================= */
+
+.accountStatus {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 22px;
+  padding: 14px;
+  background: #eaf8ef;
+  border: 1px solid #cdebd7;
+  border-radius: 9px;
+}
+
+.statusIcon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #d7f2e1;
+  color: #16834b;
+}
+
+.accountStatus strong,
+.accountStatus span {
+  display: block;
+}
+
+.accountStatus strong {
+  color: #16834b;
+  font-size: 12px;
+}
+
+.accountStatus span {
+  margin-top: 3px;
+  color: #688274;
+  font-size: 11px;
+}
+
+/* =========================================================
+   NOTIFICATIONS
+========================================================= */
+
+.notificationList {
+  display: flex;
+  flex-direction: column;
+}
+
+.notificationItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 17px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.notificationItem:last-child {
+  border-bottom: none;
+}
+
+.notificationInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.notificationIcon {
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f7fb;
+  border-radius: 9px;
+  color: #65758a;
+}
+
+.notificationInfo strong,
+.notificationInfo span {
+  display: block;
+}
+
+.notificationInfo strong {
+  color: #10233f;
+  font-size: 13px;
+}
+
+.notificationInfo span {
+  margin-top: 4px;
+  color: #8994a4;
+  font-size: 11px;
+}
+
+/* =========================================================
+   TOGGLE
+========================================================= */
+
+.toggle {
+  position: relative;
+  width: 43px;
+  height: 24px;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  background: #d7dde6;
+  cursor: pointer;
+}
+
+.toggle span {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  transition: 0.2s ease;
+}
+
+.toggleActive {
+  background: #fe7a03;
+}
+
+.toggleActive span {
+  left: 22px;
+}
+
+/* =========================================================
+   PASSWORD
+========================================================= */
+
+.passwordForm {
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.passwordInput {
+  position: relative;
+}
+
+.passwordInput input {
+  padding-right: 45px;
+}
+
+.passwordInput button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #8994a4;
+  cursor: pointer;
+}
+
+.passwordInput button:hover {
+  color: #fe7a03;
+}
+
+.securityNotice,
+.privacyNotice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 14px;
+  background: #f7f9fc;
+  border: 1px solid #e7ebf1;
+  border-radius: 9px;
+  color: #65758a;
+}
+
+.securityNotice strong,
+.securityNotice span,
+.privacyNotice strong,
+.privacyNotice span {
+  display: block;
+}
+
+.securityNotice strong,
+.privacyNotice strong {
+  color: #10233f;
+  font-size: 12px;
+}
+
+.securityNotice span,
+.privacyNotice span {
+  margin-top: 4px;
+  color: #7b8797;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   PRIVACY
+========================================================= */
+
+.privacyList {
+  display: flex;
+  flex-direction: column;
+}
+
+.privacyItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 17px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.privacyItem:last-child {
+  border-bottom: none;
+}
+
+.privacyItem strong,
+.privacyItem span {
+  display: block;
+}
+
+.privacyItem strong {
+  color: #10233f;
+  font-size: 13px;
+}
+
+.privacyItem > div > span {
+  margin-top: 4px;
+  color: #8994a4;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.enabledBadge {
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #e9f8ef;
+  color: #16834b;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   SAVE BAR
+========================================================= */
+
+.saveBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 17px;
+}
+
+.savedMessage {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #16834b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.saveButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 17px;
+  border: 1px solid #fe7a03;
+  border-radius: 8px;
+  background: #fe7a03;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.saveButton:hover {
+  background: #e96d00;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+  .settingsLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .settingsMenu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .page {
+    margin-left: 0;
+    padding: 90px 20px 35px;
+  }
+
+  .pageHeader {
+    flex-direction: column;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .settingsMenu {
+    grid-template-columns: 1fr;
+  }
+
+  .contentCard {
+    padding: 18px;
+  }
+
+  .notificationItem,
+  .privacyItem {
+    align-items: flex-start;
+  }
+
+  .saveBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .saveButton {
+    width: 100%;
+  }
+
+  .savedMessage {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,340 @@
+/* =========================================================
+   WABA MULTI-TIER DASHBOARDS STYLESHEET
+========================================================= */
+
+.dashboard {
+  width: calc(100% - 260px);
+  margin-left: 260px;
+  padding: 95px 32px 40px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(229, 9, 20, 0.08), transparent 30%),
+    radial-gradient(circle at 10% 40%, rgba(20, 30, 55, 0.5), transparent 40%),
+    #0a0a0d;
+  color: #ffffff;
+  font-family: inherit;
+  overflow-x: hidden;
+}
+
+/* Page Header Banner */
+.pageHeader {
+  position: relative;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(229, 9, 20, 0.35), transparent 30%),
+    linear-gradient(135deg, #0f131a 0%, #171d27 50%, #0d1016 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.pageHeader h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.5px;
+}
+
+.pageHeader p {
+  color: #9ca3af;
+  font-size: 13px;
+  margin: 0;
+}
+
+.headerBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  background: rgba(229, 9, 20, 0.15);
+  border: 1px solid rgba(229, 9, 20, 0.4);
+  color: #ff6b6b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.pulseDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+/* KPI Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.statCard {
+  background: #121318;
+  border: 1px solid #20222a;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(229, 9, 20, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.statIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(229, 9, 20, 0.12);
+  color: #e50914;
+  flex-shrink: 0;
+}
+
+.statInfo span {
+  display: block;
+  font-size: 12px;
+  color: #9ca3af;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.statInfo h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.statTrend {
+  font-size: 11px;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.trendUp {
+  color: #22c55e;
+}
+
+.trendAlert {
+  color: #ef4444;
+}
+
+/* Two-column layout */
+.layoutGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 22px;
+  margin-bottom: 24px;
+}
+
+.layoutGridEqual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-bottom: 24px;
+}
+
+/* Cards & Containers */
+.card {
+  background: #121318;
+  border: 1px solid #20222a;
+  border-radius: 14px;
+  padding: 22px;
+  box-sizing: border-box;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #1c1e26;
+}
+
+.cardHeader h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cardHeader span {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* Tables */
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+.table th {
+  padding: 10px 14px;
+  background: #181920;
+  color: #9ca3af;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #1c1e26;
+  color: #e5e7eb;
+}
+
+.table tr:hover td {
+  background: #171922;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.badgeActive {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.badgePending {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badgeUrgent {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.badgeBlue {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Buttons */
+.primaryBtn {
+  background: #e50914;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.primaryBtn:hover {
+  background: #c70812;
+  transform: translateY(-1px);
+}
+
+.secondaryBtn {
+  background: #1c1e26;
+  color: #d1d5db;
+  border: 1px solid #282a34;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.secondaryBtn:hover {
+  background: #252834;
+  color: #ffffff;
+  border-color: #383b4a;
+}
+
+/* Live bout box */
+.boutCard {
+  background: linear-gradient(135deg, #161720 0%, #101117 100%);
+  border: 1px solid #252733;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+}
+
+.cornerRed {
+  background: rgba(229, 9, 20, 0.1);
+  border: 1px solid rgba(229, 9, 20, 0.4);
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.cornerBlue {
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.4);
+  padding: 16px;
+  border-radius: 12px;
+}
+
+/* ID Card */
+.digitalCard {
+  background: linear-gradient(135deg, #7f0d14 0%, #3f060a 100%);
+  border: 1px solid rgba(229, 9, 20, 0.5);
+  border-radius: 14px;
+  padding: 20px;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1024px) {
+  .dashboard {
+    width: 100%;
+    margin-left: 0;
+    padding: 85px 16px 30px;
+  }
+  .layoutGrid, .layoutGridEqual {
+    grid-template-columns: 1fr;
+  }
+}

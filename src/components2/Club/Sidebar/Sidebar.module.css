@@ -1,0 +1,293 @@
+/* =========================================================
+   WABA CLUB / ACADEMY SIDEBAR
+========================================================= */
+
+.sidebar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 260px;
+  height: 100vh;
+
+  background:
+    linear-gradient(
+      180deg,
+      #06182d 0%,
+      #082442 55%,
+      #06182d 100%
+    );
+
+  color: #ffffff;
+
+  z-index: 1000;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  box-shadow:
+    4px 0 18px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+  padding: 22px 20px 20px;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brandTitle {
+  font-size: 22px;
+
+  font-weight: 800;
+
+  color: #ffffff;
+
+  letter-spacing: 0.5px;
+}
+
+.brandSubtitle {
+  margin-top: 5px;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  color: #aebbd0;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navigation {
+  padding: 16px 12px 25px;
+}
+
+
+/* =========================================================
+   MENU ROW
+========================================================= */
+
+.navItem {
+  margin-bottom: 4px;
+}
+
+.menuRow {
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   MENU LINK
+========================================================= */
+
+.menuLink {
+  flex: 1;
+
+  min-width: 0;
+
+  min-height: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 13px;
+
+  border-radius: 9px;
+
+  color: #dce6f4;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.menuLink svg {
+  flex-shrink: 0;
+
+  color: #aebbd0;
+}
+
+.menuLink:hover {
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  color: #ffffff;
+}
+
+.menuLink:hover svg {
+  color: #fe7a03;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.arrowButton {
+  width: 34px;
+  height: 34px;
+
+  margin-right: 3px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #9eacc0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.arrowButton:hover {
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  color: #fe7a03;
+}
+
+.arrowButton svg {
+  transition:
+    transform 0.25s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+
+  color: #fe7a03;
+}
+
+
+/* =========================================================
+   SUB MENU
+========================================================= */
+
+.subMenu {
+  margin-left: 28px;
+
+  padding: 4px 0 6px 16px;
+
+  border-left:
+    1px solid rgba(255, 255, 255, 0.13);
+}
+
+.subItem {
+  display: flex;
+
+  align-items: center;
+
+  min-height: 36px;
+
+  padding: 0 12px;
+
+  border-radius: 7px;
+
+  color: #aebbd0;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.subItem::before {
+  content: "";
+
+  width: 5px;
+  height: 5px;
+
+  margin-right: 9px;
+
+  border-radius: 50%;
+
+  background: #65758c;
+}
+
+.subItem:hover {
+  padding-left: 16px;
+
+  background:
+    rgba(254, 122, 3, 0.10);
+
+  color: #ffffff;
+}
+
+.subItem:hover::before {
+  background: #fe7a03;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.30);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 235px;
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 220px;
+  }
+}

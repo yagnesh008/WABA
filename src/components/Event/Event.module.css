@@ -1,0 +1,351 @@
+/* =========================================
+   EVENT PAGE
+========================================= */
+
+.eventPage {
+  width: 100%;
+  min-height: 100vh;
+
+  background-position: center;
+  background-image: url("/images/event.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  overflow: hidden;
+
+  /* Events click చేసినప్పుడు previous section
+     visible కాకుండా header కి proper space */
+  scroll-margin-top: 82px;
+}
+
+
+/* =========================================
+   EVENT CONTENT
+========================================= */
+
+.eventContent {
+  width: 90%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  /* Only slightly down */
+  padding: 35px 0 60px;
+}
+
+
+/* =========================================
+   EVENT HEADING
+========================================= */
+
+.eventHeading {
+  margin-bottom: 30px;
+}
+
+
+/* EVENTS SMALL HEADING */
+
+.eventHeading span {
+  color: #03af0b;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+
+/* UPCOMING EVENTS */
+
+.eventHeading h1 {
+  color: #fe7a03;
+
+  font-size: 110px;
+  font-weight: 900;
+
+  line-height: 1.1;
+
+  margin: 12px 0 14px;
+}
+
+
+/* DESCRIPTION */
+
+.eventHeading p {
+  max-width: 620px;
+
+  color: #032865;
+
+  font-size: 16px;
+  line-height: 1.55;
+
+  margin: 0;
+}
+
+
+/* =========================================
+   EVENT GRID
+========================================= */
+
+.eventGrid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   EVENT CARD
+========================================= */
+
+.eventCard {
+  width: 100%;
+
+  min-height: 260px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 25px;
+
+  overflow: hidden;
+
+  background: rgba(0, 0, 0, 0.65);
+}
+
+
+/* =========================================
+   EVENT IMAGE
+========================================= */
+
+.eventImage {
+  width: 100%;
+  height: 190px;
+
+  flex-shrink: 0;
+}
+
+
+.eventImage img {
+  width: 100%;
+  height: 190px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =========================================
+   EVENT INFORMATION
+========================================= */
+
+.eventInfo {
+  width: 100%;
+
+  padding: 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+
+/* EVENT TITLE */
+
+.eventInfo h2 {
+  color: #ffffff;
+
+  font-size: 31px;
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  margin: 0 0 15px;
+}
+
+
+/* =========================================
+   EVENT DETAILS
+========================================= */
+
+.eventDetails {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+
+.eventInfo p {
+  color: #ffffff;
+
+  font-size: 15px;
+  line-height: 1.6;
+
+  margin: 0 0 20px;
+}
+
+
+/* =========================================
+   LEARN MORE BUTTON
+========================================= */
+
+.learnMore {
+  margin-top: auto;
+
+  align-self: flex-start;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #fe7a03;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.learnMore span {
+  font-size: 20px;
+
+  line-height: 10px;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.learnMore:hover {
+  background: transparent;
+
+  color: #fe7a03;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .eventPage {
+    scroll-margin-top: 80px;
+  }
+
+  .eventContent {
+    width: 92%;
+
+    padding: 35px 0 55px;
+  }
+
+  .eventHeading {
+    margin-bottom: 30px;
+  }
+
+  .eventHeading h1 {
+    font-size: 80px;
+  }
+
+  .eventHeading p {
+    max-width: 600px;
+
+    font-size: 15px;
+  }
+
+  .eventGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .eventPage {
+    scroll-margin-top: 75px;
+  }
+
+  .eventContent {
+    width: 92%;
+
+    padding: 30px 0 45px;
+  }
+
+  .eventHeading {
+    margin-bottom: 28px;
+  }
+
+  .eventHeading span {
+    font-size: 13px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .eventHeading h1 {
+    font-size: 42px;
+
+    line-height: 1.05;
+
+    margin: 10px 0 13px;
+  }
+
+  .eventHeading p {
+    max-width: 100%;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+  }
+
+  .eventGrid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .eventCard {
+    min-height: auto;
+  }
+
+  .eventImage {
+    width: 100%;
+    height: 220px;
+  }
+
+  .eventImage img {
+    width: 100%;
+    height: 220px;
+  }
+
+  .eventInfo {
+    width: 100%;
+
+    padding: 22px;
+  }
+
+  .eventInfo h2 {
+    font-size: 21px;
+  }
+
+  .eventInfo p {
+    font-size: 15px;
+  }
+}

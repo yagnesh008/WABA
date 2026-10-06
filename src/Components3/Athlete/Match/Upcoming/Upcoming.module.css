@@ -1,0 +1,309 @@
+.page {
+  margin-left: 260px;
+  padding: 95px 30px 40px;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.backLink:hover {
+  color: #fe7a03;
+}
+
+.pageHeader h1 {
+  margin: 0;
+  color: #10233f;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.pageHeader p {
+  margin: 7px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.matchBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: #fff3e8;
+  color: #fe7a03;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.statCard {
+  background: white;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.statIcon {
+  width: 46px;
+  height: 46px;
+  border-radius: 11px;
+  background: #fff3e8;
+  color: #fe7a03;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statCard span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.statCard strong {
+  color: #10233f;
+  font-size: 21px;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+  background: white;
+  border: 1px solid #e5eaf1;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.sectionHeader {
+  margin-bottom: 20px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  color: #10233f;
+  font-size: 19px;
+}
+
+.sectionHeader p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* =========================
+   MATCH CARD
+========================= */
+
+.matchList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.matchCard {
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  padding: 20px;
+  background: #fff;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.matchId {
+  color: #fe7a03;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.cardTop h3 {
+  margin: 5px 0 0;
+  color: #10233f;
+  font-size: 17px;
+}
+
+.status {
+  padding: 6px 11px;
+  border-radius: 20px;
+  background: #e9f8ef;
+  color: #16803c;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================
+   OPPONENT
+========================= */
+
+.opponentBox {
+  margin: 18px 0;
+  padding: 17px;
+  background: #f8fafc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.opponentIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #10233f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opponentBox span,
+.youBox span {
+  display: block;
+  color: #64748b;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.opponentBox strong,
+.youBox strong {
+  color: #10233f;
+  font-size: 14px;
+}
+
+.vs {
+  margin-left: auto;
+  margin-right: 20px;
+  color: #fe7a03;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.youBox {
+  min-width: 170px;
+}
+
+/* =========================
+   DETAILS
+========================= */
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detailItem svg {
+  color: #fe7a03;
+  flex-shrink: 0;
+}
+
+.detailItem span {
+  display: block;
+  color: #64748b;
+  font-size: 11px;
+  margin-bottom: 3px;
+}
+
+.detailItem strong {
+  color: #10233f;
+  font-size: 13px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  .detailsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .page {
+    margin-left: 0;
+    padding: 85px 16px 30px;
+  }
+
+  .pageHeader {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .section {
+    padding: 16px;
+  }
+
+  .cardTop {
+    flex-direction: column;
+  }
+
+  .opponentBox {
+    flex-wrap: wrap;
+  }
+
+  .vs {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .youBox {
+    width: 100%;
+  }
+
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,389 @@
+/* =========================================================
+   WABA CLUB / ACADEMY HEADER
+========================================================= */
+
+.header {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+
+  left: 260px;
+
+  height: 72px;
+
+  background:
+    rgba(255, 255, 255, 0.97);
+
+  backdrop-filter: blur(10px);
+
+  border-bottom:
+    1px solid #e6ebf2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 28px;
+
+  z-index: 900;
+
+  box-shadow:
+    0 2px 12px rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.searchBox {
+  width: 330px;
+
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 13px;
+
+  border:
+    1px solid #dce2eb;
+
+  border-radius: 9px;
+
+  background: #f8fafc;
+
+  color: #718096;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.searchBox:focus-within {
+  background: #ffffff;
+
+  border-color: #0756a8;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(3, 40, 101, 0.08);
+}
+
+.searchBox input {
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #172033;
+
+  font-size: 14px;
+}
+
+.searchBox input::placeholder {
+  color: #9aa4b2;
+}
+
+
+/* =========================================================
+   HEADER RIGHT
+========================================================= */
+
+.headerRight {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+}
+
+
+/* =========================================================
+   NOTIFICATION
+========================================================= */
+
+.notificationButton {
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid #e0e5ec;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #39445a;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    all 0.2s ease;
+}
+
+.notificationButton:hover {
+  background: #f5f8fc;
+
+  color: #032865;
+
+  border-color: #cfd8e5;
+}
+
+.notificationBadge {
+  position: absolute;
+
+  top: -5px;
+  right: -5px;
+
+  min-width: 17px;
+  height: 17px;
+
+  padding: 0 4px;
+
+  border-radius: 20px;
+
+  background: #fe7a03;
+
+  color: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  border: 2px solid #ffffff;
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.profileContainer {
+  position: relative;
+}
+
+.profileButton {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border: none;
+
+  background: transparent;
+
+  padding: 5px 8px;
+
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease;
+}
+
+.profileButton:hover {
+  background: #f5f7fb;
+}
+
+.profileAvatar {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #032865,
+      #0756a8
+    );
+
+  color: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.profileInfo {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 2px;
+}
+
+.profileName {
+  font-size: 13px;
+
+  font-weight: 700;
+
+  color: #172033;
+}
+
+.profileRole {
+  font-size: 11px;
+
+  color: #718096;
+}
+
+.profileArrow,
+.profileArrowOpen {
+  color: #718096;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.profileArrowOpen {
+  transform: rotate(180deg);
+
+  color: #032865;
+}
+
+
+/* =========================================================
+   PROFILE DROPDOWN
+========================================================= */
+
+.profileDropdown {
+  position: absolute;
+
+  top: calc(100% + 10px);
+
+  right: 0;
+
+  width: 190px;
+
+  padding: 7px;
+
+  background: #ffffff;
+
+  border:
+    1px solid #e4e9f1;
+
+  border-radius: 11px;
+
+  box-shadow:
+    0 12px 30px
+    rgba(15, 23, 42, 0.13);
+
+  z-index: 1000;
+}
+
+.dropdownItem {
+  width: 100%;
+
+  min-height: 40px;
+
+  padding: 0 11px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #39445a;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.dropdownItem:hover {
+  background: #f3f6fb;
+
+  color: #032865;
+}
+
+.dropdownItem:last-child:hover {
+  color: #dc3b3b;
+
+  background: #fff1f1;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .header {
+    left: 235px;
+
+    padding: 0 20px;
+  }
+
+  .searchBox {
+    width: 240px;
+  }
+
+  .profileInfo {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    left: 220px;
+
+    padding: 0 14px;
+  }
+
+  .searchBox {
+    width: 180px;
+  }
+
+  .headerRight {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 520px) {
+  .searchBox {
+    display: none;
+  }
+
+  .header {
+    justify-content: flex-end;
+  }
+}       

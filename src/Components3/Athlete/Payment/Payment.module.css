@@ -1,0 +1,443 @@
+.main {
+  margin-left: 260px;
+  padding: 95px 30px 40px;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+/* =====================================
+   PAGE HEADER
+===================================== */
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.pageHeader h1 {
+  margin: 8px 0 6px;
+  color: #10233f;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.pageHeader p {
+  margin: 0;
+  color: #68758a;
+  font-size: 14px;
+}
+
+.backLink {
+  color: #fe7a03;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.headerBadge {
+  background: #fff;
+  border: 1px solid #e1e6ee;
+  color: #10233f;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =====================================
+   STATS
+===================================== */
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.statCard {
+  background: #fff;
+  border: 1px solid #e3e8ef;
+  border-radius: 10px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.statIcon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.orange {
+  background: #fff1e5;
+  color: #e66b00;
+}
+
+.green {
+  background: #e8f7ef;
+  color: #15945a;
+}
+
+.blue {
+  background: #eaf2ff;
+  color: #2868c7;
+}
+
+.purple {
+  background: #f1ebff;
+  color: #7650c9;
+}
+
+.statCard span {
+  display: block;
+  color: #78859a;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.statCard strong {
+  color: #10233f;
+  font-size: 16px;
+}
+
+/* =====================================
+   LATEST PAYMENT
+===================================== */
+
+.currentPayment {
+  background: linear-gradient(135deg, #10233f, #19375d);
+  border-radius: 12px;
+  padding: 23px 25px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: white;
+  margin-bottom: 24px;
+  box-shadow: 0 6px 18px rgba(16, 35, 63, 0.12);
+}
+
+.paymentIcon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+  background: #20a464;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.currentContent {
+  flex: 1;
+}
+
+.currentContent > span {
+  color: #b8c5d8;
+  font-size: 12px;
+}
+
+.currentContent h2 {
+  margin: 5px 0 7px;
+  font-size: 19px;
+}
+
+.currentContent p {
+  margin: 3px 0;
+  color: #d1d9e5;
+  font-size: 12px;
+}
+
+.currentContent strong {
+  color: white;
+}
+
+.amountBox {
+  min-width: 150px;
+  padding-left: 25px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.amountBox span {
+  display: block;
+  color: #b8c5d8;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.amountBox strong {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.amountBox small {
+  color: #8fe0b5;
+  font-size: 11px;
+}
+
+/* =====================================
+   COMMON SECTION
+===================================== */
+
+.section {
+  background: #fff;
+  border: 1px solid #e3e8ef;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.sectionHeader {
+  padding: 20px 22px;
+  border-bottom: 1px solid #edf0f4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sectionHeader h2 {
+  margin: 0 0 5px;
+  color: #10233f;
+  font-size: 18px;
+}
+
+.sectionHeader p {
+  margin: 0;
+  color: #7a8799;
+  font-size: 13px;
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.exportButton {
+  border: 1px solid #fe7a03;
+  background: #fff;
+  color: #fe7a03;
+  padding: 9px 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.exportButton:hover {
+  background: #fff5ed;
+}
+
+.invoiceButton {
+  border: none;
+  background: transparent;
+  color: #fe7a03;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.invoiceButton:hover {
+  text-decoration: underline;
+}
+
+/* =====================================
+   TABLE
+===================================== */
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 850px;
+}
+
+.table th {
+  background: #f8f9fb;
+  color: #66758a;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 13px 18px;
+  border-bottom: 1px solid #e8edf3;
+}
+
+.table td {
+  padding: 15px 18px;
+  border-bottom: 1px solid #edf0f4;
+  color: #59687d;
+  font-size: 12px;
+}
+
+.table td strong {
+  color: #10233f;
+}
+
+.table tbody tr:hover {
+  background: #fafbfd;
+}
+
+.paidBadge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #e8f7ef;
+  color: #15945a;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =====================================
+   PAYMENT METHODS
+===================================== */
+
+.methodCard {
+  margin: 18px 22px;
+  border: 1px solid #e4e8ef;
+  border-radius: 9px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.methodIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+  background: #fff1e5;
+  color: #e66b00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.methodContent {
+  flex: 1;
+}
+
+.methodContent h3 {
+  margin: 0 0 4px;
+  color: #10233f;
+  font-size: 14px;
+}
+
+.methodContent p {
+  margin: 0;
+  color: #78859a;
+  font-size: 12px;
+}
+
+.defaultBadge {
+  background: #eaf2ff;
+  color: #2868c7;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =====================================
+   INFO BOX
+===================================== */
+
+.infoBox {
+  display: flex;
+  gap: 14px;
+  background: #fff9f2;
+  border: 1px solid #f7dfc5;
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.infoIcon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background: #fe7a03;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.infoBox h3 {
+  margin: 0 0 8px;
+  color: #10233f;
+  font-size: 14px;
+}
+
+.infoBox ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.infoBox li {
+  color: #68758a;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 1100px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    padding: 85px 18px 30px;
+  }
+
+  .pageHeader {
+    flex-direction: column;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .currentPayment {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .amountBox {
+    margin-left: 68px;
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .sectionHeader {
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,442 @@
+.assignmentsPage {
+  margin-left: 260px;
+  padding: 95px 30px 40px;
+  min-height: 100vh;
+  background: #f6f8fc;
+}
+
+/* Header */
+
+.pageHeader {
+  margin-bottom: 24px;
+}
+
+.titleSection {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.titleIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #032865;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleSection h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #172033;
+}
+
+.titleSection p {
+  margin: 5px 0 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+/* Summary */
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.summaryCard {
+  background: white;
+  border: 1px solid #e7ebf2;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.cardIcon {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: #e9eef8;
+  color: #032865;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.assignedIcon {
+  background: #e8f7ee;
+  color: #159447;
+}
+
+.pendingIcon {
+  background: #fff5df;
+  color: #e79b00;
+}
+
+.completedIcon {
+  background: #e8eefc;
+  color: #3157a6;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cardContent span {
+  font-size: 13px;
+  color: #718096;
+}
+
+.cardContent strong {
+  font-size: 25px;
+  color: #172033;
+}
+
+/* Filters */
+
+.filterCard {
+  background: white;
+  border: 1px solid #e7ebf2;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.searchBox {
+  flex: 1;
+  height: 44px;
+  border: 1px solid #dce2eb;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 13px;
+  color: #718096;
+}
+
+.searchBox input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #172033;
+}
+
+.filterSelect {
+  height: 44px;
+  min-width: 170px;
+  border: 1px solid #dce2eb;
+  border-radius: 9px;
+  padding: 0 12px;
+  background: white;
+  color: #39445a;
+  outline: none;
+}
+
+/* Table */
+
+.tableCard {
+  background: white;
+  border: 1px solid #e7ebf2;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.tableHeader {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.tableHeader h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #172033;
+}
+
+.tableHeader p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #718096;
+}
+
+.assignmentCount {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #eef3fb;
+  color: #032865;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.assignmentsTable {
+  width: 100%;
+  min-width: 1500px;
+  border-collapse: collapse;
+}
+
+.tableHeading {
+  padding: 14px 16px;
+  background: #f8fafc;
+  color: #657187;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid #e7ebf2;
+}
+
+.tableCell {
+  padding: 16px;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 13px;
+  color: #39445a;
+  white-space: nowrap;
+}
+
+.assignmentsTable tbody tr:hover {
+  background: #fafcff;
+}
+
+/* Official */
+
+.officialInfo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #032865;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.officialName {
+  font-size: 14px;
+  font-weight: 700;
+  color: #172033;
+}
+
+.officialId {
+  margin-top: 3px;
+  font-size: 11px;
+  color: #9aa4b2;
+}
+
+/* Information */
+
+.role {
+  color: #032865;
+  font-weight: 600;
+}
+
+.competition {
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  color: #172033;
+}
+
+.category {
+  color: #596579;
+}
+
+.dateTime {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #39445a;
+}
+
+.dateTime span {
+  display: block;
+  font-weight: 600;
+}
+
+.dateTime small {
+  display: block;
+  margin-top: 3px;
+  color: #718096;
+  font-size: 11px;
+}
+
+.venue {
+  color: #39445a;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Status */
+
+.status {
+  display: inline-flex;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.assigned {
+  background: #e8f7ee;
+  color: #159447;
+}
+
+.pending {
+  background: #fff5df;
+  color: #c98400;
+}
+
+.completed {
+  background: #e8eefc;
+  color: #3157a6;
+}
+
+/* Actions */
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.viewButton,
+.editButton {
+  width: 34px;
+  height: 34px;
+  border-radius: 7px;
+  border: 1px solid #dce2eb;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.viewButton {
+  color: #032865;
+}
+
+.editButton {
+  color: #e57a00;
+}
+
+.viewButton:hover,
+.editButton:hover {
+  background: #f5f7fb;
+}
+
+.assignButton {
+  height: 34px;
+  border: none;
+  border-radius: 7px;
+  padding: 0 12px;
+  background: #159447;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.assignButton:hover {
+  opacity: 0.9;
+}
+
+.completeButton {
+  height: 34px;
+  border: none;
+  border-radius: 7px;
+  padding: 0 12px;
+  background: #032865;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.completeButton:hover {
+  opacity: 0.9;
+}
+
+/* Empty */
+
+.emptyCell {
+  padding: 50px;
+  text-align: center;
+}
+
+.noData {
+  color: #718096;
+  font-size: 14px;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  .summaryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filterCard {
+    flex-wrap: wrap;
+  }
+
+  .searchBox {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .assignmentsPage {
+    margin-left: 0;
+    padding: 90px 15px 30px;
+  }
+
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .filterSelect {
+    width: 100%;
+  }
+
+  .tableHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

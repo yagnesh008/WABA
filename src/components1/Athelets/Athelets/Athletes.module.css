@@ -1,0 +1,1076 @@
+/* =========================================================
+   ATHLETES PAGE
+========================================================= */
+
+.athletesPage,
+.athletesPage * {
+  box-sizing: border-box;
+}
+
+.athletesPage {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  max-width: 100%;
+  min-height: 100vh;
+  padding: 95px 30px 40px;
+
+  background:
+    radial-gradient(
+      circle at 5% 5%,
+      rgba(254, 122, 3, 0.08),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 95% 10%,
+      rgba(3, 40, 101, 0.09),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #f8faff 0%,
+      #f5f8fc 50%,
+      #fafcff 100%
+    );
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.pageHeader {
+  margin-bottom: 26px;
+}
+
+.titleSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.titleIcon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #032865,
+    #0756a8
+  );
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  box-shadow:
+    0 8px 20px rgba(3, 40, 101, 0.20);
+}
+
+.titleSection h1 {
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: 800;
+
+  color: #172033;
+
+  letter-spacing: -0.4px;
+}
+
+.titleSection p {
+  margin: 5px 0 0;
+
+  color: #718096;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.summaryGrid {
+  display: grid;
+
+  grid-template-columns: repeat(
+    4,
+    minmax(0, 1fr)
+  );
+
+  gap: 18px;
+
+  margin-bottom: 24px;
+}
+
+.summaryCard {
+  position: relative;
+
+  min-width: 0;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border: 1px solid #e7ebf2;
+
+  border-radius: 16px;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.05);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.summaryCard::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background: #032865;
+}
+
+.summaryCard:nth-child(2)::before {
+  background: #159447;
+}
+
+.summaryCard:nth-child(3)::before {
+  background: #e79b00;
+}
+
+.summaryCard:nth-child(4)::before {
+  background: #dc3b3b;
+}
+
+.summaryCard:hover {
+  transform: translateY(-4px);
+
+  border-color: #d9e1ed;
+
+  box-shadow:
+    0 12px 28px rgba(15, 23, 42, 0.09);
+}
+
+
+/* =========================================================
+   SUMMARY ICON
+========================================================= */
+
+.cardIcon {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #e9eef8,
+    #dce7f8
+  );
+
+  color: #032865;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.activeIcon {
+  background: linear-gradient(
+    135deg,
+    #e8f7ee,
+    #d8f1e2
+  );
+
+  color: #159447;
+}
+
+.pendingIcon {
+  background: linear-gradient(
+    135deg,
+    #fff5df,
+    #ffedc2
+  );
+
+  color: #e79b00;
+}
+
+.suspendedIcon {
+  background: linear-gradient(
+    135deg,
+    #ffe9e9,
+    #ffdada
+  );
+
+  color: #dc3b3b;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.cardContent {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  min-width: 0;
+}
+
+.cardContent span {
+  font-size: 13px;
+
+  color: #718096;
+
+  font-weight: 500;
+}
+
+.cardContent strong {
+  font-size: 26px;
+
+  line-height: 1.1;
+
+  color: #172033;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   FILTER CARD
+========================================================= */
+
+.filterCard {
+  background: rgba(255, 255, 255, 0.97);
+
+  border: 1px solid #e7ebf2;
+
+  border-radius: 16px;
+
+  padding: 18px;
+
+  display: flex;
+
+  gap: 14px;
+
+  margin-bottom: 24px;
+
+  box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.04);
+}
+
+.searchBox {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 46px;
+
+  border: 1px solid #dce2eb;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 14px;
+
+  color: #718096;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.searchBox:focus-within {
+  border-color: #0756a8;
+
+  box-shadow:
+    0 0 0 3px rgba(3, 40, 101, 0.08);
+}
+
+.searchBox input {
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  font-size: 14px;
+
+  color: #172033;
+
+  background: transparent;
+}
+
+.searchBox input::placeholder {
+  color: #9aa4b2;
+}
+
+.filterSelect {
+  height: 46px;
+
+  min-width: 175px;
+
+  border: 1px solid #dce2eb;
+
+  border-radius: 10px;
+
+  padding: 0 13px;
+
+  background: #ffffff;
+
+  color: #39445a;
+
+  outline: none;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.filterSelect:focus {
+  border-color: #0756a8;
+
+  box-shadow:
+    0 0 0 3px rgba(3, 40, 101, 0.08);
+}
+
+
+/* =========================================================
+   TABLE CARD
+========================================================= */
+
+.tableCard {
+  width: 100%;
+
+  max-width: 100%;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border: 1px solid #e4e9f1;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 6px 22px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.tableHeader {
+  padding: 21px 22px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 15px;
+
+  border-bottom: 1px solid #edf0f5;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #fbfcfe
+    );
+}
+
+.tableHeader h2 {
+  margin: 0;
+
+  font-size: 18px;
+
+  font-weight: 750;
+
+  color: #172033;
+}
+
+.tableHeader p {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+
+  color: #718096;
+}
+
+.athleteCount {
+  padding: 7px 13px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #eef3fb,
+    #e3ebf8
+  );
+
+  color: #032865;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  border: 1px solid #dce6f4;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.tableWrapper {
+  width: 100%;
+
+  max-width: 100%;
+
+  overflow-x: auto;
+
+  overflow-y: hidden;
+
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    #b8c4d6
+    #f1f4f8;
+}
+
+.tableWrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.tableWrapper::-webkit-scrollbar-track {
+  background: #f1f4f8;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb {
+  background: #b8c4d6;
+
+  border-radius: 10px;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb:hover {
+  background: #8e9db2;
+}
+
+
+/* =========================================================
+   ATHLETES TABLE
+========================================================= */
+
+.athletesTable {
+  width: 100%;
+
+  min-width: 1350px;
+
+  border-collapse: collapse;
+
+  table-layout: auto;
+}
+
+
+/* =========================================================
+   TABLE HEADING
+========================================================= */
+
+.tableHeading {
+  padding: 15px 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #032865,
+      #06498f
+    );
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-align: left;
+
+  white-space: nowrap;
+
+  border-bottom: 1px solid #dce3ee;
+
+  letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   TABLE CELL
+========================================================= */
+
+.tableCell {
+  padding: 16px;
+
+  border-bottom: 1px solid #edf0f5;
+
+  font-size: 13px;
+
+  color: #39445a;
+
+  white-space: nowrap;
+
+  background: #ffffff;
+}
+
+.athletesTable tbody tr {
+  transition:
+    background 0.2s ease;
+}
+
+.athletesTable tbody tr:hover {
+  background: #f8fbff;
+}
+
+.athletesTable tbody tr:hover .tableCell {
+  background: #f8fbff;
+}
+
+.athletesTable tbody tr:last-child .tableCell {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   ATHLETE
+========================================================= */
+
+.athleteInfo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #032865,
+      #0873c9
+    );
+
+  color: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 800;
+
+  font-size: 14px;
+
+  flex-shrink: 0;
+
+  box-shadow:
+    0 4px 10px rgba(3, 40, 101, 0.18);
+}
+
+.athleteName {
+  font-size: 14px;
+
+  font-weight: 750;
+
+  color: #172033;
+}
+
+.athleteEmail {
+  margin-top: 3px;
+
+  font-size: 12px;
+
+  color: #718096;
+}
+
+.athleteId {
+  margin-top: 3px;
+
+  font-size: 11px;
+
+  color: #9aa4b2;
+}
+
+
+/* =========================================================
+   INFORMATION
+========================================================= */
+
+.organisation {
+  font-weight: 650;
+
+  color: #39445a;
+}
+
+.category {
+  color: #39445a;
+
+  font-weight: 650;
+}
+
+.classification {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 6px 10px;
+
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef3fb,
+      #e5edf9
+    );
+
+  color: #032865;
+
+  font-size: 12px;
+
+  font-weight: 750;
+
+  border: 1px solid #dce6f4;
+}
+
+.location {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #4a5568;
+}
+
+.competitions {
+  font-weight: 750;
+
+  color: #032865;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 75px;
+
+  padding: 6px 11px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  border: 1px solid transparent;
+}
+
+.active {
+  background: #e8f7ee;
+
+  color: #159447;
+
+  border-color: #cdebd9;
+}
+
+.pending {
+  background: #fff5df;
+
+  color: #c98400;
+
+  border-color: #f8e4b7;
+}
+
+.suspended {
+  background: #ffe9e9;
+
+  color: #dc3b3b;
+
+  border-color: #f5caca;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.viewButton,
+.editButton {
+  width: 35px;
+  height: 35px;
+
+  border-radius: 8px;
+
+  border: 1px solid #dce2eb;
+
+  background: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.viewButton {
+  color: #032865;
+}
+
+.editButton {
+  color: #e57a00;
+}
+
+.viewButton:hover {
+  color: #ffffff;
+
+  background: #032865;
+
+  border-color: #032865;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(3, 40, 101, 0.18);
+}
+
+.editButton:hover {
+  color: #ffffff;
+
+  background: #e57a00;
+
+  border-color: #e57a00;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(229, 122, 0, 0.18);
+}
+
+.activateButton {
+  height: 35px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  padding: 0 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #159447,
+      #20ae5a
+    );
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  box-shadow:
+    0 4px 10px rgba(21, 148, 71, 0.15);
+}
+
+.activateButton:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 15px rgba(21, 148, 71, 0.22);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.emptyCell {
+  padding: 60px 30px;
+
+  text-align: center;
+
+  background: #ffffff;
+}
+
+.noData {
+  color: #718096;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   LARGE SCREEN
+========================================================= */
+
+@media (max-width: 1400px) {
+  .athletesPage {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .summaryGrid {
+    gap: 15px;
+  }
+
+  .summaryCard {
+    padding: 17px;
+  }
+}
+
+
+/* =========================================================
+   MEDIUM SCREEN
+========================================================= */
+
+@media (max-width: 1100px) {
+  .summaryGrid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .filterCard {
+    flex-wrap: wrap;
+  }
+
+  .searchBox {
+    flex-basis: 100%;
+  }
+
+  .filterSelect {
+    flex: 1;
+
+    min-width: 160px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .athletesPage {
+    padding: 90px 20px 35px;
+  }
+
+  .titleSection h1 {
+    font-size: 24px;
+  }
+
+  .summaryGrid {
+    gap: 14px;
+  }
+
+  .summaryCard {
+    padding: 16px;
+  }
+
+  .cardContent strong {
+    font-size: 23px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .athletesPage {
+    margin-left: 0;
+
+    width: 100%;
+
+    padding: 90px 15px 30px;
+  }
+
+  .titleSection {
+    align-items: flex-start;
+  }
+
+  .titleIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .titleSection h1 {
+    font-size: 22px;
+  }
+
+  .titleSection p {
+    font-size: 13px;
+  }
+
+  .summaryGrid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .filterCard {
+    padding: 14px;
+
+    flex-direction: column;
+  }
+
+  .searchBox {
+    width: 100%;
+
+    flex-basis: auto;
+  }
+
+  .filterSelect {
+    width: 100%;
+
+    min-width: 0;
+
+    flex: none;
+  }
+
+  .tableHeader {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    padding: 18px;
+  }
+
+  .athleteCount {
+    align-self: flex-start;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+  .athletesPage {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .titleSection {
+    gap: 10px;
+  }
+
+  .titleIcon {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 11px;
+  }
+
+  .titleSection h1 {
+    font-size: 20px;
+  }
+
+  .titleSection p {
+    font-size: 12px;
+  }
+
+  .summaryCard {
+    padding: 15px;
+  }
+
+  .cardIcon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .cardContent strong {
+    font-size: 22px;
+  }
+
+  .tableHeader h2 {
+    font-size: 17px;
+  }
+}

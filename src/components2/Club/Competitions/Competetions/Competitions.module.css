@@ -1,0 +1,467 @@
+.main {
+  margin-left: 260px;
+  padding: 98px 30px 45px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top right, rgba(255, 122, 0, 0.08), transparent 30%),
+    linear-gradient(135deg, #f7f9fc 0%, #eef3f8 100%);
+}
+
+/* ================================
+   PAGE HEADER
+================================ */
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.titleIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff7a00, #ff9f43);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255, 122, 0, 0.25);
+}
+
+.pageHeader h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 750;
+  color: #10233f;
+}
+
+.pageHeader p {
+  margin: 5px 0 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+/* ================================
+   STATS
+================================ */
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.statCard {
+  background: #ffffff;
+  border: 1px solid #e6ebf1;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 6px 20px rgba(16, 35, 63, 0.06);
+  transition: 0.25s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(16, 35, 63, 0.1);
+}
+
+.statIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.orange {
+  background: #fff1e5;
+  color: #f57c00;
+}
+
+.blue {
+  background: #eaf3ff;
+  color: #2878d8;
+}
+
+.green {
+  background: #e8f8ef;
+  color: #1f9d55;
+}
+
+.purple {
+  background: #f2ebff;
+  color: #7b4bd1;
+}
+
+.statCard span {
+  display: block;
+  color: #718096;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.statCard strong {
+  display: block;
+  font-size: 25px;
+  color: #10233f;
+  line-height: 1.1;
+}
+
+.statCard small {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #8996a8;
+}
+
+/* ================================
+   SECTION
+================================ */
+
+.section {
+  margin-bottom: 30px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 17px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  color: #10233f;
+  font-size: 20px;
+  font-weight: 720;
+}
+
+.sectionHeader p {
+  margin: 5px 0 0;
+  color: #7a8798;
+  font-size: 13px;
+}
+
+.viewAll {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #f57c00;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.viewAll:hover {
+  color: #d96400;
+}
+
+/* ================================
+   MANAGEMENT CARDS
+================================ */
+
+.managementGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.managementCard {
+  text-decoration: none;
+  background: #ffffff;
+  border: 1px solid #e4eaf1;
+  border-radius: 18px;
+  padding: 22px;
+  display: flex;
+  gap: 17px;
+  min-height: 180px;
+  box-shadow: 0 7px 22px rgba(16, 35, 63, 0.06);
+  transition: 0.25s ease;
+}
+
+.managementCard:hover {
+  transform: translateY(-5px);
+  border-color: #ffb36b;
+  box-shadow: 0 15px 32px rgba(16, 35, 63, 0.11);
+}
+
+.managementIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.available {
+  background: #fff1e5;
+  color: #f57c00;
+}
+
+.registration {
+  background: #e8f8ef;
+  color: #159957;
+}
+
+.upcoming {
+  background: #eaf3ff;
+  color: #2878d8;
+}
+
+.cardContent {
+  flex: 1;
+}
+
+.cardContent h3 {
+  margin: 2px 0 8px;
+  color: #10233f;
+  font-size: 17px;
+}
+
+.cardContent p {
+  margin: 0;
+  color: #718096;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.cardBottom {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardBottom span {
+  color: #8996a8;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #f4f7fa;
+  color: #53657b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================================
+   COMPETITION LIST
+================================ */
+
+.competitionList {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.competitionCard {
+  background: #ffffff;
+  border: 1px solid #e4eaf1;
+  border-radius: 16px;
+  padding: 17px 19px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 5px 18px rgba(16, 35, 63, 0.05);
+  transition: 0.2s ease;
+}
+
+.competitionCard:hover {
+  box-shadow: 0 10px 25px rgba(16, 35, 63, 0.09);
+  transform: translateY(-2px);
+}
+
+.dateBox {
+  width: 62px;
+  min-width: 62px;
+  height: 62px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #102c4d, #174d7e);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dateBox span {
+  font-size: 22px;
+  font-weight: 750;
+  line-height: 1;
+}
+
+.dateBox small {
+  margin-top: 5px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
+
+.competitionInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.competitionTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.competitionTitle h3 {
+  margin: 0;
+  color: #10233f;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.confirmed {
+  padding: 4px 9px;
+  border-radius: 20px;
+  background: #e8f8ef;
+  color: #198754;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.details {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.details span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #7b8797;
+  font-size: 12px;
+}
+
+.details svg {
+  color: #f57c00;
+}
+
+.detailsButton {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 13px;
+  border-radius: 9px;
+  background: #f5f7fa;
+  color: #53657b;
+  font-size: 12px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.detailsButton:hover {
+  background: #fff1e5;
+  color: #f57c00;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1200px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .managementGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    padding: 90px 18px 30px;
+  }
+
+  .pageHeader h1 {
+    font-size: 23px;
+  }
+
+  .pageHeader p {
+    font-size: 12px;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .managementGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .competitionCard {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .competitionInfo {
+    width: calc(100% - 80px);
+  }
+
+  .detailsButton {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 85px 13px 25px;
+  }
+
+  .titleRow {
+    align-items: flex-start;
+  }
+
+  .titleIcon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .pageHeader h1 {
+    font-size: 21px;
+  }
+
+  .managementCard {
+    padding: 17px;
+  }
+
+  .competitionCard {
+    padding: 14px;
+  }
+
+  .details {
+    gap: 10px;
+  }
+}

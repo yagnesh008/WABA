@@ -1,0 +1,1158 @@
+/* =========================================================
+   WABA NATIONAL ADMIN - COACHES PAGE
+========================================================= */
+
+.coachesPage {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  min-height: 100vh;
+  padding: 95px 30px 40px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(
+      circle at 95% 5%,
+      rgba(254, 122, 3, 0.12),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 5% 30%,
+      rgba(25, 118, 210, 0.10),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #f4f8fc 0%,
+      #f8fafc 50%,
+      #fff8f2 100%
+    );
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.pageHeader {
+  position: relative;
+
+  width: 100%;
+  min-height: 135px;
+
+  padding: 28px 32px;
+  margin-bottom: 22px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background:
+    radial-gradient(
+      circle at 92% 15%,
+      rgba(254, 122, 3, 0.42),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 72% 100%,
+      rgba(25, 118, 210, 0.35),
+      transparent 32%
+    ),
+    linear-gradient(
+      120deg,
+      #04182e 0%,
+      #07345e 55%,
+      #0b4c7c 100%
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 14px 35px rgba(3, 40, 101, 0.16);
+}
+
+/* Decorative circles */
+
+.pageHeader::before {
+  content: "";
+
+  position: absolute;
+
+  width: 170px;
+  height: 170px;
+
+  right: -60px;
+  top: -85px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pageHeader::after {
+  content: "";
+
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  right: 35px;
+  bottom: -75px;
+
+  border-radius: 50%;
+
+  background: rgba(254, 122, 3, 0.12);
+}
+
+
+/* Header content */
+
+.pageHeader > div:first-child {
+  position: relative;
+  z-index: 2;
+}
+
+.pageHeader h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 30px;
+  font-weight: 850;
+
+  letter-spacing: 0.2px;
+}
+
+.pageHeader p {
+  margin: 8px 0 0;
+
+  color: #dceaf7;
+
+  font-size: 13px;
+}
+
+
+/* Header icon */
+
+.headerIcon {
+  position: relative;
+  z-index: 3;
+
+  width: 64px;
+  height: 64px;
+
+  min-width: 64px;
+
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(254, 122, 3, 0.95),
+      rgba(255, 173, 92, 0.9)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow:
+    0 10px 25px rgba(254, 122, 3, 0.28);
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+.summaryGrid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 22px;
+}
+
+.summaryCard {
+  position: relative;
+
+  min-width: 0;
+  min-height: 110px;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e4eaf1;
+
+  border-radius: 17px;
+
+  box-shadow:
+    0 7px 24px rgba(7, 27, 51, 0.07);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Decorative circle */
+
+.summaryCard::after {
+  content: "";
+
+  position: absolute;
+
+  width: 75px;
+  height: 75px;
+
+  right: -25px;
+  top: -28px;
+
+  border-radius: 50%;
+
+  background: rgba(25, 118, 210, 0.05);
+}
+
+.summaryCard:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 14px 30px rgba(7, 27, 51, 0.12);
+}
+
+
+/* Summary icon */
+
+.summaryIcon {
+  width: 53px;
+  height: 53px;
+
+  min-width: 53px;
+
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  position: relative;
+  z-index: 2;
+
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Blue */
+
+.summaryIcon.blue {
+  background:
+    linear-gradient(
+      135deg,
+      #1976d2,
+      #42a5f5
+    );
+}
+
+
+/* Orange */
+
+.summaryIcon.orange {
+  background:
+    linear-gradient(
+      135deg,
+      #fe7a03,
+      #ffad5c
+    );
+}
+
+
+/* Green */
+
+.summaryIcon.green {
+  background:
+    linear-gradient(
+      135deg,
+      #10a765,
+      #45d58e
+    );
+}
+
+
+/* Purple */
+
+.summaryIcon.purple {
+  background:
+    linear-gradient(
+      135deg,
+      #8e44ad,
+      #bd70dc
+    );
+}
+
+
+.summaryCard span {
+  display: block;
+
+  color: #78879a;
+
+  font-size: 11px;
+  font-weight: 650;
+
+  white-space: nowrap;
+}
+
+.summaryCard strong {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #071b33;
+
+  font-size: 26px;
+  font-weight: 850;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   MAIN COACHES CARD
+========================================================= */
+
+.coachesCard {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 19px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 9px 28px rgba(7, 27, 51, 0.07);
+}
+
+
+/* Top colorful line */
+
+.coachesCard::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #fe7a03 0%,
+      #ffad5c 35%,
+      #1976d2 70%,
+      #16a765 100%
+    );
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.cardHeader {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 23px 24px;
+
+  border-bottom: 1px solid #edf1f5;
+}
+
+.cardHeader h2 {
+  margin: 0;
+
+  color: #032865;
+
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.cardHeader p {
+  margin: 6px 0 0;
+
+  color: #7c8797;
+
+  font-size: 11px;
+}
+
+
+/* Total badge */
+
+.totalBadge {
+  padding: 7px 13px;
+
+  border-radius: 20px;
+
+  color: #fe7a03;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff1e5,
+      #fff8f2
+    );
+
+  border: 1px solid #ffd7b0;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  box-shadow:
+    0 4px 10px rgba(254, 122, 3, 0.08);
+}
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.filters {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 18px 24px;
+
+  border-bottom: 1px solid #edf1f5;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #fbfcfe
+    );
+}
+
+
+/* Search */
+
+.searchBox {
+  flex: 1;
+
+  min-width: 200px;
+  max-width: 430px;
+
+  height: 43px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  border: 1px solid #dce4ed;
+
+  border-radius: 11px;
+
+  background: #f9fbfd;
+
+  color: #7b8797;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.searchBox:focus-within {
+  background: #ffffff;
+
+  border-color: #1976d2;
+
+  box-shadow:
+    0 0 0 3px rgba(25, 118, 210, 0.10);
+}
+
+.searchBox input {
+  width: 100%;
+
+  min-width: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #334155;
+
+  font-size: 12px;
+}
+
+.searchBox input::placeholder {
+  color: #9aa6b5;
+}
+
+
+/* Select */
+
+.selectBox {
+  height: 43px;
+
+  min-width: 190px;
+
+  padding: 0 13px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  border: 1px solid #dce4ed;
+
+  border-radius: 11px;
+
+  background: #f9fbfd;
+
+  color: #718096;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.selectBox:focus-within {
+  border-color: #fe7a03;
+
+  box-shadow:
+    0 0 0 3px rgba(254, 122, 3, 0.10);
+}
+
+.selectBox select {
+  width: 100%;
+
+  min-width: 0;
+
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #374151;
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.tableWrapper {
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* Horizontal scrollbar */
+
+.tableWrapper::-webkit-scrollbar {
+  height: 7px;
+}
+
+.tableWrapper::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(
+      90deg,
+      #1976d2,
+      #fe7a03
+    );
+
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.table {
+  width: 100%;
+
+  min-width: 1050px;
+
+  border-collapse: separate;
+
+  border-spacing: 0;
+}
+
+
+/* Table heading */
+
+.table th {
+  padding: 14px 17px;
+
+  text-align: left;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f8fafc,
+      #f3f6fa
+    );
+
+  color: #64748b;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  border-bottom: 1px solid #e3e8ef;
+
+  white-space: nowrap;
+}
+
+
+/* First heading */
+
+.table th:first-child {
+  padding-left: 20px;
+}
+
+
+/* Table cells */
+
+.table td {
+  padding: 15px 17px;
+
+  color: #475569;
+
+  font-size: 11px;
+
+  border-bottom: 1px solid #edf1f5;
+
+  vertical-align: middle;
+
+  white-space: nowrap;
+}
+
+
+/* Row */
+
+.table tbody tr {
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background:
+    linear-gradient(
+      90deg,
+      #fffaf5,
+      #ffffff,
+      #f7fbff
+    );
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   COACH INFORMATION
+========================================================= */
+
+.userInfo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  min-width: 220px;
+}
+
+
+/* Avatar */
+
+.avatar {
+  width: 41px;
+  height: 41px;
+
+  min-width: 41px;
+
+  border-radius: 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1976d2,
+      #42a5f5
+    );
+
+  font-size: 14px;
+  font-weight: 850;
+
+  box-shadow:
+    0 6px 15px rgba(25, 118, 210, 0.20);
+}
+
+
+.userInfo div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+
+  min-width: 0;
+}
+
+.userInfo strong {
+  color: #172033;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.userInfo span {
+  color: #fe7a03;
+
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.userInfo small {
+  color: #8a94a3;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   SPECIALIZATION
+========================================================= */
+
+.specialization {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 6px 10px;
+
+  border-radius: 8px;
+
+  color: #d96b18;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff0e5,
+      #fff7f1
+    );
+
+  border: 1px solid #ffd9bd;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  box-shadow:
+    0 3px 8px rgba(254, 122, 3, 0.07);
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.active,
+.pending {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 6px 11px;
+
+  border-radius: 20px;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+
+/* Active */
+
+.active {
+  color: #12834a;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e5f8ed,
+      #f0fcf5
+    );
+
+  border: 1px solid #bce8ce;
+}
+
+
+/* Pending */
+
+.pending {
+  color: #b77900;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff3d7,
+      #fff9e9
+    );
+
+  border: 1px solid #f4dda2;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+
+/* Action button */
+
+.actions button {
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+
+  border: 1px solid #dfe6ee;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #64748b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    all 0.2s ease;
+}
+
+
+/* View */
+
+.actions button:hover {
+  color: #1976d2;
+
+  background: #edf5ff;
+
+  border-color: #bcdcff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(25, 118, 210, 0.12);
+}
+
+
+/* =========================================================
+   RESPONSIVE - LARGE TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .coachesPage {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .summaryGrid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .filters {
+    flex-wrap: wrap;
+  }
+
+  .searchBox {
+    max-width: none;
+    flex: 1 1 300px;
+  }
+
+  .selectBox {
+    flex: 1 1 180px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .coachesPage {
+    margin-left: 235px;
+
+    width: calc(100% - 235px);
+
+    padding:
+      90px 20px 35px;
+  }
+
+  .pageHeader {
+    min-height: 125px;
+
+    padding:
+      25px;
+  }
+
+  .pageHeader h1 {
+    font-size: 27px;
+  }
+
+  .summaryGrid {
+    gap: 14px;
+  }
+
+  .summaryCard {
+    padding: 17px;
+  }
+
+  .cardHeader {
+    padding:
+      20px;
+  }
+
+  .filters {
+    padding:
+      16px 20px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .coachesPage {
+    margin-left: 0;
+
+    width: 100%;
+
+    padding:
+      88px 15px 30px;
+  }
+
+  .pageHeader {
+    min-height: 120px;
+
+    padding:
+      22px;
+
+    border-radius: 16px;
+  }
+
+  .pageHeader h1 {
+    font-size: 24px;
+  }
+
+  .pageHeader p {
+    font-size: 11px;
+  }
+
+  .headerIcon {
+    width: 50px;
+    height: 50px;
+
+    min-width: 50px;
+
+    border-radius: 14px;
+  }
+
+  .summaryGrid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .summaryCard {
+    min-height: 90px;
+  }
+
+  .coachesCard {
+    border-radius: 15px;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding:
+      19px;
+  }
+
+  .filters {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding:
+      16px 19px;
+  }
+
+  .searchBox {
+    width: 100%;
+
+    max-width: none;
+  }
+
+  .selectBox {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+  .table {
+    min-width: 1000px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .coachesPage {
+    padding:
+      85px 10px 25px;
+  }
+
+  .pageHeader {
+    padding:
+      19px;
+  }
+
+  .pageHeader h1 {
+    font-size: 22px;
+  }
+
+  .headerIcon {
+    width: 45px;
+    height: 45px;
+
+    min-width: 45px;
+  }
+
+  .summaryCard {
+    padding:
+      15px;
+  }
+
+  .summaryIcon {
+    width: 47px;
+    height: 47px;
+
+    min-width: 47px;
+  }
+
+  .cardHeader {
+    padding:
+      17px;
+  }
+}

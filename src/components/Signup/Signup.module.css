@@ -1,0 +1,1097 @@
+/* =====================================================
+   SIGNUP PAGE
+===================================================== */
+
+.signupPage {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        135deg,
+        #ff9933 0%,
+        #ffffff 48%,
+        #138808 100%
+    );
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   MAIN SIGNUP CARD
+===================================================== */
+
+.signupContainer {
+    width: 100%;
+
+    max-width: 850px;
+
+    height: 76vh;
+
+    max-height: 620px;
+
+    display: grid;
+
+    grid-template-columns: 43% 57%;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 22px 60px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =====================================================
+   LEFT SECTION
+===================================================== */
+
+.leftSection {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 35px 30px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ff7a00 0%,
+            #d6a900 48%,
+            #5aa900 100%
+        );
+}
+
+
+/* =====================================================
+   DECORATIVE TOP CIRCLE
+===================================================== */
+
+.leftSection::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    top: -210px;
+    left: -190px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   DECORATIVE BOTTOM CIRCLE
+===================================================== */
+
+.leftSection::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    right: -190px;
+    bottom: -190px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.22);
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.leftContent {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 320px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   WABA LOGO
+===================================================== */
+
+.logo {
+    width: 115px;
+    height: 115px;
+
+    margin: 0 auto 18px;
+
+    padding: 5px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    border: 4px solid rgba(255, 255, 255, 0.65);
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.22);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =====================================================
+   LOGO HOVER
+===================================================== */
+
+.logo:hover {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 14px 34px rgba(0, 0, 0, 0.27);
+}
+
+
+/* =====================================================
+   LOGO IMAGE
+===================================================== */
+
+.logo img {
+    width: 94%;
+    height: 94%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =====================================================
+   JOIN WABA HEADING
+===================================================== */
+
+.leftContent h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 36px;
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.7px;
+
+    text-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =====================================================
+   HEADING LINE
+===================================================== */
+
+.leftContent h1::after {
+    content: "";
+
+    display: block;
+
+    width: 50px;
+
+    height: 3px;
+
+    margin: 10px auto 16px;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.leftContent p {
+    max-width: 310px;
+
+    margin: 0 auto 23px;
+
+    color: rgba(255, 255, 255, 0.97);
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    line-height: 1.65;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   TAGS
+===================================================== */
+
+.tags {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    max-width: 320px;
+}
+
+
+/* =====================================================
+   TAG
+===================================================== */
+
+.tags span {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 6px 13px;
+
+    border-radius: 30px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.75);
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.7px;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* =====================================================
+   TAG HOVER
+===================================================== */
+
+.tags span:hover {
+    transform: translateY(-3px);
+
+    background:
+        rgba(255, 255, 255, 0.25);
+}
+
+
+/* =====================================================
+   RIGHT SECTION
+===================================================== */
+
+.rightSection {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background: #ffffff;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        #cccccc
+        transparent;
+}
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+.rightSection::-webkit-scrollbar {
+    width: 6px;
+}
+
+.rightSection::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.rightSection::-webkit-scrollbar-thumb {
+    background: #cccccc;
+
+    border-radius: 10px;
+}
+
+.rightSection::-webkit-scrollbar-thumb:hover {
+    background: #aaaaaa;
+}
+
+
+/* =====================================================
+   FORM WRAPPER
+===================================================== */
+
+.formWrapper {
+    width: 100%;
+
+    max-width: 500px;
+
+    padding: 32px 35px 40px;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   FORM HEADING
+===================================================== */
+
+.formWrapper h2 {
+    margin: 0;
+
+    color: #032865;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.subtitle {
+    margin: 6px 0 21px;
+
+    color: #777777;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   INPUT GROUP
+===================================================== */
+
+.inputGroup {
+    width: 100%;
+
+    margin-bottom: 13px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.inputGroup label {
+    margin-bottom: 6px;
+
+    color: #032865;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   INPUT / SELECT / TEXTAREA
+===================================================== */
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+    width: 100%;
+
+    padding: 10px 12px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d3d3d3;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #222222;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =====================================================
+   INPUT / SELECT HEIGHT
+===================================================== */
+
+.inputGroup input,
+.inputGroup select {
+    height: 42px;
+}
+
+
+/* =====================================================
+   TEXTAREA
+===================================================== */
+
+.inputGroup textarea {
+    min-height: 75px;
+
+    resize: vertical;
+}
+
+
+/* =====================================================
+   PLACEHOLDER
+===================================================== */
+
+.inputGroup input::placeholder,
+.inputGroup textarea::placeholder {
+    color: #a5a5a5;
+}
+
+
+/* =====================================================
+   INPUT FOCUS
+===================================================== */
+
+.inputGroup input:focus,
+.inputGroup select:focus,
+.inputGroup textarea:focus {
+    border-color: #ff7a00;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 122, 0, 0.10);
+}
+
+
+/* =====================================================
+   DISABLED SELECT
+===================================================== */
+
+.inputGroup select:disabled {
+    background: #f5f5f5;
+
+    color: #999999;
+
+    border-color: #dddddd;
+
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   ADDRESS SELECTS
+===================================================== */
+
+.inputGroup > select {
+    margin-bottom: 8px;
+}
+
+
+/* =====================================================
+   FILE INPUT
+===================================================== */
+
+.inputGroup input[type="file"] {
+    height: auto;
+
+    padding: 8px 10px;
+
+    cursor: pointer;
+
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   SMALL TEXT
+===================================================== */
+
+.inputGroup small {
+    margin-top: 4px;
+
+    color: #777777;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   DYNAMIC SECTION
+===================================================== */
+
+.dynamicSection {
+    width: 100%;
+
+    margin-top: 10px;
+
+    margin-bottom: 15px;
+
+    padding: 14px 15px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e1e1e1;
+
+    border-radius: 10px;
+
+    background: #fafafa;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.03);
+}
+
+
+/* =====================================================
+   DYNAMIC HEADING
+===================================================== */
+
+.dynamicSection h3 {
+    margin: 0 0 13px;
+
+    color: #032865;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   NESTED DYNAMIC SECTION
+===================================================== */
+
+.dynamicSection .dynamicSection {
+    margin-top: 5px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    box-shadow: none;
+}
+
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+.submitButton {
+    width: 100%;
+
+    height: 44px;
+
+    margin-top: 6px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff7a00,
+            #f47721
+        );
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =====================================================
+   SUBMIT HOVER
+===================================================== */
+
+.submitButton:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 22px rgba(255, 122, 0, 0.28);
+}
+
+
+/* =====================================================
+   SUBMIT ACTIVE
+===================================================== */
+
+.submitButton:active {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   ALREADY HAVE ACCOUNT - LOGIN AREA
+===================================================== */
+
+.loginText {
+    margin: 12px 0 0;
+
+    padding: 10px 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    color: #5f6673;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    text-align: center;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 122, 0, 0.06),
+            rgba(3, 175, 11, 0.06)
+        );
+
+    border:
+        1px solid rgba(255, 122, 0, 0.12);
+
+    box-sizing: border-box;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =====================================================
+   LOGIN TEXT HOVER
+===================================================== */
+
+.loginText:hover {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 122, 0, 0.10),
+            rgba(3, 175, 11, 0.10)
+        );
+
+    border-color:
+        rgba(3, 175, 11, 0.20);
+
+    box-shadow:
+        0 4px 12px rgba(3, 175, 11, 0.08);
+}
+
+
+/* =====================================================
+   LOGIN LINK
+===================================================== */
+
+.loginText a {
+    position: relative;
+
+    color: #fe7a03;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* =====================================================
+   LOGIN UNDERLINE
+===================================================== */
+
+.loginText a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -2px;
+
+    width: 100%;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fe7a03,
+            #03af0b
+        );
+
+    transform: scaleX(0);
+
+    transform-origin: center;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+/* =====================================================
+   LOGIN HOVER
+===================================================== */
+
+.loginText a:hover {
+    color: #03af0b;
+
+    transform: translateY(-1px);
+}
+
+
+.loginText a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .signupPage {
+        padding: 20px;
+    }
+
+
+    .signupContainer {
+        max-width: 760px;
+
+        height: 88vh;
+
+        grid-template-columns: 40% 60%;
+    }
+
+
+    .leftSection {
+        padding: 30px 25px;
+    }
+
+
+    .logo {
+        width: 110px;
+        height: 110px;
+    }
+
+
+    .leftContent h1 {
+        font-size: 32px;
+    }
+
+
+    .leftContent p {
+        font-size: 13px;
+    }
+
+
+    .formWrapper {
+        padding: 28px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .signupPage {
+        min-height: 100vh;
+
+        padding: 15px;
+
+        align-items: flex-start;
+
+        overflow-y: auto;
+    }
+
+
+    .signupContainer {
+        width: 100%;
+
+        height: auto;
+
+        max-height: none;
+
+        grid-template-columns: 1fr;
+
+        border-radius: 20px;
+    }
+
+
+    .leftSection {
+        width: 100%;
+
+        min-height: 350px;
+
+        height: auto;
+
+        padding: 35px 25px;
+    }
+
+
+    .leftContent {
+        max-width: 350px;
+    }
+
+
+    .logo {
+        width: 110px;
+        height: 110px;
+
+        margin-bottom: 17px;
+    }
+
+
+    .leftContent h1 {
+        font-size: 31px;
+    }
+
+
+    .leftContent p {
+        font-size: 13px;
+
+        max-width: 330px;
+    }
+
+
+    .tags {
+        justify-content: center;
+    }
+
+
+    .rightSection {
+        width: 100%;
+
+        height: auto;
+
+        overflow: visible;
+    }
+
+
+    .formWrapper {
+        max-width: 100%;
+
+        padding: 30px 25px 38px;
+    }
+
+
+    /* Login section on mobile */
+
+    .loginText {
+        margin-top: 12px;
+
+        padding: 10px 12px;
+
+        font-size: 11px;
+    }
+
+
+    .loginText a {
+        font-size: 12px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .signupPage {
+        padding: 10px;
+    }
+
+
+    .signupContainer {
+        border-radius: 17px;
+    }
+
+
+    .leftSection {
+        min-height: 330px;
+
+        padding: 30px 20px;
+    }
+
+
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .leftContent h1 {
+        font-size: 28px;
+    }
+
+
+    .leftContent p {
+        font-size: 12px;
+
+        line-height: 1.6;
+    }
+
+
+    .tags {
+        gap: 6px;
+    }
+
+
+    .tags span {
+        padding: 6px 10px;
+
+        font-size: 9px;
+    }
+
+
+    .formWrapper {
+        padding: 26px 18px 32px;
+    }
+
+
+    .formWrapper h2 {
+        font-size: 26px;
+    }
+
+
+    .inputGroup input,
+    .inputGroup select {
+        height: 42px;
+    }
+
+
+    .dynamicSection {
+        padding: 13px;
+    }
+
+
+    /* Small mobile login */
+
+    .loginText {
+        padding: 9px 8px;
+
+        font-size: 10.5px;
+
+        gap: 4px;
+    }
+
+
+    .loginText a {
+        font-size: 11.5px;
+    }
+}

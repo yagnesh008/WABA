@@ -1,0 +1,256 @@
+.page {
+  margin-left: 260px;
+  min-height: 100vh;
+  padding: 96px 32px 45px;
+  background: #f5f7fb;
+}
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #fe7a03;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.pageHeader h1 {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 0;
+  color: #10233f;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.pageHeader p {
+  margin: 9px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.headerBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  color: #10233f;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px;
+  margin-bottom: 25px;
+  border: 1px solid #e4e8ef;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.summaryIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #10233f;
+  color: #fff;
+}
+
+.summary h2 {
+  margin: 0 0 5px;
+  color: #10233f;
+  font-size: 18px;
+}
+
+.summary p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* =========================================
+   CARDS
+========================================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  display: block;
+  padding: 23px;
+  border: 1px solid #e4e8ef;
+  border-radius: 15px;
+  background: #fff;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(16, 35, 63, 0.09);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+}
+
+.upcoming .iconBox {
+  background: #fff3e8;
+  color: #fe7a03;
+}
+
+.live .iconBox {
+  background: #eaf7ef;
+  color: #159447;
+}
+
+.completed .iconBox {
+  background: #eaf1fb;
+  color: #245a9c;
+}
+
+.count {
+  color: #10233f;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.card h3 {
+  margin: 20px 0 8px;
+  color: #10233f;
+  font-size: 18px;
+}
+
+.card p {
+  min-height: 48px;
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid #edf0f4;
+  color: #10233f;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cardFooter svg {
+  color: #fe7a03;
+}
+
+/* =========================================
+   INFO
+========================================= */
+
+.infoSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.infoCard {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 18px;
+  border: 1px solid #e4e8ef;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.infoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #f1f4f8;
+  color: #10233f;
+}
+
+.infoCard strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #10233f;
+  font-size: 13px;
+}
+
+.infoCard span {
+  color: #7b8491;
+  font-size: 12px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+  .grid,
+  .infoSection {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .page {
+    margin-left: 0;
+    padding: 90px 18px 30px;
+  }
+
+  .pageHeader {
+    flex-direction: column;
+  }
+
+  .headerBadge {
+    width: fit-content;
+  }
+}

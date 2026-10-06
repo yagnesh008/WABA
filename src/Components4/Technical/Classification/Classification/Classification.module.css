@@ -1,0 +1,728 @@
+/* =========================================================
+   CLASSIFICATION PAGE
+========================================================= */
+
+.page {
+  margin-left: 260px;
+  min-height: 100vh;
+  padding: 96px 32px 45px;
+  background: #f5f7fb;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.pageHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #fe7a03;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.pageHeader h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: #10233f;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.pageHeader h1 svg {
+  color: #fe7a03;
+}
+
+.pageHeader p {
+  margin: 9px 0 0;
+  color: #718096;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.headerBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border: 1px solid #e2e7ef;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #10233f;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.headerBadge svg {
+  color: #fe7a03;
+}
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.overviewCard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 94px;
+  padding: 18px 20px;
+  border: 1px solid #e3e8ef;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(16, 35, 63, 0.04);
+}
+
+.overviewIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #fff1e6;
+  color: #fe7a03;
+}
+
+.overviewCard strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #10233f;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.overviewCard span {
+  display: block;
+  color: #758296;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.overviewStatus {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: #f5f7fa;
+  color: #7c8797;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section {
+  margin-bottom: 30px;
+}
+
+.sectionHeader {
+  margin-bottom: 18px;
+}
+
+.sectionLabel {
+  display: block;
+  margin-bottom: 5px;
+  color: #fe7a03;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.sectionHeader h2,
+.sectionHeaderRow h2 {
+  margin: 0;
+  color: #10233f;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.sectionHeader p {
+  margin: 6px 0 0;
+  color: #7b8798;
+  font-size: 13px;
+}
+
+/* =========================================================
+   MODULE CARDS
+========================================================= */
+
+.moduleGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.moduleCard {
+  padding: 20px;
+  border: 1px solid #e3e8ef;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 5px 18px rgba(16, 35, 63, 0.05);
+  transition: 0.2s ease;
+}
+
+.moduleCard:hover {
+  transform: translateY(-2px);
+  border-color: #d6dde7;
+  box-shadow: 0 10px 25px rgba(16, 35, 63, 0.08);
+}
+
+.moduleTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.moduleIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #fff1e6;
+  color: #fe7a03;
+}
+
+.pendingBadge,
+.scheduledBadge,
+.completedBadge {
+  padding: 6px 9px;
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.pendingBadge {
+  background: #fff3e8;
+  color: #e76c00;
+}
+
+.scheduledBadge {
+  background: #eef5ff;
+  color: #3777c8;
+}
+
+.completedBadge {
+  background: #edf9f0;
+  color: #278743;
+}
+
+.moduleContent {
+  margin-top: 18px;
+}
+
+.moduleContent h3 {
+  margin: 0;
+  color: #10233f;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.moduleContent p {
+  min-height: 48px;
+  margin: 8px 0 0;
+  color: #788699;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.moduleFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #edf0f4;
+}
+
+.countBox {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.countBox strong {
+  color: #10233f;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.countBox span {
+  color: #8995a5;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.viewButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #10233f;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.viewButton:hover {
+  background: #fe7a03;
+}
+
+.viewButton svg {
+  color: #fe7a03;
+}
+
+.viewButton:hover svg {
+  color: #ffffff;
+}
+
+/* =========================================================
+   INFO GRID
+========================================================= */
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.infoCard {
+  padding: 21px;
+  border: 1px solid #e3e8ef;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 5px 18px rgba(16, 35, 63, 0.04);
+}
+
+.infoHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.infoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #fff1e6;
+  color: #fe7a03;
+}
+
+.infoHeader span {
+  display: block;
+  margin-bottom: 3px;
+  color: #fe7a03;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.9px;
+}
+
+.infoHeader h3 {
+  margin: 0;
+  color: #10233f;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   WORKFLOW
+========================================================= */
+
+.workflow {
+  padding-top: 18px;
+}
+
+.workflowItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.workflowNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #10233f;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.workflowItem strong {
+  display: block;
+  color: #26364d;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.workflowItem span {
+  display: block;
+  margin-top: 3px;
+  color: #8793a3;
+  font-size: 10px;
+}
+
+.workflowLine {
+  width: 1px;
+  height: 17px;
+  margin-left: 15px;
+  background: #dfe5ec;
+}
+
+/* =========================================================
+   STATUS LIST
+========================================================= */
+
+.statusList {
+  padding-top: 10px;
+}
+
+.statusItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.statusItem:last-child {
+  border-bottom: none;
+}
+
+.statusLeft {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #5f6d80;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.statusItem strong {
+  color: #10233f;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.statusDotOrange,
+.statusDotBlue,
+.statusDotGreen {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.statusDotOrange {
+  background: #fe7a03;
+}
+
+.statusDotBlue {
+  background: #4b8ed8;
+}
+
+.statusDotGreen {
+  background: #32a852;
+}
+
+/* =========================================================
+   SESSION SECTION
+========================================================= */
+
+.sectionHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.allButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px;
+  border: 1px solid #dfe5ed;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #10233f;
+  font-size: 11px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.allButton:hover {
+  border-color: #fe7a03;
+  color: #fe7a03;
+}
+
+.allButton svg {
+  color: #fe7a03;
+}
+
+/* =========================================================
+   SESSION LIST
+========================================================= */
+
+.sessionList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sessionCard {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 18px;
+  border: 1px solid #e3e8ef;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(16, 35, 63, 0.035);
+}
+
+.sessionIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #fff1e6;
+  color: #fe7a03;
+}
+
+.sessionMain {
+  flex: 1;
+  min-width: 0;
+}
+
+.sessionTitle {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.sessionTitle h3 {
+  margin: 0;
+  color: #26364d;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.sessionTitle span {
+  padding: 4px 7px;
+  border-radius: 5px;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.sessionScheduled {
+  background: #eef5ff;
+  color: #3777c8;
+}
+
+.sessionPending {
+  background: #fff3e8;
+  color: #e76c00;
+}
+
+.sessionMain > p {
+  margin: 4px 0 8px;
+  color: #8995a5;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.sessionDetails {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.sessionDetails span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #748196;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.sessionDetails svg {
+  color: #fe7a03;
+}
+
+/* =========================================================
+   BOTTOM NOTICE
+========================================================= */
+
+.bottomNotice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px;
+  border: 1px solid #e4e9ef;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.noticeIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #edf9f0;
+  color: #2b9348;
+}
+
+.bottomNotice strong {
+  display: block;
+  color: #26364d;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.bottomNotice p {
+  margin: 4px 0 0;
+  color: #8995a5;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .moduleGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .overviewGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .page {
+    margin-left: 0;
+    padding: 85px 18px 30px;
+  }
+
+  .pageHeader {
+    flex-direction: column;
+  }
+
+  .pageHeader h1 {
+    font-size: 25px;
+  }
+
+  .overviewGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .moduleGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionHeaderRow {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .sessionCard {
+    align-items: flex-start;
+  }
+
+  .sessionDetails {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .page {
+    padding: 80px 13px 25px;
+  }
+
+  .pageHeader h1 {
+    font-size: 22px;
+  }
+
+  .moduleCard {
+    padding: 17px;
+  }
+
+  .overviewCard {
+    padding: 15px;
+  }
+
+  .moduleContent p {
+    min-height: auto;
+  }
+
+  .sessionCard {
+    padding: 14px;
+  }
+}

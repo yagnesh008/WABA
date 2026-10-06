@@ -1,0 +1,292 @@
+.page {
+  min-height: 100vh;
+  margin-left: 260px;
+  padding: 96px 30px 45px;
+  background: linear-gradient(135deg, #f6f9fc, #eef4f8);
+}
+
+/* HEADER */
+
+.pageHeader {
+  margin-bottom: 28px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.titleIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: linear-gradient(135deg, #7c3aed, #9333ea);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.2);
+}
+
+.pageHeader h1 {
+  margin: 0;
+  color: #12263f;
+  font-size: 28px;
+}
+
+.pageHeader p {
+  margin: 6px 0 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+/* STATS */
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.statCard {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  padding: 19px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 5px 18px rgba(25, 45, 70, 0.06);
+}
+
+.statIcon {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blue {
+  color: #2563eb;
+  background: #eaf2ff;
+}
+
+.green {
+  color: #16a34a;
+  background: #eaf8ef;
+}
+
+.orange {
+  color: #ea580c;
+  background: #fff1e7;
+}
+
+.purple {
+  color: #7c3aed;
+  background: #f2ebff;
+}
+
+.statCard span {
+  display: block;
+  color: #718096;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.statCard strong {
+  color: #172b4d;
+  font-size: 24px;
+}
+
+/* SECTION */
+
+.section {
+  margin-bottom: 28px;
+}
+
+.sectionHeader {
+  margin-bottom: 16px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  color: #172b4d;
+  font-size: 19px;
+}
+
+.sectionHeader p {
+  margin: 5px 0 0;
+  color: #8a96a8;
+  font-size: 13px;
+}
+
+/* MANAGEMENT CARDS */
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.managementCard {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  text-decoration: none;
+  box-shadow: 0 5px 18px rgba(25, 45, 70, 0.05);
+  transition: 0.2s ease;
+}
+
+.managementCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(25, 45, 70, 0.1);
+}
+
+.cardIcon {
+  min-width: 52px;
+  height: 52px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.performanceIcon {
+  color: #2563eb;
+  background: #eaf2ff;
+}
+
+.rankingIcon {
+  color: #ea580c;
+  background: #fff1e7;
+}
+
+.cardContent h3 {
+  margin: 0 0 7px;
+  color: #172b4d;
+  font-size: 17px;
+}
+
+.cardContent p {
+  margin: 0;
+  color: #718096;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.viewLink {
+  display: inline-block;
+  margin-top: 13px;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* TOP PERFORMERS */
+
+.performerGrid {
+  display: grid;
+  gap: 12px;
+}
+
+.performerCard {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 13px;
+  padding: 15px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 4px 14px rgba(25, 45, 70, 0.04);
+}
+
+.rank {
+  width: 35px;
+  color: #8a96a8;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2ff;
+  color: #4338ca;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.performerInfo {
+  flex: 1;
+}
+
+.performerInfo h3 {
+  margin: 0 0 4px;
+  color: #334155;
+  font-size: 14px;
+}
+
+.performerInfo span {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.performanceScore {
+  text-align: right;
+}
+
+.performanceScore strong {
+  display: block;
+  color: #16a34a;
+  font-size: 17px;
+}
+
+.performanceScore span {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .page {
+    margin-left: 0;
+    padding: 90px 18px 35px;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pageHeader h1 {
+    font-size: 23px;
+  }
+
+  .performerCard {
+    padding: 13px;
+  }
+}

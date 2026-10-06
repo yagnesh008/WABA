@@ -1,0 +1,528 @@
+/* =========================================
+   PROGRESS SECTION
+========================================= */
+
+.Progress {
+    width: 100%;
+    min-height: 100vh;
+    color: #ffffff;
+
+    /* Progress click చేసినప్పుడు header కింద hide కాకుండా */
+    scroll-margin-top: 82px;
+}
+
+
+/* =========================================
+   PROGRESS PAGE
+========================================= */
+
+.Progresspage {
+    width: 100%;
+    min-height: 100vh;
+
+    /* Only slightly down */
+    padding: 35px 5% 70px;
+
+    box-sizing: border-box;
+
+    background-image: url("/images/program.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.mainHeading {
+    width: 100%;
+    max-width: 850px;
+
+    text-align: left;
+
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+
+/* =========================================
+   OUR PROGRESS
+========================================= */
+
+.mainHeading h3 {
+    margin: 0 0 13px;
+    padding: 0;
+
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+
+    letter-spacing: 2px;
+
+    color: #fe7a03;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   PROGRAM
+========================================= */
+
+.mainHeading h1 {
+    margin: 0 0 12px;
+    padding: 0;
+
+    font-size: 100px;
+    font-weight: 800;
+    font-style: italic;
+
+    letter-spacing: 2px;
+
+    color: #ffffff;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   SMALL LINE
+========================================= */
+
+.mainHeading h1::after {
+    content: "";
+
+    display: block;
+
+    width: 75px;
+    height: 4px;
+
+    margin-top: 12px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.mainHeading p {
+    max-width: 620px;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    color: #d5d5d5;
+}
+
+
+/* =========================================
+   PROGRAM CARDS
+========================================= */
+
+.subParts {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 24px;
+    row-gap: 30px;
+}
+
+
+/* =========================================
+   SINGLE CARD
+========================================= */
+
+.subPart {
+    width: 100%;
+    height: 230px;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: stretch;
+
+    margin: 0;
+    padding: 0;
+
+    border-radius: 18px;
+
+    background: rgba(0, 0, 0, 0.50);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   DATA WRAPPER
+========================================= */
+
+.data1 {
+    display: flex;
+    flex-direction: row;
+
+    align-items: stretch;
+}
+
+
+/* =========================================
+   IMAGE PART
+========================================= */
+
+.imagePart {
+    width: 40%;
+    height: 230px;
+
+    flex-direction: row;
+
+    flex-shrink: 0;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+}
+
+
+.imagePart img {
+    width: 150%;
+    height: 100%;
+
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    object-fit: cover;
+    object-position: left;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* =========================================
+   DATA PART
+========================================= */
+
+.dataPart {
+    width: 45%;
+    height: 230px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    box-sizing: border-box;
+
+    padding: 20px 18px;
+
+    margin: 0;
+
+    background: transparent;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.number {
+    display: none;
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.dataPart h2 {
+    margin: 0 0 10px;
+    padding: 0;
+
+    font-size: 15px;
+    font-weight: 800;
+    font-style: italic;
+
+    line-height: 1.25;
+
+    color: #ffffff;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.dataPart p {
+    margin: 0 0 16px;
+    padding: 0;
+
+    font-size: 11px;
+    font-weight: 400;
+
+    line-height: 1.55;
+
+    color: #d4d4d4;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.dataPart button {
+    width: fit-content;
+
+    margin: auto 0 0;
+    padding: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #fe7a03;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    text-align: left;
+}
+
+
+.dataPart button::after {
+    content: "→";
+
+    margin-left: 6px;
+
+    color: #fe7a03;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.subPart:hover .imagePart img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .Progress {
+        scroll-margin-top: 80px;
+    }
+
+    .Progresspage {
+        padding: 35px 4% 60px;
+    }
+
+    .mainHeading {
+        margin-bottom: 30px;
+    }
+
+    .mainHeading h3 {
+        font-size: 14px;
+    }
+
+    .mainHeading h1 {
+        font-size: 80px;
+    }
+
+    .mainHeading p {
+        max-width: 600px;
+
+        font-size: 13px;
+    }
+
+    .subParts {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 22px;
+    }
+
+    .subPart {
+        height: 220px;
+    }
+
+    .imagePart {
+        width: 55%;
+        height: 220px;
+    }
+
+    .dataPart {
+        width: 45%;
+        height: 220px;
+
+        padding: 18px 15px;
+    }
+
+    .dataPart h2 {
+        font-size: 14px;
+    }
+
+    .dataPart p {
+        font-size: 8px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .Progress {
+        scroll-margin-top: 75px;
+    }
+
+    .Progresspage {
+        padding: 35px 5% 50px;
+    }
+
+    .mainHeading {
+        margin-bottom: 30px;
+    }
+
+    .mainHeading h3 {
+        margin-bottom: 10px;
+
+        font-size: 13px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .mainHeading h1 {
+        font-size: 55px;
+
+        margin-bottom: 12px;
+    }
+
+    .mainHeading p {
+        max-width: 520px;
+
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+    .subParts {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .subPart {
+        height: 200px;
+
+        border-radius: 15px;
+    }
+
+    .imagePart {
+        width: 55%;
+        height: 200px;
+    }
+
+    .dataPart {
+        width: 45%;
+        height: 200px;
+
+        padding: 16px 13px;
+    }
+
+    .dataPart h2 {
+        font-size: 13px;
+    }
+
+    .dataPart p {
+        font-size: 7.5px;
+    }
+
+    .dataPart button {
+        font-size: 7px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+    .Progress {
+        scroll-margin-top: 70px;
+    }
+
+    .Progresspage {
+        padding: 30px 4% 40px;
+    }
+
+    .mainHeading {
+        margin-bottom: 28px;
+    }
+
+    .mainHeading h1 {
+        font-size: 42px;
+    }
+
+    .mainHeading p {
+        font-size: 12px;
+
+        line-height: 1.45;
+    }
+
+    .subPart {
+        height: 180px;
+
+        border-radius: 13px;
+    }
+
+    .imagePart {
+        width: 53%;
+        height: 180px;
+    }
+
+    .dataPart {
+        width: 47%;
+        height: 180px;
+
+        padding: 13px 10px;
+    }
+
+    .dataPart h2 {
+        font-size: 11px;
+    }
+
+    .dataPart p {
+        font-size: 6.5px;
+
+        line-height: 1.4;
+    }
+
+    .dataPart button {
+        font-size: 6px;
+    }
+}
